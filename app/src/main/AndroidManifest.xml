@@ -1,9 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
-  package="edu.cnm.deepdive.appstarter">
+  package="edu.cnm.deepdive.gardenbuddy">
 
   <application
-    android:name=".AppStarterApplication"
+    android:name="edu.cnm.deepdive.cnm.edu.deepdive.gardenbuddy.AppStarterApplication"
     android:allowBackup="false"
     android:icon="@mipmap/ic_launcher"
     android:label="@string/app_name"

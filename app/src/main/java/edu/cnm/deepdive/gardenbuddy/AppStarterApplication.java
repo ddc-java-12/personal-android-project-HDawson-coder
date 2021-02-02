@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.appstarter;
+package edu.cnm.deepdive.gardenbuddy;
 
 import android.app.Application;
 import com.facebook.stetho.Stetho;

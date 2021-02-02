@@ -8,10 +8,10 @@ titles_from_headings:
 
 # Modify the contents below for the specific project.
 
-title: "Android Project Proposal"
-description: "Trust me, it'll be cool!"
+title: "Gardening Tracker"
+description: "This app will teach you when to plant, and help keep organized."
 author:
-  name: "Java+Android Student"
+  name: "Hana Dawson"
 
 # Do not change the following line.
   copyright: true
