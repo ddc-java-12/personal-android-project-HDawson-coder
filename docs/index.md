@@ -14,7 +14,7 @@ Garden Buddy will provide services to help gardeners better track their plants a
   
 ## Functionality
 
-* Can access your photos to see the plants you have chosen to plant for the season and will suggest where to plant based on number of rows chosen.
+* Gives different layouts of rows for planting and ability to select how many rows. 
 
 * A list of plants with relevant information. Ie, when to plant, average amount of harvests for the season, if they re-seed on their own, what types of climate they are best suited for, etc...
 
@@ -22,11 +22,13 @@ Garden Buddy will provide services to help gardeners better track their plants a
 
 * Will track how many fruits/vegetables you harvested for the season over the years.
 
-* Will track weather and let you know if anticipated tempretures are expected to reach a level that is too hot/too cold for the plants and advise what steps to take to keep them safe.
+* Will track weather through weather services and let you know if anticipated temperatures are expected to reach a level that is too hot/too cold for the plants and advise what steps to take to keep them safe.
 
 ## Persistent data
 
-* Watering reminder
+* Watering reminder. User will set times they would like to be reminded to water the plants.
+
+*Reminder to shut off water. Can set how long the app should wait before reminding.
 
 * Will remember what plants were planted last year, and how many fruits/vegetables you harvested if the info is added by user.
 
@@ -34,13 +36,14 @@ Garden Buddy will provide services to help gardeners better track their plants a
     
 ## Device/external services
 
-* Photos/Camera
+* Notifications permissions through the device
 
 * Weather services
-
 
 ## Stretch goals/possible enhancements 
 
 * Smart watering system. To be able to link up to a smart device to access the watering system and be able to manually tell the watering system when to water.
+
+* The ability to take a picture of packages of seeds to auto input in to the app, instead of manually typing each plant name in.
 
 
