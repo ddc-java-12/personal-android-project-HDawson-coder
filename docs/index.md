@@ -46,4 +46,4 @@ Garden Buddy will provide services to help gardeners better track their plants a
 
 * The ability to take a picture of packages of seeds to auto input in to the app, instead of manually typing each plant name in.
 
-
+* Using a web service to host a larger database of plants and the relevant details.
