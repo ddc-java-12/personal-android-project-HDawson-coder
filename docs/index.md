@@ -6,7 +6,7 @@ Garden Buddy will provide services to help gardeners better track their plants a
 
 * People who are new to gardening.
 
-  >As a new gardener who want's to start growing my own food. I want to learn when to plant, and how to best organize my crops to get the most produce through the season.
+  >As a new gardener who wants to start growing my own food. I want to learn when to plant, and how to best organize my crops to get the most produce through the season.
 
 * People who are seasoned gardeners.
 
@@ -28,11 +28,11 @@ Garden Buddy will provide services to help gardeners better track their plants a
 
 * Watering reminder. User will set times they would like to be reminded to water the plants.
 
-*Reminder to shut off water. Can set how long the app should wait before reminding.
+* Reminder to shut off water. Can set how long the app should wait before reminding.
 
 * Will remember what plants were planted last year, and how many fruits/vegetables you harvested if the info is added by user.
 
-* List of plants and general information for offline use if the download to phone option is chosen.
+* Plant information. Different plants, yield, watering info, etc..
     
 ## Device/external services
 
