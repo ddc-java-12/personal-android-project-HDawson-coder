@@ -36,9 +36,27 @@ Garden Buddy will provide services to help gardeners better track their plants a
     
 ## Device/external services
 
-* Notifications permissions through the device
+Notifications permissions through the device
 
-* Weather services
+* https://developer.android.com/guide/topics/ui/notifiers/notifications
+
+* Notifications will be used to remind users to water the plants at the scheduled times. 
+  
+* Notifications will also be used when the weather is going to be too hot/too cold and action is needed to be taken to prevent the plants from being damaged.
+
+* The app will run without notifications if the user chooses to opt out of these added benefits.
+
+Weather services
+
+* https://www.climacell.co/data-catalog/
+* or
+* https://www.weather.gov/documentation/services-web-api  
+
+* The weather services will be used to alert users if there are weather conditions that will be harmful to the plants. Ie, too hot or too cold..
+
+* Weather services will also be able to advise user if there will be enough rain that day to not have to manually water the plants.
+
+* Garden Buddy will function without the use of weather services if it is down, however the user would have to check the weather themselves if they are concerned about changing weather. 
 
 ## Stretch goals/possible enhancements 
 
