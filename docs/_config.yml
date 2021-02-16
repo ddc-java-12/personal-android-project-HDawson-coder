@@ -12,6 +12,7 @@ title: "Garden Buddy"
 description: "This app will teach you when to plant, and help keep organized."
 author:
   name: "Hana Dawson"
+  email: hdawson2@cnm.edu
 
 # Do not change the following line.
-  copyright: true
+  #copyright: true
