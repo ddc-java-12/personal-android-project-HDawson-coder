@@ -1,3 +1,9 @@
+---
+title: Overview
+description: Project Summary and intended users
+menu: Overview
+order: 0
+---
 ## Summary
 
 Garden Buddy will provide services to help gardeners better track their plants and know when the prime times are to plant them. This app will also suggest the best places to plant the starters based on the number of rows the user chooses.
