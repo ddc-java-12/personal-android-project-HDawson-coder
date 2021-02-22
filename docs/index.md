@@ -64,6 +64,12 @@ Weather services
 
 * Garden Buddy will function without the use of weather services if it is down, however the user would have to check the weather themselves if they are concerned about changing weather. 
 
+Location Services
+
+* https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
+
+* Location services will be used to notify the weather services where to look for weather updates.
+
 ## Stretch goals/possible enhancements 
 
 * Smart watering system. To be able to link up to a smart device to access the watering system and be able to manually tell the watering system when to water.
