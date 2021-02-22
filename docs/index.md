@@ -68,6 +68,8 @@ Location Services
 
 * https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
 
+* https://cloud.google.com/maps-platform/products
+
 * Location services will be used to notify the weather services where to look for weather updates.
 
 ## Stretch goals/possible enhancements 
