@@ -20,25 +20,23 @@ Garden Buddy will provide services to help gardeners better track their plants a
   
 ## Functionality
 
-* Gives different layouts of rows for planting and ability to select how many rows. 
+* Allows the user to choose their size of garden by square inches.  
 
-* A list of plants with relevant information. Ie, when to plant, average amount of harvests for the season, if they re-seed on their own, what types of climate they are best suited for, etc...
+* A list of plant names with relevant information. Ie, what temperature range needed to plant, how many inches of room needed per seed, and days to maturity.
 
 * Watering schedule/tracker/reminder
 
-* Will track how many fruits/vegetables you harvested for the season over the years.
+* Will track whichever options you choose to track. Such as how many planted of each plant, how many fruit yielded total for each plant, and day planted-day of first harvest.
 
 * Will track weather through weather services and let you know if anticipated temperatures are expected to reach a level that is too hot/too cold for the plants and advise what steps to take to keep them safe.
 
 ## Persistent data
 
-* Watering reminder. User will set times they would like to be reminded to water the plants.
+* Will track any notes added regarding various incidents.
 
-* Reminder to shut off water. Can set how long the app should wait before reminding.
+* Will track whichever options you choose to track. Such as how many planted of each plant, how many fruit yielded total for each plant, and day planted-day of first harvest.
 
-* Will remember what plants were planted last year, and how many fruits/vegetables you harvested if the info is added by user.
-
-* Plant information. Different plants, yield, watering info, etc..
+* Plant information. Different plants, yield, watering info, etc.
     
 ## Device/external services
 
@@ -67,8 +65,6 @@ Weather services
 Location Services
 
 * https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
-
-* https://cloud.google.com/maps-platform/products
 
 * Location services will be used to notify the weather services where to look for weather updates.
 
