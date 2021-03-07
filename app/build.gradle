@@ -72,6 +72,13 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxjava:2.2.20'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
 
+    //Room components
+    def roomVersion = '2.2.6'
+    implementation "androidx.room:room-runtime:$roomVersion"
+    annotationProcessor "androidx.room:room-compiler:$roomVersion"
+    implementation "androidx.room:room-rxjava2:$roomVersion"
+
+
     // Gson (Google JSON parser) dependency
     implementation 'com.google.code.gson:gson:2.8.6'
 
