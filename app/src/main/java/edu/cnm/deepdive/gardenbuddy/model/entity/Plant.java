@@ -17,8 +17,18 @@ public class Plant {
   @ColumnInfo(index = true)
   private Date timestamp = new Date();
 
-  @ColumnInfo(index = true)
-  private String value;
+  @ColumnInfo(name = "plant_id", index = true)
+  private String commonName;
+
+  private String scientificName;
+
+  private String minTemp;
+
+  private String maxTemp;
+
+  private int daysToMaturity;
+
+  private int spacingInInches;
 
   public long getId() {
     return id;
@@ -37,12 +47,54 @@ public class Plant {
     this.timestamp = timestamp;
   }
 
-  public String getValue() {
-    return value;
+  public String getCommonName() {
+    return commonName;
   }
 
-  public void setValue(String value) {
-    this.value = value;
+  public void setCommonName(String commonName) {
+    this.commonName = commonName;
+  }
+
+  public String getScientificName() {
+    return scientificName;
+  }
+
+  public void setScientificName(String scientificName) {
+    this.scientificName = scientificName;
+  }
+
+  public String getMinTemp() {
+    return minTemp;
+  }
+
+  public void setMinTemp(String minTemp) {
+    this.minTemp = minTemp;
+  }
+
+  public String getMaxTemp() {
+    return maxTemp;
+  }
+
+  public void setMaxTemp(String maxTemp) {
+    this.maxTemp = maxTemp;
+  }
+
+  public int getDaysToMaturity() {
+    return daysToMaturity;
+  }
+
+  public void setDaysToMaturity(int daysToMaturity) {
+    this.daysToMaturity = daysToMaturity;
+  }
+
+  public int getSpacingInInches() {
+    return spacingInInches;
+  }
+
+  public void setSpacingInInches(int spacingInInches) {
+    this.spacingInInches = spacingInInches;
   }
 
 }
+
+
