@@ -78,9 +78,11 @@ dependencies {
     annotationProcessor "androidx.room:room-compiler:$roomVersion"
     implementation "androidx.room:room-rxjava2:$roomVersion"
 
-
     // Gson (Google JSON parser) dependency
     implementation 'com.google.code.gson:gson:2.8.6'
+
+    //Google Sign-in library
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
 
     // Retrofit (REST client) with ReactiveX & Gson integration
     def retrofit_version = '2.9.0'

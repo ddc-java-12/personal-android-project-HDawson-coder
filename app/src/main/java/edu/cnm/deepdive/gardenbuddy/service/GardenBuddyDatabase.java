@@ -5,21 +5,22 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverter;
+import androidx.room.TypeConverters;
 import edu.cnm.deepdive.gardenbuddy.model.entity.History;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Note;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Plant;
 import edu.cnm.deepdive.gardenbuddy.model.entity.dao.HistoryDao;
 import edu.cnm.deepdive.gardenbuddy.model.entity.dao.NoteDao;
 import edu.cnm.deepdive.gardenbuddy.model.entity.dao.PlantDao;
+import edu.cnm.deepdive.gardenbuddy.service.GardenBuddyDatabase.Converters;
 import java.util.Date;
 
 @Database(
     entities = {History.class, Plant.class, Note.class},
-//    views = {ValueCount.class}, TODO figure out what this needs to be
     version = 1
 )
 
-//@TypeConverters(value = {Converters.class, Color.class}) TODO figure out what this needs to be
+@TypeConverters(value = {Converters.class})
 
 public abstract class GardenBuddyDatabase extends RoomDatabase {
 
@@ -37,7 +38,7 @@ public abstract class GardenBuddyDatabase extends RoomDatabase {
 
   public abstract HistoryDao getHistoryDao();
 
-  public abstract NoteDao getWagerDao();
+  public abstract NoteDao getNoteDao();
 
   public abstract PlantDao getPlantDao();
 

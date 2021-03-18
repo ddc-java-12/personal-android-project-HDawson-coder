@@ -5,8 +5,11 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Transaction;
 import androidx.room.Update;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Plant;
+import edu.cnm.deepdive.gardenbuddy.model.entity.pojo.PlantWithHistory;
+import edu.cnm.deepdive.gardenbuddy.model.entity.pojo.PlantWithNotes;
 import io.reactivex.Single;
 import java.util.Collection;
 import java.util.List;
@@ -32,9 +35,13 @@ public interface PlantDao {
   @Query("SELECT * FROM Plant ORDER BY timestamp DESC")
   LiveData<List<Plant>> selectAll();
 
-//  @Transaction
-//  @Query("SELECT * FROM History WHERE history_id = :plantId")
-//  LiveData<SpinWithWagers> selectById(long plantId);
-//}  // TODO figure out how POJO will work with Garden Buddy
+  @Transaction
+  @Query("SELECT * FROM Plant WHERE plant_id = :plantId")
+  LiveData<PlantWithHistory> selectByHstId(long plantId);
+
+  @Transaction
+  @Query("SELECT * FROM Plant WHERE plant_id = :plantId")
+  LiveData<PlantWithNotes> selectByNoteId(long plantId);
 
 }
+
