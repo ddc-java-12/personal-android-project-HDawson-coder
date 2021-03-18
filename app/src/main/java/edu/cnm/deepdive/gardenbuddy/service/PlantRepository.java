@@ -2,13 +2,13 @@ package edu.cnm.deepdive.gardenbuddy.service;
 
 import android.content.Context;
 import androidx.lifecycle.LiveData;
-import edu.cnm.deepdive.gardenbuddy.model.entity.History;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Note;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Plant;
 import edu.cnm.deepdive.gardenbuddy.model.entity.dao.HistoryDao;
 import edu.cnm.deepdive.gardenbuddy.model.entity.dao.NoteDao;
 import edu.cnm.deepdive.gardenbuddy.model.entity.dao.PlantDao;
-import edu.cnm.deepdive.gardenbuddy.model.entity.pojo.PlantWithHistory;
+import edu.cnm.deepdive.gardenbuddy.model.entity.History;
+import edu.cnm.deepdive.gardenbuddy.model.entity.pojo.PlantWithHistories;
 import edu.cnm.deepdive.gardenbuddy.model.entity.pojo.PlantWithNotes;
 import io.reactivex.Completable;
 import io.reactivex.Single;
@@ -32,7 +32,7 @@ public class PlantRepository {
     historyDao = database.getHistoryDao();
   }
 
-  public Single<PlantWithHistory> save(PlantWithHistory plant) {
+  public Single<PlantWithHistories> saveHistory(PlantWithHistories plant) {
     if (plant.getId() > 0) {
       //update
       return plantDao
@@ -45,22 +45,53 @@ public class PlantRepository {
           .insert(plant)
           .flatMap((plantId) -> {
             plant.setId(plantId);
-            for (History history : plant.getHistories()) {
+            for (edu.cnm.deepdive.gardenbuddy.model.entity.History history : plant.getHistories()) {
               history.setPlantId(plantId);
             }
             return historyDao.insert(plant.getHistories());
           })
           .map((historyIds) -> {
             Iterator<Long> idIterator = historyIds.iterator();
-            Iterator<History> wagerIterator = plant.getHistories().iterator();
-            while (idIterator.hasNext() && wagerIterator.hasNext()) {
-              wagerIterator.next().setId(idIterator.next());
+            Iterator<edu.cnm.deepdive.gardenbuddy.model.entity.History> historyIterator = plant.getHistories().iterator();
+            while (idIterator.hasNext() && historyIterator.hasNext()) {
+              historyIterator.next().setId(idIterator.next());
             }
             return plant;
           })
           .subscribeOn(Schedulers.io());
     }
   }
+
+  public Single<PlantWithNotes> saveNote(PlantWithNotes plant) {
+    if (plant.getId() > 0) {
+      //update
+      return plantDao
+          .update(plant)
+          .map((ignored) -> plant)
+          .subscribeOn(Schedulers.io()); //let's us specify the line it should began on
+    } else {
+      //Insert
+      return plantDao
+          .insert(plant)
+          .flatMap((plantId) -> {
+            plant.setId(plantId);
+            for (Note note : plant.getNotes()) {
+              note.setPlantId(plantId);
+            }
+            return noteDao.insert(plant.getNotes());
+          })
+          .map((noteIds) -> {
+            Iterator<Long> idIterator = noteIds.iterator();
+            Iterator<Note> noteIterator = plant.getNotes().iterator();
+            while (idIterator.hasNext() && noteIterator.hasNext()) {
+              noteIterator.next().setId(idIterator.next());
+            }
+            return plant;
+          })
+          .subscribeOn(Schedulers.io());
+    }
+  }
+
 
   public Completable delete(Plant plant) { //a plant is a plantWithHistory too
     return (
@@ -77,8 +108,9 @@ public class PlantRepository {
       return plantDao.selectAll();
     }
 
-    public LiveData<PlantWithHistory> get(long plantId) {
+    public LiveData<PlantWithHistories> get(long plantId) {
     return plantDao.selectByHstId(plantId);
     }
+
 
   }

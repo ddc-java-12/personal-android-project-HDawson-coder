@@ -7,8 +7,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Transaction;
 import androidx.room.Update;
-import edu.cnm.deepdive.gardenbuddy.model.entity.History;
-import edu.cnm.deepdive.gardenbuddy.model.entity.pojo.PlantWithHistory;
+import edu.cnm.deepdive.gardenbuddy.model.entity.pojo.PlantWithHistories;
 import io.reactivex.Single;
 import java.util.Collection;
 import java.util.List;
@@ -17,29 +16,34 @@ import java.util.List;
 public interface HistoryDao {
 
   @Insert
-  Single<Long> insert(History history);
+  Single<Long> insert(edu.cnm.deepdive.gardenbuddy.model.entity.History history);
 
   @Insert
-  Single<Long> insert(History... histories);
+  Single<List<Long>> insert(edu.cnm.deepdive.gardenbuddy.model.entity.History... histories);
 
   @Insert
-  Single<List<Long>> insert(Collection<History> histories);
-
+  Single<List<Long>> insert(Collection<edu.cnm.deepdive.gardenbuddy.model.entity.History> histories);
 
   @Update
-  Single<Integer> update(History history);
+  Single<Integer> update(edu.cnm.deepdive.gardenbuddy.model.entity.History history);
+
+  @Update
+  Single<Integer> update(edu.cnm.deepdive.gardenbuddy.model.entity.History... histories);
+
+  @Update
+  Single<Integer> update(Collection<edu.cnm.deepdive.gardenbuddy.model.entity.History> histories);
 
   @Delete
-  Single<Integer> delete(History history); // a single history ?
+  Single<Integer> delete(edu.cnm.deepdive.gardenbuddy.model.entity.History history); // a single history ?
 
   @Delete
-  Single<Integer> delete(History... history); // a whole bunch of History's
+  Single<Integer> delete(edu.cnm.deepdive.gardenbuddy.model.entity.History... history); // a whole bunch of History's
 
   @Delete
-  Single<Integer> delete(Collection<History> history); // a collection of history's
+  Single<Integer> delete(Collection<edu.cnm.deepdive.gardenbuddy.model.entity.History> history); // a collection of history's
 
   @Transaction
-  @Query("SELECT * FROM History WHERE history_id = :historyId")
-  LiveData<PlantWithHistory> selectByPlant(long historyId);
+  @Query("SELECT * FROM History WHERE plant_id = :plantId")
+  LiveData<PlantWithHistories> selectByPlant(long plantId);
 
 }

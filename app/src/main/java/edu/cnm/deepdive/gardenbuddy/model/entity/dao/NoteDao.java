@@ -20,8 +20,20 @@ public interface NoteDao {
   @Insert
   Single<Long> insert(Note note);
 
+  @Insert
+  Single<List<Long>> insert(Note... notes);
+
+  @Insert
+  Single<List<Long>> insert(Collection<Note> notes);
+
   @Update
   Single<Integer> update(Note note);
+
+  @Update
+  Single<Integer> update(Note... notes);
+
+  @Update
+  Single<Integer> update(Collection<Note> notes);
 
   @Delete
   Single<Integer> delete(Note note); // a single history ?

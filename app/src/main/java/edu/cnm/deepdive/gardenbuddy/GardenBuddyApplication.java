@@ -2,6 +2,7 @@ package edu.cnm.deepdive.gardenbuddy;
 
 import android.app.Application;
 import com.facebook.stetho.Stetho;
+import edu.cnm.deepdive.gardenbuddy.model.entity.Plant;
 import edu.cnm.deepdive.gardenbuddy.service.GardenBuddyDatabase;
 import io.reactivex.schedulers.Schedulers;
 
@@ -20,7 +21,7 @@ public class GardenBuddyApplication extends Application {
     GardenBuddyDatabase.setContext(this);
     GardenBuddyDatabase.getInstance()
         .getPlantDao()
-        .delete()
+        .insert(new Plant())
         .subscribeOn(Schedulers.io())
         .subscribe();
   }

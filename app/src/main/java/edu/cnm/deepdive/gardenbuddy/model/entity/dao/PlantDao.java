@@ -8,7 +8,7 @@ import androidx.room.Query;
 import androidx.room.Transaction;
 import androidx.room.Update;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Plant;
-import edu.cnm.deepdive.gardenbuddy.model.entity.pojo.PlantWithHistory;
+import edu.cnm.deepdive.gardenbuddy.model.entity.pojo.PlantWithHistories;
 import edu.cnm.deepdive.gardenbuddy.model.entity.pojo.PlantWithNotes;
 import io.reactivex.Single;
 import java.util.Collection;
@@ -22,6 +22,12 @@ public interface PlantDao {
 
   @Update
   Single<Integer> update(Plant plant);
+
+  @Update
+  Single<Integer> update(Plant... plants);
+
+  @Update
+  Single<Integer> update(Collection<Plant> plants);
 
   @Delete
   Single<Integer> delete(Plant plant); // a single plant ?
@@ -37,7 +43,7 @@ public interface PlantDao {
 
   @Transaction
   @Query("SELECT * FROM Plant WHERE plant_id = :plantId")
-  LiveData<PlantWithHistory> selectByHstId(long plantId);
+  LiveData<PlantWithHistories> selectByHstId(long plantId);
 
   @Transaction
   @Query("SELECT * FROM Plant WHERE plant_id = :plantId")

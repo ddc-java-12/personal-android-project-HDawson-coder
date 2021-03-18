@@ -27,7 +27,7 @@ public class Note {
   private Date timestamp = new Date();
 
   @ColumnInfo(name = "plant_id", index = true)
-  private String plantId;
+  private long plantId;
 
   //TODO Get clarification on how to do enum incident
 
@@ -50,11 +50,11 @@ public class Note {
     this.timestamp = timestamp;
   }
 
-  public String getPlantId() {
+  public long getPlantId() {
     return plantId;
   }
 
-  public void setPlantId(String plantId) {
+  public void setPlantId(long plantId) {
     this.plantId = plantId;
   }
 
