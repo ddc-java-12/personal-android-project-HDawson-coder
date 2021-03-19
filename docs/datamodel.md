@@ -2,7 +2,7 @@
 title: Data Model Links
 description: Links for Github with data model classes.
 menu: Data Model
-order: 40
+order: 50
 ---
 
 ## Data Model Links
