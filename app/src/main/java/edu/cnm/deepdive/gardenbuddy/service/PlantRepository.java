@@ -32,6 +32,22 @@ public class PlantRepository {
     historyDao = database.getHistoryDao();
   }
 
+  public Single<Plant> save(Plant plant) {
+    return (
+        (plant.getId() > 0)
+        ? plantDao
+            .update(plant)
+            .map((ignored) -> plant)
+        : plantDao
+            .insert(plant)
+            .map((id) -> {
+              plant.setId(id);
+              return plant;
+            })
+    )
+        .subscribeOn(Schedulers.io());
+  }
+
   public Single<PlantWithHistories> saveHistory(PlantWithHistories plant) {
     if (plant.getId() > 0) {
       //update
@@ -117,8 +133,8 @@ public class PlantRepository {
     return Single.fromCallable(() -> {
       Plant plant = new Plant();
       plant.setCommonName("Corn");
-      plant.setMaxTemp("50");
-      plant.setMinTemp("40");
+      plant.setMaxTemp(50);
+      plant.setMinTemp(40);
       return plant;
     }).subscribeOn(Schedulers.computation()).flatMap(plantDao::insert).ignoreElement()
         .subscribeOn(Schedulers.io());

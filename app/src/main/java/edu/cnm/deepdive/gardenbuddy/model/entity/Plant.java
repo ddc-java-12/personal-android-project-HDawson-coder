@@ -5,6 +5,7 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import java.util.Date;
+import org.jetbrains.annotations.NotNull;
 
 @Entity
 public class Plant {
@@ -22,9 +23,9 @@ public class Plant {
 
   private String scientificName;
 
-  private String minTemp;
+  private Integer minTemp;
 
-  private String maxTemp;
+  private Integer maxTemp;
 
   private Integer daysToMaturity;
 
@@ -63,19 +64,19 @@ public class Plant {
     this.scientificName = scientificName;
   }
 
-  public String getMinTemp() {
+  public Integer getMinTemp() {
     return minTemp;
   }
 
-  public void setMinTemp(String minTemp) {
+  public void setMinTemp(Integer minTemp) {
     this.minTemp = minTemp;
   }
 
-  public String getMaxTemp() {
+  public Integer getMaxTemp() {
     return maxTemp;
   }
 
-  public void setMaxTemp(String maxTemp) {
+  public void setMaxTemp(Integer maxTemp) {
     this.maxTemp = maxTemp;
   }
 
@@ -95,6 +96,11 @@ public class Plant {
     this.spacingInInches = spacingInInches;
   }
 
+  @NonNull
+  @Override
+  public String toString() {
+    return commonName;
+  }
 }
 
 
