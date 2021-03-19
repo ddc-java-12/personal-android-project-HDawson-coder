@@ -5,7 +5,7 @@ menu: Overview
 order: 40
 ---
 
-##Data Model Links
+## Data Model Links
 
 [History Dao](https://github.com/ddc-java-12/personal-android-project-HDawson-coder/blob/main/app/src/main/java/edu/cnm/deepdive/gardenbuddy/model/entity/dao/HistoryDao.java)
 
