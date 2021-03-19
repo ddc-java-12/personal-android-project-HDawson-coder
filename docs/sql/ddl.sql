@@ -1,13 +1,5 @@
----
-title: Data Definition Language(DDL)
-description: Database
-menu: DDL
-order: 30
----
+-- noinspection SqlNoDataSourceInspectionForFile
 
-## Data Definition Language(DDL)
-
-```sqlite
 CREATE TABLE IF NOT EXISTS `History`
 (
     `history_id`        INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
@@ -53,5 +45,4 @@ CREATE TABLE IF NOT EXISTS `Note`
 CREATE INDEX IF NOT EXISTS `index_Note_timestamp` ON `Note` (`timestamp`);
 
 CREATE INDEX IF NOT EXISTS `index_Note_plant_id` ON `Note` (`plant_id`);
-```
-[ddl.sql](sql/ddl.sql)
+
