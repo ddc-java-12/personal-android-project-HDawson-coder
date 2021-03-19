@@ -55,4 +55,4 @@ CREATE INDEX IF NOT EXISTS `index_Note_timestamp` ON `Note` (`timestamp`);
 CREATE INDEX IF NOT EXISTS `index_Note_plant_id` ON `Note` (`plant_id`);
 ```
 
-[`ddl.sql`](sql/test-ddl.sql)
+[`ddl.sql`](sql/ddl.sql)
