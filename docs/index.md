@@ -60,13 +60,7 @@ Weather services
 
 * Weather services will also be able to advise user if there will be enough rain that day to not have to manually water the plants.
 
-* Garden Buddy will function without the use of weather services if it is down, however the user would have to check the weather themselves if they are concerned about changing weather. 
-
-Location Services
-
-* https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
-
-* Location services will be used to notify the weather services where to look for weather updates.
+* Garden Buddy will function without the use of weather services if it is down, however the user would have to check the weather themselves if they are concerned about changing weather.
 
 ## Stretch goals/possible enhancements 
 
