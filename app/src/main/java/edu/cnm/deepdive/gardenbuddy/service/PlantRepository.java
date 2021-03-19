@@ -52,7 +52,8 @@ public class PlantRepository {
           })
           .map((historyIds) -> {
             Iterator<Long> idIterator = historyIds.iterator();
-            Iterator<edu.cnm.deepdive.gardenbuddy.model.entity.History> historyIterator = plant.getHistories().iterator();
+            Iterator<edu.cnm.deepdive.gardenbuddy.model.entity.History> historyIterator = plant
+                .getHistories().iterator();
             while (idIterator.hasNext() && historyIterator.hasNext()) {
               historyIterator.next().setId(idIterator.next());
             }
@@ -104,13 +105,23 @@ public class PlantRepository {
         .subscribeOn(Schedulers.io());
   }
 
-    public LiveData<List<Plant>> getAll() {
-      return plantDao.selectAll();
-    }
-
-    public LiveData<PlantWithHistories> get(long plantId) {
-    return plantDao.selectByHstId(plantId);
-    }
-
-
+  public LiveData<List<Plant>> getAll() {
+    return plantDao.selectAll();
   }
+
+  public LiveData<PlantWithHistories> get(long plantId) {
+    return plantDao.selectByHstId(plantId);
+  }
+
+  public Completable newPlant() {
+    return Single.fromCallable(() -> {
+      Plant plant = new Plant();
+      plant.setCommonName("Corn");
+      plant.setMaxTemp("50");
+      plant.setMinTemp("40");
+      return plant;
+    }).subscribeOn(Schedulers.computation()).flatMap(plantDao::insert).ignoreElement()
+        .subscribeOn(Schedulers.io());
+  }
+
+}

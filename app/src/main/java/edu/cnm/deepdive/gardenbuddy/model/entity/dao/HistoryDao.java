@@ -44,6 +44,6 @@ public interface HistoryDao {
 
   @Transaction
   @Query("SELECT * FROM History WHERE plant_id = :plantId")
-  LiveData<PlantWithHistories> selectByPlant(long plantId);
+  LiveData<PlantWithHistories>selectByPlant(long plantId);
 
 }
