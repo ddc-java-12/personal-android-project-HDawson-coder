@@ -1,3 +1,10 @@
+---
+title: Data Definition Language(DDL)
+description: Database
+menu: DDL
+order: 30
+---
+
 ## Data Definition Language(DDL)
 
 ```sqlite
