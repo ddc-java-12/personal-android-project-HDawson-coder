@@ -13,6 +13,11 @@
     android:theme="@style/AppTheme"
     tools:ignore="AllowBackup">
     <activity
+      android:label="@string/title_activity_navigation__drawer"
+      android:name=".controller.Navigation_DrawerActivity"
+      android:theme="@style/AppTheme.NoActionBar">
+    </activity>
+    <activity
       android:label="@string/title_activity_main"
       android:name=".controller.MainActivity"
       android:theme="@style/AppTheme.NoActionBar">
