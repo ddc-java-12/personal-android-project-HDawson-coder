@@ -5,6 +5,7 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
+import androidx.room.TypeConverter;
 import java.util.Date;
 
 @Entity(
@@ -29,7 +30,9 @@ public class Note {
   @ColumnInfo(name = "plant_id", index = true)
   private long plantId;
 
-  //TODO Get clarification on how to do enum incident
+  @NonNull
+  @ColumnInfo(index = true)
+  private Category category;
 
   private String note;
 
@@ -64,5 +67,21 @@ public class Note {
 
   public void setNote(String note) {
     this.note = note;
+  }
+
+  public enum Category {
+    PEST,
+    WEATHER,
+    OTHER;
+
+    @TypeConverter
+    public static Integer categoryToInteger(Category value) {
+      return (value != null) ? value.ordinal() : null;
+    }
+
+    @TypeConverter
+    public static Category integerToCategory(Integer value) {
+      return (value != null) ? Category.values()[value] : null;
+    }
   }
 }

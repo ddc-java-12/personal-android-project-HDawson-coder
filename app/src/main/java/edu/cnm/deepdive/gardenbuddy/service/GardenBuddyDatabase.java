@@ -9,9 +9,9 @@ import androidx.room.TypeConverters;
 import edu.cnm.deepdive.gardenbuddy.model.entity.History;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Note;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Plant;
-import edu.cnm.deepdive.gardenbuddy.model.entity.dao.HistoryDao;
-import edu.cnm.deepdive.gardenbuddy.model.entity.dao.NoteDao;
-import edu.cnm.deepdive.gardenbuddy.model.entity.dao.PlantDao;
+import edu.cnm.deepdive.gardenbuddy.model.dao.HistoryDao;
+import edu.cnm.deepdive.gardenbuddy.model.dao.NoteDao;
+import edu.cnm.deepdive.gardenbuddy.model.dao.PlantDao;
 import edu.cnm.deepdive.gardenbuddy.service.GardenBuddyDatabase.Converters;
 import java.util.Date;
 
@@ -19,9 +19,7 @@ import java.util.Date;
     entities = {History.class, Plant.class, Note.class},
     version = 1
 )
-
-@TypeConverters(value = {Converters.class})
-
+@TypeConverters(value = {Converters.class, Note.Category.class})
 public abstract class GardenBuddyDatabase extends RoomDatabase {
 
   private static final String DB_NAME = "gardenbuddy_db";

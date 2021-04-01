@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.gardenbuddy.model.entity.dao;
+package edu.cnm.deepdive.gardenbuddy.model.dao;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -7,9 +7,8 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Transaction;
 import androidx.room.Update;
-import edu.cnm.deepdive.gardenbuddy.model.entity.History;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Note;
-import edu.cnm.deepdive.gardenbuddy.model.entity.Plant;
+import edu.cnm.deepdive.gardenbuddy.model.entity.Note.Category;
 import io.reactivex.Single;
 import java.util.Collection;
 import java.util.List;
@@ -44,8 +43,11 @@ public interface NoteDao {
   @Delete
   Single<Integer> delete(Collection<Note> note); // a collection of history's
 
-  @Transaction
   @Query("SELECT * FROM Note WHERE plant_id = :plantId")
   LiveData<List<Note>> selectByPlant(long plantId);
+
+  @Query("SELECT * FROM Note WHERE plant_id = :plantId AND category = :category")
+  LiveData<List<Note>> selectByPlantAndCategory(long plantId, Category category);
+
 }
 

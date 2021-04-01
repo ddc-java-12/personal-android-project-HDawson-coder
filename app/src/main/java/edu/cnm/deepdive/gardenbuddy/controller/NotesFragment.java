@@ -9,26 +9,31 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 import edu.cnm.deepdive.gardenbuddy.R;
+import edu.cnm.deepdive.gardenbuddy.databinding.FragmentNotesBinding;
 import edu.cnm.deepdive.gardenbuddy.viewmodel.NotesViewModel;
+import org.jetbrains.annotations.NotNull;
 
 public class NotesFragment extends Fragment {
 
   private NotesViewModel notesViewModel;
+  private FragmentNotesBinding binding;
 
   public View onCreateView(@NonNull LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {
-    notesViewModel =
-        ViewModelProviders.of(this).get(NotesViewModel.class);
-    View root = inflater.inflate(R.layout.fragment_notes, container, false);
-    final TextView textView = root.findViewById(R.id.notes_header);
-    notesViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-      @Override
-      public void onChanged(@Nullable String s) {
-        textView.setText(s);
-      }
-    });
-    return root;
+    binding = FragmentNotesBinding.inflate(inflater, container, false);
+    //TODO Attach event handler to spinner. To get a different list of notes for plants.
+    //TODO Attach event handlers to floating action buttons.
+    return binding.getRoot();
+  }
+
+  @Override
+  public void onViewCreated(@NonNull @NotNull View view,
+      @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
+    super.onViewCreated(view, savedInstanceState);
+    notesViewModel = new ViewModelProvider(this).get(NotesViewModel.class);
+    //TODO observe data from viewmodel.
   }
 }

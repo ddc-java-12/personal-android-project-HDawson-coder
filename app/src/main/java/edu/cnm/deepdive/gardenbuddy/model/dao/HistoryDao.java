@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.gardenbuddy.model.entity.dao;
+package edu.cnm.deepdive.gardenbuddy.model.dao;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -7,7 +7,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Transaction;
 import androidx.room.Update;
-import edu.cnm.deepdive.gardenbuddy.model.entity.pojo.PlantWithHistories;
+import edu.cnm.deepdive.gardenbuddy.model.pojo.PlantWithHistories;
 import io.reactivex.Single;
 import java.util.Collection;
 import java.util.List;

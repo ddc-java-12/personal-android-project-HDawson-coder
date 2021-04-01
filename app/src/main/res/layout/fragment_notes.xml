@@ -7,14 +7,19 @@
   android:layout_height="match_parent"
   tools:context=".controller.NotesFragment">
 
-  <TextView
-    android:id="@+id/notes_header"
-    android:layout_width="match_parent"
+  <Spinner
+    android:id="@+id/plants"
+    android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:text="@string/notes_header"
-    android:textSize="@dimen/fab_margin"
-    android:textAlignment="center"
     app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"/>
+
+  <View
+    android:layout_width="0dp"
+    android:layout_height="1dp"
+    android:background="?attr/colorPrimaryDark"
+    app:layout_constraintBottom_toTopOf="@id/pest_notes_header"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -30,7 +35,7 @@
     android:textSize="20sp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/notes_header"
+    app:layout_constraintTop_toBottomOf="@id/plants"
     app:layout_constraintBottom_toTopOf="@id/pest_notes"/>
 
   <androidx.recyclerview.widget.RecyclerView
