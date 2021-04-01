@@ -3,6 +3,7 @@ package edu.cnm.deepdive.gardenbuddy.service;
 import android.content.Context;
 import androidx.lifecycle.LiveData;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Note;
+import edu.cnm.deepdive.gardenbuddy.model.entity.Note.Category;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Plant;
 import edu.cnm.deepdive.gardenbuddy.model.dao.HistoryDao;
 import edu.cnm.deepdive.gardenbuddy.model.dao.NoteDao;
@@ -139,4 +140,7 @@ public class PlantRepository {
         .subscribeOn(Schedulers.io());
   }
 
+  public LiveData<List<Note>> getNotesByCategory(Plant plant, Category category) {
+    return noteDao.selectByPlantAndCategory(plant.getId(), category);
+  }
 }

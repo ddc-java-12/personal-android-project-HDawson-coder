@@ -101,6 +101,9 @@ android {
         implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
         implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
 
+        // CSV Library
+        implementation 'org.apache.commons:commons-csv:1.8'
+
         // OkHttp logging dependency
         implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
 
