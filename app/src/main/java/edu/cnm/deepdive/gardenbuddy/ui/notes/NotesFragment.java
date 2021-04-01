@@ -14,15 +14,15 @@ import edu.cnm.deepdive.gardenbuddy.R;
 
 public class NotesFragment extends Fragment {
 
-  private NotesViewModel slideshowViewModel;
+  private NotesViewModel notesViewModel;
 
   public View onCreateView(@NonNull LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {
-    slideshowViewModel =
+    notesViewModel =
         ViewModelProviders.of(this).get(NotesViewModel.class);
     View root = inflater.inflate(R.layout.fragment_notes, container, false);
     final TextView textView = root.findViewById(R.id.text_slideshow);
-    slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+    notesViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
       @Override
       public void onChanged(@Nullable String s) {
         textView.setText(s);

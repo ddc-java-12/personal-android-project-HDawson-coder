@@ -11,18 +11,22 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import edu.cnm.deepdive.gardenbuddy.R;
+import edu.cnm.deepdive.gardenbuddy.databinding.FragmentPlantsBinding;
 
 public class PlantFragment extends Fragment {
 
-  private PlantViewModel galleryViewModel;
+  private PlantViewModel plantViewModel;
+  private FragmentPlantsBinding binding;
+
 
   public View onCreateView(@NonNull LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {
-    galleryViewModel =
-        ViewModelProviders.of(this).get(PlantViewModel.class);
+    plantViewModel = ViewModelProviders.of(this).get(PlantViewModel.class);
     View root = inflater.inflate(R.layout.fragment_plants, container, false);
-    final TextView textView = root.findViewById(R.id.plant_list);
-    galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+    final TextView textView = root.findViewById(R.id.header);
+    plantViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+
+
       @Override
       public void onChanged(@Nullable String s) {
         textView.setText(s);

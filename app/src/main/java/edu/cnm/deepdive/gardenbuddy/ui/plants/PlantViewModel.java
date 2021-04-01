@@ -10,7 +10,7 @@ public class PlantViewModel extends ViewModel {
 
   public PlantViewModel() {
     mText = new MutableLiveData<>();
-    mText.setValue("This is gallery fragment");
+    mText.setValue("This is Plant fragment");
   }
 
   public LiveData<String> getText() {
