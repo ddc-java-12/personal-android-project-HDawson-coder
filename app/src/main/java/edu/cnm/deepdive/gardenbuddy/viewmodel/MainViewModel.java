@@ -19,7 +19,6 @@ public class MainViewModel extends AndroidViewModel {
   private final MutableLiveData<Throwable> throwable;
 
 
-
   public MainViewModel( @NotNull Application application) {
     super(application);
     repository = new PlantRepository(application);

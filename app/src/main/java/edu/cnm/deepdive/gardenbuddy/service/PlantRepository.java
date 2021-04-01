@@ -3,13 +3,13 @@ package edu.cnm.deepdive.gardenbuddy.service;
 import android.content.Context;
 import androidx.lifecycle.LiveData;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Note;
+import edu.cnm.deepdive.gardenbuddy.model.entity.Note.Category;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Plant;
-import edu.cnm.deepdive.gardenbuddy.model.entity.dao.HistoryDao;
-import edu.cnm.deepdive.gardenbuddy.model.entity.dao.NoteDao;
-import edu.cnm.deepdive.gardenbuddy.model.entity.dao.PlantDao;
-import edu.cnm.deepdive.gardenbuddy.model.entity.History;
-import edu.cnm.deepdive.gardenbuddy.model.entity.pojo.PlantWithHistories;
-import edu.cnm.deepdive.gardenbuddy.model.entity.pojo.PlantWithNotes;
+import edu.cnm.deepdive.gardenbuddy.model.dao.HistoryDao;
+import edu.cnm.deepdive.gardenbuddy.model.dao.NoteDao;
+import edu.cnm.deepdive.gardenbuddy.model.dao.PlantDao;
+import edu.cnm.deepdive.gardenbuddy.model.pojo.PlantWithHistories;
+import edu.cnm.deepdive.gardenbuddy.model.pojo.PlantWithNotes;
 import io.reactivex.Completable;
 import io.reactivex.Single;
 import io.reactivex.schedulers.Schedulers;
@@ -140,4 +140,7 @@ public class PlantRepository {
         .subscribeOn(Schedulers.io());
   }
 
+  public LiveData<List<Note>> getNotesByCategory(Plant plant, Category category) {
+    return noteDao.selectByPlantAndCategory(plant.getId(), category);
+  }
 }

@@ -1,8 +1,7 @@
-package edu.cnm.deepdive.gardenbuddy.model.entity.pojo;
+package edu.cnm.deepdive.gardenbuddy.model.pojo;
 
 import androidx.annotation.NonNull;
 import androidx.room.Relation;
-import edu.cnm.deepdive.gardenbuddy.model.entity.History;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Plant;
 import java.util.LinkedList;
 import java.util.List;

@@ -2,11 +2,31 @@
   <string name="app_name">Garden Buddy</string>
   <string name="title_activity_main">MainActivity</string>
   <!-- Strings used for fragments for navigation -->
-  <string name="first_fragment_label">First Fragment</string>
-  <string name="second_fragment_label">Second Fragment</string>
-  <string name="next">Next</string>
+  <string name="start_fragment_label">Start Fragment</string>
+  <string name="new_garden">New Garden</string>
   <string name="previous">Previous</string>
 
-  <string name="hello_first_fragment">Hello first fragment</string>
   <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+  <string name="title_activity_home_page">HomePageActivity</string>
+  <string name="welcome_to_garden_buddy">Welcome to Garden Buddy</string>
+
+  <string name="overview_fragment_label">OverviewFragment</string>
+  <string name="existing_gardens">Existing Gardens</string>
+  <string name="title_activity_navigation__drawer">Navigation_DrawerActivity</string>
+  <string name="navigation_drawer_open">Open navigation drawer</string>
+  <string name="navigation_drawer_close">Close navigation drawer</string>
+  <string name="nav_header_title">Garden Buddy</string>
+  <string name="nav_header_subtitle">For your gardening needs</string>
+  <string name="nav_header_desc">Navigation header</string>
+  <string name="action_settings">Settings</string>
+
+  <string name="menu_home">Home</string>
+  <string name="menu_plants">Plants</string>
+  <string name="menu_notes">Notes</string>
+  <string name="plants_header">Plant Information and Selection</string>
+  <string name="notes_header">Keep notes of mentionable events</string>
+  <string name="add_note">Add Note</string>
+  <string name="weather_related_incidents">Weather related incidents</string>
+  <string name="other_notes">Other notes</string>
+  <string name="pest_related_incidents">Pest Related Incidents</string>
 </resources>
