@@ -1,18 +1,18 @@
-//package edu.cnm.deepdive.gardenbuddy.controller;
-//
-//import android.os.Bundle;
-//import android.widget.ArrayAdapter;
-//import androidx.drawerlayout.widget.DrawerLayout;
-//import androidx.lifecycle.ViewModelProvider;
-//import androidx.navigation.NavController;
-//import androidx.navigation.ui.AppBarConfiguration;
-//import androidx.appcompat.app.AppCompatActivity;
-//import edu.cnm.deepdive.gardenbuddy.databinding.ActivityMainBinding;
-//import edu.cnm.deepdive.gardenbuddy.model.entity.Plant;
-//import edu.cnm.deepdive.gardenbuddy.viewmodel.MainViewModel;
-//
-//public class MainActivity extends AppCompatActivity {
-//
+package edu.cnm.deepdive.gardenbuddy.controller;
+
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.appcompat.app.AppCompatActivity;
+import edu.cnm.deepdive.gardenbuddy.databinding.ActivityMainBinding;
+import edu.cnm.deepdive.gardenbuddy.model.entity.Plant;
+import edu.cnm.deepdive.gardenbuddy.viewmodel.MainViewModel;
+
+public class MainActivity extends AppCompatActivity {
+
 //  private ActivityMainBinding binding;
 //  private MainActivityDrawer drawerActivity;
 //  private AppBarConfiguration appBarConfiguration;
@@ -38,5 +38,5 @@
 //    });
 //  }
 //
-//
-//}
+
+}
