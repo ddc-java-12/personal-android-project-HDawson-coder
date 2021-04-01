@@ -1,16 +1,16 @@
-package edu.cnm.deepdive.gardenbuddy.ui.home;
+package edu.cnm.deepdive.gardenbuddy.viewmodel;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+public class PlantViewModel extends ViewModel {
 
   private MutableLiveData<String> mText;
 
-  public HomeViewModel() {
+  public PlantViewModel() {
     mText = new MutableLiveData<>();
-    mText.setValue("This is home fragment");
+    mText.setValue("This is Plant fragment");
   }
 
   public LiveData<String> getText() {

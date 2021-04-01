@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.gardenbuddy.ui.plants;
+package edu.cnm.deepdive.gardenbuddy.controller;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,22 +11,19 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import edu.cnm.deepdive.gardenbuddy.R;
-import edu.cnm.deepdive.gardenbuddy.databinding.FragmentPlantsBinding;
+import edu.cnm.deepdive.gardenbuddy.viewmodel.HomeViewModel;
 
-public class PlantFragment extends Fragment {
+public class HomeFragment extends Fragment {
 
-  private PlantViewModel plantViewModel;
-  private FragmentPlantsBinding binding;
-
+  private HomeViewModel homeViewModel;
 
   public View onCreateView(@NonNull LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {
-    plantViewModel = ViewModelProviders.of(this).get(PlantViewModel.class);
-    View root = inflater.inflate(R.layout.fragment_plants, container, false);
-    final TextView textView = root.findViewById(R.id.header);
-    plantViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-
-
+    homeViewModel =
+        ViewModelProviders.of(this).get(HomeViewModel.class);
+    View root = inflater.inflate(R.layout.fragment_home, container, false);
+    final TextView textView = root.findViewById(R.id.text_home);
+    homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
       @Override
       public void onChanged(@Nullable String s) {
         textView.setText(s);

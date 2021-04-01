@@ -9,18 +9,18 @@
   <fragment
     android:id="@+id/nav_home"
     android:label="@string/menu_home"
-    android:name="edu.cnm.deepdive.gardenbuddy.ui.home.HomeFragment"
+    android:name="edu.cnm.deepdive.gardenbuddy.controller.HomeFragment"
     tools:layout="@layout/fragment_home"/>
 
   <fragment
     android:id="@+id/nav_plant"
     android:label="@string/menu_plants"
-    android:name="edu.cnm.deepdive.gardenbuddy.ui.plants.PlantFragment"
+    android:name="edu.cnm.deepdive.gardenbuddy.controller.PlantFragment"
     tools:layout="@layout/fragment_plants"/>
 
   <fragment
     android:id="@+id/nav_notes"
     android:label="@string/menu_notes"
-    android:name="edu.cnm.deepdive.gardenbuddy.ui.notes.NotesFragment"
+    android:name="edu.cnm.deepdive.gardenbuddy.controller.NotesFragment"
     tools:layout="@layout/fragment_notes"/>
 </navigation>
