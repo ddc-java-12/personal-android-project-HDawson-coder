@@ -69,6 +69,15 @@ public class Note {
     this.note = note;
   }
 
+  @NonNull
+  public Category getCategory() {
+    return category;
+  }
+
+  public void setCategory(@NonNull Category category) {
+    this.category = category;
+  }
+
   public enum Category {
     PEST,
     WEATHER,

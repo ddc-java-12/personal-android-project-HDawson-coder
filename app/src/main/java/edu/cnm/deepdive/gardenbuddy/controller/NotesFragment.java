@@ -30,10 +30,10 @@ public class NotesFragment extends Fragment {
   }
 
   @Override
-  public void onViewCreated(@NonNull @NotNull View view,
-      @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
+  public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
     notesViewModel = new ViewModelProvider(this).get(NotesViewModel.class);
+    getLifecycle().addObserver(notesViewModel);
     //TODO observe data from viewmodel.
   }
 }

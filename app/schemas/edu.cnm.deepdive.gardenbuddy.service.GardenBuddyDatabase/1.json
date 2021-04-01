@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "64a96761f0fb49948259a1fa146aba45",
+    "identityHash": "e0041b51719c511a834e60b1e1a57acc",
     "entities": [
       {
         "tableName": "History",
@@ -176,7 +176,7 @@
       },
       {
         "tableName": "Note",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`note_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `timestamp` INTEGER NOT NULL, `plant_id` INTEGER NOT NULL, `note` TEXT, FOREIGN KEY(`plant_id`) REFERENCES `Plant`(`plant_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`note_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `timestamp` INTEGER NOT NULL, `plant_id` INTEGER NOT NULL, `category` INTEGER NOT NULL, `note` TEXT, FOREIGN KEY(`plant_id`) REFERENCES `Plant`(`plant_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
         "fields": [
           {
             "fieldPath": "id",
@@ -193,6 +193,12 @@
           {
             "fieldPath": "plantId",
             "columnName": "plant_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "category",
+            "columnName": "category",
             "affinity": "INTEGER",
             "notNull": true
           },
@@ -225,6 +231,14 @@
               "plant_id"
             ],
             "createSql": "CREATE INDEX IF NOT EXISTS `index_Note_plant_id` ON `${TABLE_NAME}` (`plant_id`)"
+          },
+          {
+            "name": "index_Note_category",
+            "unique": false,
+            "columnNames": [
+              "category"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_Note_category` ON `${TABLE_NAME}` (`category`)"
           }
         ],
         "foreignKeys": [
@@ -245,7 +259,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '64a96761f0fb49948259a1fa146aba45')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'e0041b51719c511a834e60b1e1a57acc')"
     ]
   }
 }
