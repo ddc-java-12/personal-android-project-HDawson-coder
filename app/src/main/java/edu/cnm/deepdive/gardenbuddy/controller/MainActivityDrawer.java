@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import edu.cnm.deepdive.gardenbuddy.R;
 
-public class Navigation_DrawerActivity extends AppCompatActivity {
+public class MainActivityDrawer extends AppCompatActivity {
 
   private AppBarConfiguration mAppBarConfiguration;
 
@@ -26,13 +26,8 @@ public class Navigation_DrawerActivity extends AppCompatActivity {
     Toolbar toolbar = findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
     FloatingActionButton fab = findViewById(R.id.fab);
-    fab.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-        Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-            .setAction("Action", null).show();
-      }
-    });
+    fab.setOnClickListener(view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+        .setAction("Action", null).show());
     DrawerLayout drawer = findViewById(R.id.drawer_layout);
     NavigationView navigationView = findViewById(R.id.nav_view);
     // Passing each menu ID as a set of Ids because each
@@ -41,7 +36,7 @@ public class Navigation_DrawerActivity extends AppCompatActivity {
         R.id.nav_home, R.id.nav_plant, R.id.nav_notes)
         .setDrawerLayout(drawer)
         .build();
-    NavController navController = Navigation.findNavController(this, R.id.nav_home);
+    NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
     NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
     NavigationUI.setupWithNavController(navigationView, navController);
   }
@@ -55,7 +50,7 @@ public class Navigation_DrawerActivity extends AppCompatActivity {
 
   @Override
   public boolean onSupportNavigateUp() {
-    NavController navController = Navigation.findNavController(this, R.id.nav_home);
+    NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
     return NavigationUI.navigateUp(navController, mAppBarConfiguration)
         || super.onSupportNavigateUp();
   }

@@ -12,14 +12,9 @@
     android:supportsRtl="true"
     android:theme="@style/AppTheme"
     tools:ignore="AllowBackup">
+
     <activity
-      android:label="@string/title_activity_navigation__drawer"
-      android:name=".controller.Navigation_DrawerActivity"
-      android:theme="@style/AppTheme.NoActionBar">
-    </activity>
-    <activity
-      android:label="@string/title_activity_main"
-      android:name=".controller.MainActivity"
+      android:name=".controller.MainActivityDrawer"
       android:theme="@style/AppTheme.NoActionBar">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
@@ -27,6 +22,13 @@
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
+
+<!--    <activity-->
+<!--      android:label="@string/title_activity_main"-->
+<!--      android:name=".controller.MainActivity"-->
+<!--      android:theme="@style/AppTheme.NoActionBar">-->
+
+<!--    </activity>-->
   </application>
 
 </manifest>
