@@ -25,4 +25,5 @@
   <string name="menu_notes">Notes</string>
   <string name="plants_header">Plant Information and Selection</string>
   <string name="notes_header">Keep notes of mentionable events</string>
+  <string name="add_note">Add Note</string>
 </resources>
