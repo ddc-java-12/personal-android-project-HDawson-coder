@@ -26,4 +26,7 @@
   <string name="plants_header">Plant Information and Selection</string>
   <string name="notes_header">Keep notes of mentionable events</string>
   <string name="add_note">Add Note</string>
+  <string name="weather_related_incidents">Weather related incidents</string>
+  <string name="other_notes">Other notes</string>
+  <string name="pest_related_incidents">Pest Related Incidents</string>
 </resources>

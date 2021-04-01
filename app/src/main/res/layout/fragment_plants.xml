@@ -8,7 +8,7 @@
   tools:context=".controller.PlantFragment">
 
   <TextView
-    android:id="@+id/header"
+    android:id="@+id/plants_header"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="@string/plants_header"
@@ -30,12 +30,8 @@
   <com.google.android.material.floatingactionbutton.FloatingActionButton
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="New Plant"
     app:useCompatPadding="true"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"/>
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

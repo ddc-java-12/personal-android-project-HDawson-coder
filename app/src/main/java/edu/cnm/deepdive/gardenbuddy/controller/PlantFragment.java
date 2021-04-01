@@ -24,7 +24,7 @@ public class PlantFragment extends Fragment {
       ViewGroup container, Bundle savedInstanceState) {
     plantViewModel = ViewModelProviders.of(this).get(PlantViewModel.class);
     View root = inflater.inflate(R.layout.fragment_plants, container, false);
-    final TextView textView = root.findViewById(R.id.header);
+    final TextView textView = root.findViewById(R.id.plants_header);
     plantViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
 
 
