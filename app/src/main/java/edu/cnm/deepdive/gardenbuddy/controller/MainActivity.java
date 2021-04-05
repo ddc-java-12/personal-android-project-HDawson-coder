@@ -12,7 +12,7 @@ import edu.cnm.deepdive.gardenbuddy.model.entity.Plant;
 import edu.cnm.deepdive.gardenbuddy.viewmodel.MainViewModel;
 
 public class MainActivity extends AppCompatActivity {
-
+//
 //  private ActivityMainBinding binding;
 //  private MainActivityDrawer drawerActivity;
 //  private AppBarConfiguration appBarConfiguration;

@@ -7,11 +7,11 @@ order: 40
 
 ## Data Model Links
 
-[History Dao](https://github.com/ddc-java-12/personal-android-project-HDawson-coder/blob/main/app/src/main/java/edu/cnm/deepdive/gardenbuddy/model/entity/dao/HistoryDao.java)
+[History Dao](https://github.com/ddc-java-12/personal-android-project-HDawson-coder/blob/main/app/src/main/java/edu/cnm/deepdive/gardenbuddy/model/dao/HistoryDao.java)
 
-[Note Dao](https://github.com/ddc-java-12/personal-android-project-HDawson-coder/blob/main/app/src/main/java/edu/cnm/deepdive/gardenbuddy/model/entity/dao/NoteDao.java)
+[Note Dao](https://github.com/ddc-java-12/personal-android-project-HDawson-coder/blob/main/app/src/main/java/edu/cnm/deepdive/gardenbuddy/model/dao/NoteDao.java)
 
-[Plant Dao](https://github.com/ddc-java-12/personal-android-project-HDawson-coder/blob/main/app/src/main/java/edu/cnm/deepdive/gardenbuddy/model/entity/dao/PlantDao.java)
+[Plant Dao](https://github.com/ddc-java-12/personal-android-project-HDawson-coder/blob/main/app/src/main/java/edu/cnm/deepdive/gardenbuddy/model/dao/PlantDao.java)
 
 [History Entity](https://github.com/ddc-java-12/personal-android-project-HDawson-coder/blob/main/app/src/main/java/edu/cnm/deepdive/gardenbuddy/model/entity/History.java)
 
@@ -19,6 +19,6 @@ order: 40
 
 [Plant Entity](https://github.com/ddc-java-12/personal-android-project-HDawson-coder/blob/main/app/src/main/java/edu/cnm/deepdive/gardenbuddy/model/entity/Plant.java)
 
-[PlantWithHistories](https://github.com/ddc-java-12/personal-android-project-HDawson-coder/blob/main/app/src/main/java/edu/cnm/deepdive/gardenbuddy/model/entity/pojo/PlantWithHistories.java)
+[PlantWithHistories](https://github.com/ddc-java-12/personal-android-project-HDawson-coder/blob/main/app/src/main/java/edu/cnm/deepdive/gardenbuddy/model/pojo/PlantWithHistories.java)
 
-[PlantWithNotes](https://github.com/ddc-java-12/personal-android-project-HDawson-coder/blob/main/app/src/main/java/edu/cnm/deepdive/gardenbuddy/model/entity/pojo/PlantWithNotes.java)
+[PlantWithNotes](https://github.com/ddc-java-12/personal-android-project-HDawson-coder/blob/main/app/src/main/java/edu/cnm/deepdive/gardenbuddy/model/pojo/PlantWithNotes.java)
