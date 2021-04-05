@@ -21,7 +21,7 @@ public class GardenBuddyApplication extends Application {
     GardenBuddyDatabase.setContext(this);
     GardenBuddyDatabase.getInstance()
         .getPlantDao()
-        .insert(new Plant())
+        .delete()
         .subscribeOn(Schedulers.io())
         .subscribe();
   }

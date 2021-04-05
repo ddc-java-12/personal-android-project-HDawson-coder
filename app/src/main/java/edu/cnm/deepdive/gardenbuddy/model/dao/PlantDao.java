@@ -20,6 +20,12 @@ public interface PlantDao {
   @Insert
   Single<Long> insert(Plant plant);
 
+  @Insert
+  Single<List<Long>> insert(Collection<Plant> plants);
+
+  @Insert
+  Single<List<Long>> insert (Plant... plants);
+
   @Update
   Single<Integer> update(Plant plant);
 

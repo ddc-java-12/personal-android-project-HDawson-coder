@@ -1,5 +1,5 @@
 common_name, scientific_name, min_temp, max_temp, days_to_maturity, spacing_in_inches
-"Corn", "Zea mays", 60, 95, 60-100, 1.5
-"Cucumber", "Cucumis sativus", 60, 90, 55-65, 48-72
-"Tomato", "Lycopersicon esculentum", 65, 86, 40-60, 48
-"Chili", "", , ,65-90days, 18-24inches
+"Corn", "Zea Mays", 60, 95, 80, 4
+"Cucumber", "Cucumis Sativus", 60, 90, 60, 48
+"Tomato", "Lycopersicon Esculentum", 65, 86, 50, 48
+"Chili", "Capsicum Frutescens", 65, 85, 80, 18

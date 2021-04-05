@@ -13,6 +13,12 @@
     android:theme="@style/AppTheme"
     tools:ignore="AllowBackup">
 
+<!--    <activity android:name=".controller.LoginActivity">-->
+<!--      <intent-filter>-->
+
+<!--      </intent-filter>-->
+<!--    </activity>-->
+
     <activity
       android:name=".controller.MainActivityDrawer"
       android:theme="@style/AppTheme.NoActionBar">

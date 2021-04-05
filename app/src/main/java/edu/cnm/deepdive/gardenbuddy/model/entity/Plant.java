@@ -38,7 +38,6 @@ public class Plant {
   public void setId(long id) {
     this.id = id;
   }
-
   @NonNull
   public Date getTimestamp() {
     return timestamp;
@@ -48,11 +47,12 @@ public class Plant {
     this.timestamp = timestamp;
   }
 
+  @NonNull
   public String getCommonName() {
     return commonName;
   }
 
-  public void setCommonName(String commonName) {
+  public void setCommonName(@NonNull String commonName) {
     this.commonName = commonName;
   }
 
