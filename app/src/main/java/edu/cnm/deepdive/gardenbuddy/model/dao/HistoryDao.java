@@ -42,8 +42,8 @@ public interface HistoryDao {
   @Delete
   Single<Integer> delete(Collection<edu.cnm.deepdive.gardenbuddy.model.entity.History> history); // a collection of history's
 
-  @Transaction
-  @Query("SELECT * FROM History WHERE plant_id = :plantId")
-  LiveData<PlantWithHistories>selectByPlant(long plantId);
+//  @Transaction
+//  @Query("SELECT * FROM History WHERE plant_id = :plantId")
+//  LiveData<PlantWithHistories>selectByPlant(long plantId);
 
 }

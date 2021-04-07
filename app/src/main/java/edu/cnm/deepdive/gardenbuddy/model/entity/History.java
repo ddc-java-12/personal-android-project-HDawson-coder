@@ -29,14 +29,17 @@ public class History {
   @ColumnInfo(name = "plant_id", index = true)
   private long plantId;
 
+  @NonNull
   private Date yearPlanted;
 
   private int totalPlanted;
 
   private int totalFruitYielded;
 
+  @NonNull
   private Date dayPlanted;
 
+  @NonNull
   private Date dayFirstHarvest;
 
   public long getId() {
@@ -56,20 +59,21 @@ public class History {
     this.timestamp = timestamp;
   }
 
-  public Date getYearPlanted() {
-    return yearPlanted;
-  }
-
-  public void setYearPlanted(Date yearPlanted) {
-    this.yearPlanted = yearPlanted;
-  }
-
   public long getPlantId() {
     return plantId;
   }
 
   public void setPlantId(long plantId) {
     this.plantId = plantId;
+  }
+
+  @NonNull
+  public Date getYearPlanted() {
+    return yearPlanted;
+  }
+
+  public void setYearPlanted(@NonNull Date yearPlanted) {
+    this.yearPlanted = yearPlanted;
   }
 
   public int getTotalPlanted() {
@@ -88,19 +92,21 @@ public class History {
     this.totalFruitYielded = totalFruitYielded;
   }
 
+  @NonNull
   public Date getDayPlanted() {
     return dayPlanted;
   }
 
-  public void setDayPlanted(Date dayPlanted) {
+  public void setDayPlanted(@NonNull Date dayPlanted) {
     this.dayPlanted = dayPlanted;
   }
 
+  @NonNull
   public Date getDayFirstHarvest() {
     return dayFirstHarvest;
   }
 
-  public void setDayFirstHarvest(Date dayFirstHarvest) {
+  public void setDayFirstHarvest(@NonNull Date dayFirstHarvest) {
     this.dayFirstHarvest = dayFirstHarvest;
   }
 }

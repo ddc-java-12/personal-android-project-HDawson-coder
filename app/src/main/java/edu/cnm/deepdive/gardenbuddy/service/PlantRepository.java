@@ -48,6 +48,22 @@ public class PlantRepository {
         .subscribeOn(Schedulers.io());
   }
 
+  public Single<Note> saveNote(Note note) {
+    return (
+        (note.getId() > 0)
+            ? noteDao
+            .update(note)
+            .map((ignored) -> note)
+            : noteDao
+                .insert(note)
+                .map((id) -> {
+                  note.setId(id);
+                  return note;
+                })
+    )
+        .subscribeOn(Schedulers.io());
+  }
+
   public Single<PlantWithHistories> saveHistory(PlantWithHistories plant) {
     if (plant.getId() > 0) {
       //update
@@ -125,9 +141,9 @@ public class PlantRepository {
     return plantDao.selectAll();
   }
 
-  public LiveData<PlantWithHistories> get(long plantId) {
-    return plantDao.selectByHstId(plantId);
-  }
+//  public LiveData<PlantWithHistories> get(long plantId) {
+//    return plantDao.selectByHstId(plantId);
+//  }
 
   public Completable newPlant() {
     return Single.fromCallable(() -> {

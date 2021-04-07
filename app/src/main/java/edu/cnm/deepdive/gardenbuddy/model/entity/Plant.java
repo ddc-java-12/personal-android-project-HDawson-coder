@@ -18,17 +18,23 @@ public class Plant {
   @ColumnInfo(index = true)
   private Date timestamp = new Date();
 
+  @NonNull
   @ColumnInfo(index = true)
   private String commonName;
 
+  @NonNull
   private String scientificName;
 
+  @NonNull
   private Integer minTemp;
 
+  @NonNull
   private Integer maxTemp;
 
+  @NonNull
   private Integer daysToMaturity;
 
+  @NonNull
   private Integer spacingInInches;
 
   public long getId() {
@@ -38,6 +44,7 @@ public class Plant {
   public void setId(long id) {
     this.id = id;
   }
+
   @NonNull
   public Date getTimestamp() {
     return timestamp;
@@ -56,43 +63,48 @@ public class Plant {
     this.commonName = commonName;
   }
 
+  @NonNull
   public String getScientificName() {
     return scientificName;
   }
 
-  public void setScientificName(String scientificName) {
+  public void setScientificName(@NonNull String scientificName) {
     this.scientificName = scientificName;
   }
 
+  @NonNull
   public Integer getMinTemp() {
     return minTemp;
   }
 
-  public void setMinTemp(Integer minTemp) {
+  public void setMinTemp(@NonNull Integer minTemp) {
     this.minTemp = minTemp;
   }
 
+  @NonNull
   public Integer getMaxTemp() {
     return maxTemp;
   }
 
-  public void setMaxTemp(Integer maxTemp) {
+  public void setMaxTemp(@NonNull Integer maxTemp) {
     this.maxTemp = maxTemp;
   }
 
+  @NonNull
   public Integer getDaysToMaturity() {
     return daysToMaturity;
   }
 
-  public void setDaysToMaturity(Integer daysToMaturity) {
+  public void setDaysToMaturity(@NonNull Integer daysToMaturity) {
     this.daysToMaturity = daysToMaturity;
   }
 
+  @NonNull
   public Integer getSpacingInInches() {
     return spacingInInches;
   }
 
-  public void setSpacingInInches(Integer spacingInInches) {
+  public void setSpacingInInches(@NonNull Integer spacingInInches) {
     this.spacingInInches = spacingInInches;
   }
 

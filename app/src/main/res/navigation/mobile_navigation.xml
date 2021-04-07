@@ -6,6 +6,15 @@
   android:id="@+id/mobile_navigation"
   app:startDestination="@+id/nav_home">
 
+  <action
+    android:id="@+id/open_pest_note"
+    app:destination="@id/pest_note_fragment">
+
+    <argument
+      android:name="plant_id"
+      app:argType="long"/>
+  </action>
+
   <fragment
     android:id="@+id/nav_home"
     android:label="@string/menu_home"
@@ -23,4 +32,15 @@
     android:label="@string/menu_notes"
     android:name="edu.cnm.deepdive.gardenbuddy.controller.NotesFragment"
     tools:layout="@layout/fragment_notes"/>
+
+  <dialog
+    android:id="@+id/pest_note_fragment"
+    android:name="edu.cnm.deepdive.gardenbuddy.controller.PestNoteFragment"
+    android:label="fragment_pest_note"
+    tools:layout="@layout/fragment_pest_note">
+    <argument
+      android:name="plant_id"
+      app:argType="long"/>
+  </dialog>
+
 </navigation>

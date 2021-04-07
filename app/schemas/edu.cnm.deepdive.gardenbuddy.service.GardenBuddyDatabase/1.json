@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "e0041b51719c511a834e60b1e1a57acc",
+    "identityHash": "bce77e347516a2d1ef36159e98c86d88",
     "entities": [
       {
         "tableName": "History",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`history_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `timestamp` INTEGER NOT NULL, `plant_id` INTEGER NOT NULL, `yearPlanted` INTEGER, `totalPlanted` INTEGER NOT NULL, `totalFruitYielded` INTEGER NOT NULL, `dayPlanted` INTEGER, `dayFirstHarvest` INTEGER, FOREIGN KEY(`plant_id`) REFERENCES `Plant`(`plant_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`history_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `timestamp` INTEGER NOT NULL, `plant_id` INTEGER NOT NULL, `yearPlanted` INTEGER NOT NULL, `totalPlanted` INTEGER NOT NULL, `totalFruitYielded` INTEGER NOT NULL, `dayPlanted` INTEGER NOT NULL, `dayFirstHarvest` INTEGER NOT NULL, FOREIGN KEY(`plant_id`) REFERENCES `Plant`(`plant_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
         "fields": [
           {
             "fieldPath": "id",
@@ -30,7 +30,7 @@
             "fieldPath": "yearPlanted",
             "columnName": "yearPlanted",
             "affinity": "INTEGER",
-            "notNull": false
+            "notNull": true
           },
           {
             "fieldPath": "totalPlanted",
@@ -48,13 +48,13 @@
             "fieldPath": "dayPlanted",
             "columnName": "dayPlanted",
             "affinity": "INTEGER",
-            "notNull": false
+            "notNull": true
           },
           {
             "fieldPath": "dayFirstHarvest",
             "columnName": "dayFirstHarvest",
             "affinity": "INTEGER",
-            "notNull": false
+            "notNull": true
           }
         ],
         "primaryKey": {
@@ -97,7 +97,7 @@
       },
       {
         "tableName": "Plant",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`plant_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `timestamp` INTEGER NOT NULL, `commonName` TEXT, `scientificName` TEXT, `minTemp` INTEGER, `maxTemp` INTEGER, `daysToMaturity` INTEGER, `spacingInInches` INTEGER)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`plant_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `timestamp` INTEGER NOT NULL, `commonName` TEXT NOT NULL, `scientificName` TEXT NOT NULL, `minTemp` INTEGER NOT NULL, `maxTemp` INTEGER NOT NULL, `daysToMaturity` INTEGER NOT NULL, `spacingInInches` INTEGER NOT NULL)",
         "fields": [
           {
             "fieldPath": "id",
@@ -115,37 +115,37 @@
             "fieldPath": "commonName",
             "columnName": "commonName",
             "affinity": "TEXT",
-            "notNull": false
+            "notNull": true
           },
           {
             "fieldPath": "scientificName",
             "columnName": "scientificName",
             "affinity": "TEXT",
-            "notNull": false
+            "notNull": true
           },
           {
             "fieldPath": "minTemp",
             "columnName": "minTemp",
             "affinity": "INTEGER",
-            "notNull": false
+            "notNull": true
           },
           {
             "fieldPath": "maxTemp",
             "columnName": "maxTemp",
             "affinity": "INTEGER",
-            "notNull": false
+            "notNull": true
           },
           {
             "fieldPath": "daysToMaturity",
             "columnName": "daysToMaturity",
             "affinity": "INTEGER",
-            "notNull": false
+            "notNull": true
           },
           {
             "fieldPath": "spacingInInches",
             "columnName": "spacingInInches",
             "affinity": "INTEGER",
-            "notNull": false
+            "notNull": true
           }
         ],
         "primaryKey": {
@@ -259,7 +259,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'e0041b51719c511a834e60b1e1a57acc')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'bce77e347516a2d1ef36159e98c86d88')"
     ]
   }
 }

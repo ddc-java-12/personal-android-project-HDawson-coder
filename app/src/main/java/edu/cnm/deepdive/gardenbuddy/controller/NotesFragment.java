@@ -11,6 +11,9 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import edu.cnm.deepdive.gardenbuddy.MobileNavigationDirections.OpenPestNote;
 import edu.cnm.deepdive.gardenbuddy.R;
 import edu.cnm.deepdive.gardenbuddy.databinding.FragmentNotesBinding;
 import edu.cnm.deepdive.gardenbuddy.viewmodel.NotesViewModel;
@@ -25,7 +28,10 @@ public class NotesFragment extends Fragment {
       ViewGroup container, Bundle savedInstanceState) {
     binding = FragmentNotesBinding.inflate(inflater, container, false);
     //TODO Attach event handler to spinner. To get a different list of notes for plants.
-    //TODO Attach event handlers to floating action buttons.
+    binding.addPestNote.setOnClickListener((value) -> {
+      OpenPestNote action = PestNoteFragmentDirections.openPestNote(value.getId());
+      Navigation.findNavController(binding.getRoot()).navigate(action);
+    });
     return binding.getRoot();
   }
 

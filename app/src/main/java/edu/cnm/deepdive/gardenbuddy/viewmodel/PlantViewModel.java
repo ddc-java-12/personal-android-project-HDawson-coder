@@ -9,8 +9,7 @@ public class PlantViewModel extends ViewModel {
   private MutableLiveData<String> mText;
 
   public PlantViewModel() {
-    mText = new MutableLiveData<>();
-    mText.setValue("This is Plant fragment");
+
   }
 
   public LiveData<String> getText() {

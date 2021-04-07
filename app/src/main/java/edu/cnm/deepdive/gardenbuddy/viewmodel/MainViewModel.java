@@ -6,8 +6,11 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+import edu.cnm.deepdive.gardenbuddy.model.entity.Note;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Plant;
+import edu.cnm.deepdive.gardenbuddy.model.pojo.PlantWithNotes;
 import edu.cnm.deepdive.gardenbuddy.service.PlantRepository;
+import io.reactivex.disposables.CompositeDisposable;
 import java.util.List;
 import org.jetbrains.annotations.NotNull;
 
@@ -15,8 +18,10 @@ public class MainViewModel extends AndroidViewModel {
 
   private final PlantRepository repository;
 
+  private final MutableLiveData<Note> note;
   private final MutableLiveData<Plant> plant;
   private final MutableLiveData<Throwable> throwable;
+  private final CompositeDisposable pending;
 
 
   public MainViewModel( @NotNull Application application) {
@@ -24,11 +29,8 @@ public class MainViewModel extends AndroidViewModel {
     repository = new PlantRepository(application);
     plant = new MutableLiveData<>();
     throwable = new MutableLiveData<>();
-    loadPlant();
-  }
-
-  public PlantRepository getRepository() {
-    return repository;
+    pending = new CompositeDisposable();
+    note = new MutableLiveData<>();
   }
 
   public LiveData<Plant> getPlant() {
@@ -43,24 +45,24 @@ public class MainViewModel extends AndroidViewModel {
     return throwable;
   }
 
-  public void save(Plant plant) {
-    throwable.setValue(null);
-    repository
-        .save(plant)
+  public void saveNote(Note note) {
+    pending.add(
+        repository
+        .saveNote(note)
         .subscribe(
-            (p) -> {},
-            this::postThrowable
-        );
+            (n) -> {}, throwable::postValue
+        ));
   }
 
-  public void loadPlant() {
-    throwable.setValue(null);
-    repository.newPlant()
-        .subscribe(
-            () -> {},
-            this::postThrowable
-        );
-  }
+//  public void save(Plant plant) {
+//    throwable.setValue(null);
+//    repository
+//        .save(plant)
+//        .subscribe(
+//            (p) -> {},
+//            this::postThrowable
+//        );
+//  }
 
   private void postThrowable(Throwable throwable) {
     Log.e(getClass().getName(),throwable.getMessage(),throwable);
