@@ -15,7 +15,9 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import edu.cnm.deepdive.gardenbuddy.MobileNavigationDirections.OpenOtherNote;
 import edu.cnm.deepdive.gardenbuddy.MobileNavigationDirections.OpenPestNote;
+import edu.cnm.deepdive.gardenbuddy.MobileNavigationDirections.OpenWeatherNote;
 import edu.cnm.deepdive.gardenbuddy.R;
 import edu.cnm.deepdive.gardenbuddy.databinding.FragmentNotesBinding;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Plant;
@@ -45,9 +47,16 @@ public class NotesFragment extends Fragment {
     binding.plantsSpinner.setAdapter(adapter);
     //TODO Attach event handler to spinner. To get a different list of notes for plants.
     });
-
     binding.addPestNote.setOnClickListener((value) -> {
       OpenPestNote action = PestNoteFragmentDirections.openPestNote(value.getId());
+      Navigation.findNavController(binding.getRoot()).navigate(action);
+    });
+    binding.addWeatherNote.setOnClickListener((value) -> {
+      OpenWeatherNote action = WeatherNoteFragmentDirections.openWeatherNote(value.getId());
+      Navigation.findNavController(binding.getRoot()).navigate(action);
+    });
+    binding.addOtherNote.setOnClickListener((value) -> {
+      OpenOtherNote action = OtherNoteFragmentDirections.openOtherNote(value.getId());
       Navigation.findNavController(binding.getRoot()).navigate(action);
     });
     return binding.getRoot();

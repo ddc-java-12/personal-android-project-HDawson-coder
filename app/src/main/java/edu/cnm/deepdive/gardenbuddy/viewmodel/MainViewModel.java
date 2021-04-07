@@ -57,16 +57,6 @@ public class MainViewModel extends AndroidViewModel {
             ));
   }
 
-//  public void save(Plant plant) {
-//    throwable.setValue(null);
-//    repository
-//        .save(plant)
-//        .subscribe(
-//            (p) -> {},
-//            this::postThrowable
-//        );
-//  }
-
   private void postThrowable(Throwable throwable) {
     Log.e(getClass().getName(), throwable.getMessage(), throwable);
     this.throwable.postValue(throwable);

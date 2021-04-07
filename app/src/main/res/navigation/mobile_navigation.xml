@@ -15,6 +15,24 @@
       app:argType="long"/>
   </action>
 
+  <action
+    android:id="@+id/open_weather_note"
+    app:destination="@id/weather_note_fragment">
+
+    <argument
+      android:name="plant_id"
+      app:argType="long"/>
+  </action>
+
+  <action
+    android:id="@+id/open_other_note"
+    app:destination="@id/other_note_fragment">
+
+    <argument
+      android:name="plant_id"
+      app:argType="long"/>
+  </action>
+
   <fragment
     android:id="@+id/nav_home"
     android:label="@string/menu_home"
@@ -41,6 +59,28 @@
     <argument
       android:name="plant_id"
       app:argType="long"/>
+  </dialog>
+
+  <dialog
+    android:id="@+id/weather_note_fragment"
+    android:name="edu.cnm.deepdive.gardenbuddy.controller.WeatherNoteFragment"
+    android:label="fragment_weather_note"
+    tools:layout="@layout/fragment_weather_note">
+    <argument
+      android:name="plant_id"
+      app:argType="long"/>
+
+  </dialog>
+
+  <dialog
+    android:id="@+id/other_note_fragment"
+    android:name="edu.cnm.deepdive.gardenbuddy.controller.OtherNoteFragment"
+    android:label="fragment_other_note"
+    tools:layout="@layout/fragment_other_note">
+    <argument
+      android:name="plant_id"
+      app:argType="long"/>
+
   </dialog>
 
 </navigation>
