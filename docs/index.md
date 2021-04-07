@@ -4,9 +4,23 @@ description: Project Summary and intended users
 menu: Overview
 order: 0
 ---
-## Summary
+## Project Introduction and Summary
 
-Garden Buddy will provide services to help gardeners better track their plants and know when the prime times are to plant them. This app will also suggest the best places to plant the starters based on the number of rows the user chooses.
+* Summary
+
+> Garden Buddy will provide services to help gardeners keep notes of eventful observations and keep a list of current planted plants.
+  
+* Why I chose this application
+
+>I chose this project because my mother is a gardener, and she told me she wishes there were more tools out there to help people who are gardening. 
+I feel this app will be helpful as a way to track notable incidents to help gardeners prepare for future incidents that could be prevented by proactively taking steps to 
+  prevent another similar incident from happening.
+  
+* Key Functional Elements
+
+> The app will allow a user to hold a list of plants and assign notes to the individual types of plants. Such as 
+> assigning notes to cucumbers so a user can keep track of when the squash bugs came and destroyed the cucumbers and 
+> better prepare themselves for the following year. 
 
 ## Intended users
 

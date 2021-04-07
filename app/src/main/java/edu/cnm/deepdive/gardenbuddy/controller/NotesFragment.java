@@ -9,21 +9,26 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
 import edu.cnm.deepdive.gardenbuddy.MobileNavigationDirections.OpenOtherNote;
 import edu.cnm.deepdive.gardenbuddy.MobileNavigationDirections.OpenPestNote;
 import edu.cnm.deepdive.gardenbuddy.MobileNavigationDirections.OpenWeatherNote;
 import edu.cnm.deepdive.gardenbuddy.R;
 import edu.cnm.deepdive.gardenbuddy.databinding.FragmentNotesBinding;
+import edu.cnm.deepdive.gardenbuddy.model.entity.Note.Category;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Plant;
 import edu.cnm.deepdive.gardenbuddy.viewmodel.MainViewModel;
 import edu.cnm.deepdive.gardenbuddy.viewmodel.NotesViewModel;
 import java.util.List;
+import java.util.Observable;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -65,8 +70,17 @@ public class NotesFragment extends Fragment {
   @Override
   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
-    notesViewModel = new ViewModelProvider(this).get(NotesViewModel.class);
+    notesViewModel = new ViewModelProvider(getActivity()).get(NotesViewModel.class);
     getLifecycle().addObserver(notesViewModel);
+    LifecycleOwner lifecycleOwner = getViewLifecycleOwner();
+    notesViewModel.getPlants().observe(lifecycleOwner,
+        (plants) -> binding.getRoot());
+    notesViewModel.getThrowable().observe(lifecycleOwner, (throwable) -> {
+      if (throwable != null) {
+        Snackbar.make(getContext(), binding.getRoot(), throwable.getMessage(),
+            BaseTransientBottomBar.LENGTH_INDEFINITE).show();
+      }
+    });
     //TODO observe data from viewmodel.
   }
 }

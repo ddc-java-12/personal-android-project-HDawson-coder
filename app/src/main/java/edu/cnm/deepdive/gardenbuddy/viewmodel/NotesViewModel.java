@@ -4,6 +4,7 @@ import android.app.Application;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LifecycleObserver;
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Plant;
 import edu.cnm.deepdive.gardenbuddy.service.PlantRepository;
@@ -13,10 +14,12 @@ public class NotesViewModel extends AndroidViewModel implements LifecycleObserve
 
   private final PlantRepository plantRepository;
   private final MutableLiveData<List<Plant>> plants;
+  private final MutableLiveData<Throwable> throwable;
 
   public NotesViewModel(@NonNull Application application) {
     super(application);
     plantRepository = new PlantRepository(application);
+    throwable = new MutableLiveData<>();
     plants = new MutableLiveData<>();
   }
 
@@ -26,5 +29,9 @@ public class NotesViewModel extends AndroidViewModel implements LifecycleObserve
 
   public MutableLiveData<List<Plant>> getPlants() {
     return plants;
+  }
+
+  public LiveData<Throwable> getThrowable() {
+    return throwable;
   }
 }
