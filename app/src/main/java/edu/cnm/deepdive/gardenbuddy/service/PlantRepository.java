@@ -2,6 +2,7 @@ package edu.cnm.deepdive.gardenbuddy.service;
 
 import android.content.Context;
 import androidx.lifecycle.LiveData;
+import androidx.room.Dao;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Note;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Note.Category;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Plant;
@@ -23,6 +24,7 @@ public class PlantRepository {
   private final PlantDao plantDao;
   private final NoteDao noteDao;
   private final HistoryDao historyDao;
+
 
   public PlantRepository(Context context) {
     this.context = context;
@@ -125,7 +127,6 @@ public class PlantRepository {
     }
   }
 
-
   public Completable delete(Plant plant) { //a plant is a plantWithHistory too
     return (
         (plant.getId() == 0)
@@ -137,7 +138,7 @@ public class PlantRepository {
         .subscribeOn(Schedulers.io());
   }
 
-  public LiveData<List<Plant>> getAll() {
+  public LiveData<List<Plant>> getPlants() {
     return plantDao.selectAll();
   }
 

@@ -4,10 +4,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
@@ -16,18 +18,30 @@ import androidx.navigation.Navigation;
 import edu.cnm.deepdive.gardenbuddy.MobileNavigationDirections.OpenPestNote;
 import edu.cnm.deepdive.gardenbuddy.R;
 import edu.cnm.deepdive.gardenbuddy.databinding.FragmentNotesBinding;
+import edu.cnm.deepdive.gardenbuddy.model.entity.Plant;
+import edu.cnm.deepdive.gardenbuddy.viewmodel.MainViewModel;
 import edu.cnm.deepdive.gardenbuddy.viewmodel.NotesViewModel;
+import java.util.List;
 import org.jetbrains.annotations.NotNull;
 
 public class NotesFragment extends Fragment {
 
   private NotesViewModel notesViewModel;
   private FragmentNotesBinding binding;
+  private List<Plant> plants;
 
   public View onCreateView(@NonNull LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {
     binding = FragmentNotesBinding.inflate(inflater, container, false);
+    MainViewModel mainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
+    mainViewModel.loadPlants().observe(getViewLifecycleOwner(), (plants) -> {
+      this.plants = plants;
+    ArrayAdapter<Plant> adapter = new ArrayAdapter<>(getContext(), R.layout.item_spinner, plants);
+    adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+    binding.plantsSpinner.setAdapter(adapter);
     //TODO Attach event handler to spinner. To get a different list of notes for plants.
+    });
+
     binding.addPestNote.setOnClickListener((value) -> {
       OpenPestNote action = PestNoteFragmentDirections.openPestNote(value.getId());
       Navigation.findNavController(binding.getRoot()).navigate(action);
