@@ -1,5 +1,6 @@
 package edu.cnm.deepdive.gardenbuddy.controller;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -14,6 +15,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import edu.cnm.deepdive.gardenbuddy.R;
+import edu.cnm.deepdive.gardenbuddy.service.GoogleSignInService;
 
 public class MainActivityDrawer extends AppCompatActivity {
 
@@ -25,9 +27,6 @@ public class MainActivityDrawer extends AppCompatActivity {
     setContentView(R.layout.activity_navigation_drawer);
     Toolbar toolbar = findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
-//    FloatingActionButton fab = findViewById(R.id.fab);
-//    fab.setOnClickListener(view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//        .setAction("Action", null).show());
     DrawerLayout drawer = findViewById(R.id.drawer_layout);
     NavigationView navigationView = findViewById(R.id.nav_view);
     // Passing each menu ID as a set of Ids because each
@@ -53,5 +52,15 @@ public class MainActivityDrawer extends AppCompatActivity {
     NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
     return NavigationUI.navigateUp(navController, mAppBarConfiguration)
         || super.onSupportNavigateUp();
+  }
+
+  private void signOut() {
+    GoogleSignInService
+        .getInstance() // getting the instance of google sign in services
+        .signOut() // signing out
+        .addOnCompleteListener((ignored) ->  //waits for button to be pushed basically
+            startActivity( //once button is pushed this happens
+                new Intent(this, LoginActivity.class)
+                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK)));
   }
 }

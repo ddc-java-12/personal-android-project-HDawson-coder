@@ -4,6 +4,7 @@ import android.app.Application;
 import com.facebook.stetho.Stetho;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Plant;
 import edu.cnm.deepdive.gardenbuddy.service.GardenBuddyDatabase;
+import edu.cnm.deepdive.gardenbuddy.service.GoogleSignInService;
 import io.reactivex.schedulers.Schedulers;
 
 /**
@@ -16,7 +17,7 @@ public class GardenBuddyApplication extends Application {
   @Override
   public void onCreate() {
     super.onCreate();
-//    GoogleSignInService.setContext(this);
+    GoogleSignInService.setContext(this);
     Stetho.initializeWithDefaults(this);
     GardenBuddyDatabase.setContext(this);
     GardenBuddyDatabase.getInstance()

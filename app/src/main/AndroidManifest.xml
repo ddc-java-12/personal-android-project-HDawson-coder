@@ -13,15 +13,8 @@
     android:theme="@style/AppTheme"
     tools:ignore="AllowBackup">
 
-<!--    <activity android:name=".controller.LoginActivity">-->
-<!--      <intent-filter>-->
-
-<!--      </intent-filter>-->
-<!--    </activity>-->
-
     <activity
-      android:name=".controller.MainActivityDrawer"
-      android:theme="@style/AppTheme.NoActionBar">
+      android:name=".controller.LoginActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
 
@@ -30,11 +23,16 @@
     </activity>
 
     <activity
-      android:label="@string/title_activity_main"
-      android:name=".controller.MainActivity"
+      android:name=".controller.MainActivityDrawer"
       android:theme="@style/AppTheme.NoActionBar">
-
     </activity>
+
+<!--    <activity-->
+<!--      android:label="@string/title_activity_main"-->
+<!--      android:name=".controller.MainActivity"-->
+<!--      android:theme="@style/AppTheme.NoActionBar">-->
+
+<!--    </activity>-->
   </application>
 
 </manifest>

@@ -33,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
               binding = ActivityLoginBinding.inflate(getLayoutInflater());
               binding.signIn.setOnClickListener((v) ->
                   service.startSignIn(this, LOGIN_REQUEST_CODE));
+              setContentView(binding.getRoot());
             }
         );
   }
@@ -52,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
 
   private void updateAndSwitch(GoogleSignInAccount account) {
     startActivity(
-        new Intent(this, MainActivity.class)
+        new Intent(this, MainActivityDrawer.class)
         .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK)
     );
   }

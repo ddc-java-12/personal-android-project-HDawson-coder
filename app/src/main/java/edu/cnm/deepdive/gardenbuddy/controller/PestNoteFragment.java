@@ -5,23 +5,24 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import androidx.lifecycle.ViewModelProvider;
-import edu.cnm.deepdive.gardenbuddy.R;
 import edu.cnm.deepdive.gardenbuddy.databinding.FragmentPestNoteBinding;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Note;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Note.Category;
 import edu.cnm.deepdive.gardenbuddy.viewmodel.MainViewModel;
 import edu.cnm.deepdive.gardenbuddy.viewmodel.NotesViewModel;
-import org.jetbrains.annotations.NotNull;
+
+/**
+ * This is for notes associated to pest incidents. This will show on the Note page in UI.
+ */
 
 public class PestNoteFragment extends DialogFragment implements TextWatcher {
 

@@ -24,6 +24,10 @@ import edu.cnm.deepdive.gardenbuddy.viewmodel.NotesViewModel;
 import java.util.List;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * This is the notes fragment which will show all categories of notes.
+ */
+
 public class NotesFragment extends Fragment {
 
   private NotesViewModel notesViewModel;
