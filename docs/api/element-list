@@ -1,0 +1,7 @@
+edu.cnm.deepdive.gardenbuddy
+edu.cnm.deepdive.gardenbuddy.controller
+edu.cnm.deepdive.gardenbuddy.model.dao
+edu.cnm.deepdive.gardenbuddy.model.entity
+edu.cnm.deepdive.gardenbuddy.model.pojo
+edu.cnm.deepdive.gardenbuddy.service
+edu.cnm.deepdive.gardenbuddy.viewmodel

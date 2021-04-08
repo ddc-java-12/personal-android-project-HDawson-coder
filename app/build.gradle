@@ -126,3 +126,54 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
 }
+
+task generateApiDoc() {
+    group "reporting"
+    description "Generates all Javadoc."
+}
+
+android.applicationVariants.all { variant ->
+    def task = project.tasks.create("generate${variant.name.capitalize()}Javadoc", Javadoc) {
+        title "Roulette (${project.android.defaultConfig.versionName})"
+        group "ApiDoc"
+        description "Generates Javadoc for $variant.name."
+
+        source = variant.sourceSets.collect { it.java.sourceFiles }.inject { m, i -> m + i }
+
+        doFirst {
+            classpath = project.files(
+                    project.file(projectDir).toPath().resolve(
+                            "build/intermediates/javac/${variant.name}/classes"),
+
+                    variant.javaCompileProvider.get().classpath.files,
+                    project.android.getBootClasspath(),
+            )
+        }
+
+        if (JavaVersion.current().isJava8Compatible()) {
+            options.addStringOption('Xdoclint:none', '-quiet')
+        }
+
+        exclude '**/R'
+        exclude '**/R.**'
+        exclude '**/R\$**'
+        exclude '**/BuildConfig*'
+
+        destinationDir = file("$projectDir/../docs/api")
+
+        options {
+            windowTitle = "Garden Buddy (${project.android.defaultConfig.versionName})"
+            memberLevel = JavadocMemberLevel.PROTECTED
+            linkSource = false
+            author = false
+            links 'https://docs.oracle.com/javase/8/docs/api/'
+            linksOffline 'https://developer.android.com/reference', "$projectDir/.."
+        }
+
+        failOnError true
+    }
+
+    task.dependsOn "assemble${variant.name.capitalize()}"
+    generateApiDoc.dependsOn task
+
+}
