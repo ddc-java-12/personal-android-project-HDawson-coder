@@ -6,6 +6,9 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Transformations;
+import edu.cnm.deepdive.gardenbuddy.model.entity.Note;
+import edu.cnm.deepdive.gardenbuddy.model.entity.Note.Category;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Plant;
 import edu.cnm.deepdive.gardenbuddy.service.PlantRepository;
 import java.util.List;
@@ -13,22 +16,40 @@ import java.util.List;
 public class NotesViewModel extends AndroidViewModel implements LifecycleObserver {
 
   private final PlantRepository plantRepository;
-  private final MutableLiveData<List<Plant>> plants;
   private final MutableLiveData<Throwable> throwable;
+  private final MutableLiveData<Long> plantId;
+  private final LiveData<List<Note>> pestNotes;
+  private final LiveData<List<Note>> weatherNotes;
+  private final LiveData<List<Note>> otherNotes;
 
   public NotesViewModel(@NonNull Application application) {
     super(application);
     plantRepository = new PlantRepository(application);
     throwable = new MutableLiveData<>();
-    plants = new MutableLiveData<>();
+    plantId = new MutableLiveData<>();
+    pestNotes = Transformations.switchMap(plantId, (id) -> plantRepository.getNotesByCategory(id, Category.PEST));
+    weatherNotes = Transformations.switchMap(plantId, (id) -> plantRepository.getNotesByCategory(id, Category.WEATHER));
+    otherNotes = Transformations.switchMap(plantId, (id) -> plantRepository.getNotesByCategory(id, Category.OTHER));
   }
 
-  public PlantRepository getPlantRepository() {
-    return plantRepository;
+  public LiveData<List<Plant>> getPlants() {
+    return plantRepository.getPlants();
   }
 
-  public MutableLiveData<List<Plant>> getPlants() {
-    return plants;
+  public void setPlantId(long id) {
+    plantId.setValue(id);
+  }
+
+  public LiveData<List<Note>> getPestNotes() {
+    return pestNotes;
+  }
+
+  public LiveData<List<Note>> getWeatherNotes() {
+    return weatherNotes;
+  }
+
+  public LiveData<List<Note>> getOtherNotes() {
+    return otherNotes;
   }
 
   public LiveData<Throwable> getThrowable() {

@@ -12,6 +12,12 @@ import io.reactivex.Single;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * HistoryDao is not yet implemented into the features in the app.
+ * The HistoryDao will eventually be used as another way to track the plants in the garden.
+ * There can be many History's attached to one Plant.
+ */
+
 @Dao // One Dao per entity
 public interface HistoryDao {
 

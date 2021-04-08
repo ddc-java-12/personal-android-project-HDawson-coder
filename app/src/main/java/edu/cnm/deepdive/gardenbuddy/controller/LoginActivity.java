@@ -19,6 +19,10 @@ public class LoginActivity extends AppCompatActivity {
   private GoogleSignInService service;
   private ActivityLoginBinding binding;
 
+  /**
+   * Provides the Google sign activity to be created upon app launch.
+   * @param savedInstanceState
+   */
   @SuppressLint("CheckResult")
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +42,12 @@ public class LoginActivity extends AppCompatActivity {
         );
   }
 
+  /**
+   *
+   * @param requestCode provides a requestCode for Google to recognize the user device signing in.
+   * @param resultCode provides the resultCode for Google to recognize the user device signing in.
+   * @param data provides the data needed for Google to recognize the user device signing in.
+   */
   @Override
   protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
     if (requestCode == LOGIN_REQUEST_CODE) {
@@ -51,6 +61,10 @@ public class LoginActivity extends AppCompatActivity {
     }
   }
 
+  /**
+   *
+   * @param account gathers the account information and if correct will sign the user in.
+   */
   private void updateAndSwitch(GoogleSignInAccount account) {
     startActivity(
         new Intent(this, MainActivityDrawer.class)

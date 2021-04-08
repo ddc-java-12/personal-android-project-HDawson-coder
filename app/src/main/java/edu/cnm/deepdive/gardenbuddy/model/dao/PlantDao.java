@@ -14,6 +14,11 @@ import io.reactivex.Single;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * PlantDao will track all Plants added in to the database.
+ * There can be One Plant attached to many Notes.
+ */
+
 @Dao // One Dao per entity
 public interface PlantDao {
 

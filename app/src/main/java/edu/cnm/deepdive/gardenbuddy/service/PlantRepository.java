@@ -37,15 +37,15 @@ public class PlantRepository {
   public Single<Plant> save(Plant plant) {
     return (
         (plant.getId() > 0)
-        ? plantDao
+            ? plantDao
             .update(plant)
             .map((ignored) -> plant)
-        : plantDao
-            .insert(plant)
-            .map((id) -> {
-              plant.setId(id);
-              return plant;
-            })
+            : plantDao
+                .insert(plant)
+                .map((id) -> {
+                  plant.setId(id);
+                  return plant;
+                })
     )
         .subscribeOn(Schedulers.io());
   }
@@ -157,7 +157,7 @@ public class PlantRepository {
         .subscribeOn(Schedulers.io());
   }
 
-  public LiveData<List<Note>> getNotesByCategory(Plant plant, Category category) {
-    return noteDao.selectByPlantAndCategory(plant.getId(), category);
+  public LiveData<List<Note>> getNotesByCategory(long plantId, Category category) {
+    return noteDao.selectByPlantAndCategory(plantId, category);
   }
 }

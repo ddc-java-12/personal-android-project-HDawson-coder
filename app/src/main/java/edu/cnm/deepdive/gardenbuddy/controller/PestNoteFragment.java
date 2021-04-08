@@ -30,11 +30,15 @@ public class PestNoteFragment extends DialogFragment implements TextWatcher {
   private FragmentPestNoteBinding binding;
   private AlertDialog alertDialog;
   private MainViewModel mainViewModel;
-  private Long noteId;
+  private long plantId;
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+    if (getArguments() != null ) {
+      PestNoteFragmentArgs args = PestNoteFragmentArgs.fromBundle(getArguments());
+      plantId = args.getPlantId();
+    }
   }
 
   @NonNull
@@ -64,10 +68,6 @@ public class PestNoteFragment extends DialogFragment implements TextWatcher {
   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
     mainViewModel = new ViewModelProvider(getActivity()).get(MainViewModel.class);
-    if (getArguments() != null ) {
-      PestNoteFragmentArgs args = PestNoteFragmentArgs.fromBundle(getArguments());
-      noteId = Long.getLong(String.valueOf(args.getPlantId()));
-    }
   }
 
   @Override
@@ -94,7 +94,7 @@ public class PestNoteFragment extends DialogFragment implements TextWatcher {
     Note note = new Note();
     String pestNote = binding.pestNote.getText().toString().trim();
     note.setNote(pestNote);
-    note.setPlantId(noteId);
+    note.setPlantId(plantId);
     note.setCategory(Category.PEST);
     mainViewModel.saveNote(note);
   }

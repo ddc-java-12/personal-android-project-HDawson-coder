@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -41,40 +43,68 @@ public class NotesFragment extends Fragment {
   private FragmentNotesBinding binding;
   private List<Plant> plants;
 
+  /**
+   *
+   * @param inflater provides the layout fragment for Notes Fragment and and inflates to display with UI
+   * @param container provides the container for the ViewGroup of NotesFragment to display.
+   * @param savedInstanceState provides the information from the database and utilizes where needed.
+   * @return provides the viewModel roots to display.
+   */
+
   public View onCreateView(@NonNull LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {
     binding = FragmentNotesBinding.inflate(inflater, container, false);
-    MainViewModel mainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
-    mainViewModel.loadPlants().observe(getViewLifecycleOwner(), (plants) -> {
-      this.plants = plants;
-    ArrayAdapter<Plant> adapter = new ArrayAdapter<>(getContext(), R.layout.item_spinner, plants);
-    adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
-    binding.plantsSpinner.setAdapter(adapter);
-    //TODO Attach event handler to spinner. To get a different list of notes for plants.
-    });
     binding.addPestNote.setOnClickListener((value) -> {
-      OpenPestNote action = PestNoteFragmentDirections.openPestNote(value.getId());
+      long plantId = ((Plant) binding.plantsSpinner.getSelectedItem()).getId();
+      OpenPestNote action = PestNoteFragmentDirections.openPestNote(plantId);
       Navigation.findNavController(binding.getRoot()).navigate(action);
     });
     binding.addWeatherNote.setOnClickListener((value) -> {
-      OpenWeatherNote action = WeatherNoteFragmentDirections.openWeatherNote(value.getId());
+      long plantId = ((Plant) binding.plantsSpinner.getSelectedItem()).getId();
+      OpenWeatherNote action = WeatherNoteFragmentDirections.openWeatherNote(plantId);
       Navigation.findNavController(binding.getRoot()).navigate(action);
     });
     binding.addOtherNote.setOnClickListener((value) -> {
-      OpenOtherNote action = OtherNoteFragmentDirections.openOtherNote(value.getId());
+      long plantId = ((Plant) binding.plantsSpinner.getSelectedItem()).getId();
+      OpenOtherNote action = OtherNoteFragmentDirections.openOtherNote(plantId);
       Navigation.findNavController(binding.getRoot()).navigate(action);
+    });
+    binding.plantsSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
+      @Override
+      public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        Plant plant = (Plant) parent.getItemAtPosition(position);
+        notesViewModel.setPlantId(plant.getId());
+      }
+
+      @Override
+      public void onNothingSelected(AdapterView<?> parent) {
+      }
     });
     return binding.getRoot();
   }
 
+  /**
+   *
+   * @param view Gathers the information from the ViewModel to display as it changes during application use.
+   * @param savedInstanceState
+   */
   @Override
   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
     notesViewModel = new ViewModelProvider(getActivity()).get(NotesViewModel.class);
     getLifecycle().addObserver(notesViewModel);
     LifecycleOwner lifecycleOwner = getViewLifecycleOwner();
-    notesViewModel.getPlants().observe(lifecycleOwner,
-        (plants) -> binding.getRoot());
+    notesViewModel.getPlants().observe(lifecycleOwner, (plants) -> {
+      this.plants = plants;
+      ArrayAdapter<Plant> adapter = new ArrayAdapter<>(getContext(), R.layout.item_spinner, plants);
+      adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+      binding.plantsSpinner.setAdapter(adapter);
+
+    });
+    notesViewModel.getPestNotes().observe(lifecycleOwner, (notes) -> {
+      // TODO Create an instance of a recycler view adapter with the notes received from 104.
+//      binding.pestNotes.setAdapter(/* This has to be the adapter created in previous line */);
+    });
     notesViewModel.getThrowable().observe(lifecycleOwner, (throwable) -> {
       if (throwable != null) {
         Snackbar.make(getContext(), binding.getRoot(), throwable.getMessage(),
