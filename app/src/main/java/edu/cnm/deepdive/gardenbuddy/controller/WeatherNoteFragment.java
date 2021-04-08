@@ -91,6 +91,6 @@ public class WeatherNoteFragment extends DialogFragment implements TextWatcher {
     note.setNote(weatherNote);
     note.setPlantId(noteId);
     note.setCategory(Category.WEATHER);
-    mainViewModel.saveNote(note);
+    notesViewModel.saveNote(note);
   }
 }

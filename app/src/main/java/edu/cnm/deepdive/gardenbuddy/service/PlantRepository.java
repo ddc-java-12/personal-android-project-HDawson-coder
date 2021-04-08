@@ -142,21 +142,6 @@ public class PlantRepository {
     return plantDao.selectAll();
   }
 
-//  public LiveData<PlantWithHistories> get(long plantId) {
-//    return plantDao.selectByHstId(plantId);
-//  }
-
-  public Completable newPlant() {
-    return Single.fromCallable(() -> {
-      Plant plant = new Plant();
-      plant.setCommonName("Corn");
-      plant.setMaxTemp(50);
-      plant.setMinTemp(40);
-      return plant;
-    }).subscribeOn(Schedulers.computation()).flatMap(plantDao::insert).ignoreElement()
-        .subscribeOn(Schedulers.io());
-  }
-
   public LiveData<List<Note>> getNotesByCategory(long plantId, Category category) {
     return noteDao.selectByPlantAndCategory(plantId, category);
   }

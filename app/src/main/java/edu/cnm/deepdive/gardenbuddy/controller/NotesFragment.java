@@ -37,10 +37,12 @@ public class NotesFragment extends Fragment {
   private PestAdapter pestAdapter;
 
   /**
-   *
-   * @param inflater provides the layout fragment for Notes Fragment and and inflates to display with UI
-   * @param container provides the container for the ViewGroup of NotesFragment to display.
-   * @param savedInstanceState provides the information from the database and utilizes where needed.
+   * @param inflater           provides the layout fragment for Notes Fragment and and inflates to
+   *                           display with UI
+   * @param container          provides the container for the ViewGroup of NotesFragment to
+   *                           display.
+   * @param savedInstanceState provides the information from the database and utilizes where
+   *                           needed.
    * @return provides the viewModel roots to display.
    */
 
@@ -77,8 +79,8 @@ public class NotesFragment extends Fragment {
   }
 
   /**
-   *
-   * @param view Gathers the information from the ViewModel to display as it changes during application use.
+   * @param view               Gathers the information from the ViewModel to display as it changes
+   *                           during application use.
    * @param savedInstanceState
    */
   @Override
@@ -87,15 +89,13 @@ public class NotesFragment extends Fragment {
     notesViewModel = new ViewModelProvider(getActivity()).get(NotesViewModel.class);
     getLifecycle().addObserver(notesViewModel);
     LifecycleOwner lifecycleOwner = getViewLifecycleOwner();
-    notesViewModel.getPlants().observe(lifecycleOwner, (plants) -> {
-      this.plants = plants;
-      ArrayAdapter<Plant> adapter = new ArrayAdapter<>(getContext(), R.layout.item_spinner, plants);
-      adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
-      binding.plantsSpinner.setAdapter(adapter);
-
-    });
     notesViewModel.getPestNotes().observe(lifecycleOwner, (notes) -> {
-      binding.pestNotes.setAdapter(new PestAdapter(getContext(), notes));
+      if (notes != null) {
+        binding
+            .pestNotes
+            .setAdapter(
+                new PestAdapter(getContext(), notes));
+      }
     });
     notesViewModel.getThrowable().observe(lifecycleOwner, (throwable) -> {
       if (throwable != null) {
@@ -103,6 +103,12 @@ public class NotesFragment extends Fragment {
             BaseTransientBottomBar.LENGTH_INDEFINITE).show();
       }
     });
-    //TODO observe data from viewmodel.
+    notesViewModel.getPlants().observe(lifecycleOwner, (plants) -> {
+      this.plants = plants;
+      ArrayAdapter<Plant> adapter = new ArrayAdapter<>(getContext(), R.layout.item_spinner, plants);
+      adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+      binding.plantsSpinner.setAdapter(adapter);
+    });
+
   }
 }

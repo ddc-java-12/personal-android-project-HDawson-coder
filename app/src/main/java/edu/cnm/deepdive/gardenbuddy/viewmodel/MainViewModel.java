@@ -14,21 +14,20 @@ import org.jetbrains.annotations.NotNull;
 
 public class MainViewModel extends AndroidViewModel {
 
-  private final PlantRepository repository;
+
 
   private final MutableLiveData<Note> note;
   private final MutableLiveData<Plant> plant;
   private final MutableLiveData<List<Plant>> plants;
   private final MutableLiveData<Throwable> throwable;
-  private final CompositeDisposable pending;
+
 
 
   public MainViewModel(@NotNull Application application) {
     super(application);
-    repository = new PlantRepository(application);
     plant = new MutableLiveData<>();
     throwable = new MutableLiveData<>();
-    pending = new CompositeDisposable();
+
     note = new MutableLiveData<>();
     plants = new MutableLiveData<>();
   }
@@ -42,18 +41,8 @@ public class MainViewModel extends AndroidViewModel {
   }
 
   public LiveData<List<Plant>> loadPlants() {
-    return repository.getPlants();
+    return null;
 
-  }
-
-  public void saveNote(Note note) {
-    pending.add(
-        repository
-            .saveNote(note)
-            .subscribe(
-                (n) -> {
-                }, throwable::postValue
-            ));
   }
 
   private void postThrowable(Throwable throwable) {

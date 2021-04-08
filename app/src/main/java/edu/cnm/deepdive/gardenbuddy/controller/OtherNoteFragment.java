@@ -124,6 +124,6 @@ public class OtherNoteFragment extends DialogFragment implements TextWatcher {
     note.setNote(otherNote);
     note.setPlantId(noteId);
     note.setCategory(Category.OTHER);
-    mainViewModel.saveNote(note);
+    notesViewModel.saveNote(note);
   }
 }

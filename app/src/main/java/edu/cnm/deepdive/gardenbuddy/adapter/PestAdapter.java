@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import edu.cnm.deepdive.gardenbuddy.adapter.PestAdapter.Holder;
 import edu.cnm.deepdive.gardenbuddy.databinding.ItemPestNoteBinding;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Note;
+import edu.cnm.deepdive.gardenbuddy.model.entity.Note.Category;
 import java.util.List;
 
 public class PestAdapter extends RecyclerView.Adapter<Holder> {
@@ -25,7 +26,6 @@ public class PestAdapter extends RecyclerView.Adapter<Holder> {
   public List<Note> getNotes() {
     return notes;
   }
-
 
   @NonNull
   @Override
@@ -57,9 +57,9 @@ public class PestAdapter extends RecyclerView.Adapter<Holder> {
     }
 
     private void Bind(Note note) {
-      String category = note.getCategory().toString();
+      Category category = note.getCategory();
       String pest = note.getNote();
-      pestBinding.category.setText(category);
+      pestBinding.category.setText(category.toString());
       pestBinding.note.setText(pest);
       pestBinding.getRoot();
     }

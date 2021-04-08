@@ -67,7 +67,7 @@ public class PestNoteFragment extends DialogFragment implements TextWatcher {
   @Override
   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
-    mainViewModel = new ViewModelProvider(getActivity()).get(MainViewModel.class);
+    notesViewModel = new ViewModelProvider(getActivity()).get(NotesViewModel.class);
   }
 
   @Override
@@ -96,6 +96,6 @@ public class PestNoteFragment extends DialogFragment implements TextWatcher {
     note.setNote(pestNote);
     note.setPlantId(plantId);
     note.setCategory(Category.PEST);
-    mainViewModel.saveNote(note);
+    notesViewModel.saveNote(note);
   }
 }
