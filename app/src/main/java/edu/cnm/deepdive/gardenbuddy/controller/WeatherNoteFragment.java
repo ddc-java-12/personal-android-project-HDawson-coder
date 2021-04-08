@@ -25,11 +25,15 @@ public class WeatherNoteFragment extends DialogFragment implements TextWatcher {
   private FragmentWeatherNoteBinding binding;
   private AlertDialog alertDialog;
   private MainViewModel mainViewModel;
-  private Long noteId;
+  private Long plantId;
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+    if (getArguments() != null ) {
+      PestNoteFragmentArgs args = PestNoteFragmentArgs.fromBundle(getArguments());
+      plantId = args.getPlantId();
+    }
   }
 
   @NonNull
@@ -58,11 +62,7 @@ public class WeatherNoteFragment extends DialogFragment implements TextWatcher {
   @Override
   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
-    mainViewModel = new ViewModelProvider(getActivity()).get(MainViewModel.class);
-    if (getArguments() != null ) {
-      WeatherNoteFragmentArgs args = WeatherNoteFragmentArgs.fromBundle(getArguments());
-      noteId = Long.getLong(String.valueOf(args.getPlantId()));
-    }
+    notesViewModel = new ViewModelProvider(getActivity()).get(NotesViewModel.class);
   }
 
   @Override
@@ -89,7 +89,7 @@ public class WeatherNoteFragment extends DialogFragment implements TextWatcher {
     Note note = new Note();
     String weatherNote = binding.weatherNote.getText().toString().trim();
     note.setNote(weatherNote);
-    note.setPlantId(noteId);
+    note.setPlantId(plantId);
     note.setCategory(Category.WEATHER);
     notesViewModel.saveNote(note);
   }

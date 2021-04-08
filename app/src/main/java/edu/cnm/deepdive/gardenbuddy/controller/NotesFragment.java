@@ -19,7 +19,9 @@ import edu.cnm.deepdive.gardenbuddy.MobileNavigationDirections.OpenOtherNote;
 import edu.cnm.deepdive.gardenbuddy.MobileNavigationDirections.OpenPestNote;
 import edu.cnm.deepdive.gardenbuddy.MobileNavigationDirections.OpenWeatherNote;
 import edu.cnm.deepdive.gardenbuddy.R;
+import edu.cnm.deepdive.gardenbuddy.adapter.OtherAdapter;
 import edu.cnm.deepdive.gardenbuddy.adapter.PestAdapter;
+import edu.cnm.deepdive.gardenbuddy.adapter.WeatherAdapter;
 import edu.cnm.deepdive.gardenbuddy.databinding.FragmentNotesBinding;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Plant;
 import edu.cnm.deepdive.gardenbuddy.viewmodel.NotesViewModel;
@@ -89,6 +91,12 @@ public class NotesFragment extends Fragment {
     notesViewModel = new ViewModelProvider(getActivity()).get(NotesViewModel.class);
     getLifecycle().addObserver(notesViewModel);
     LifecycleOwner lifecycleOwner = getViewLifecycleOwner();
+    notesViewModel.getPlants().observe(lifecycleOwner, (plants) -> {
+      this.plants = plants;
+      ArrayAdapter<Plant> adapter = new ArrayAdapter<>(getContext(), R.layout.item_spinner, plants);
+      adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+      binding.plantsSpinner.setAdapter(adapter);
+    });
     notesViewModel.getPestNotes().observe(lifecycleOwner, (notes) -> {
       if (notes != null) {
         binding
@@ -97,18 +105,27 @@ public class NotesFragment extends Fragment {
                 new PestAdapter(getContext(), notes));
       }
     });
+    notesViewModel.getWeatherNotes().observe(lifecycleOwner, (notes) -> {
+      if (notes != null) {
+        binding
+            .weatherNotes
+            .setAdapter(
+                new WeatherAdapter(getContext(), notes));
+      }
+    });
+    notesViewModel.getOtherNotes().observe(lifecycleOwner, (notes) -> {
+      if (notes != null) {
+        binding
+            .otherNotes
+            .setAdapter(
+                new OtherAdapter(getContext(), notes));
+      }
+    });
     notesViewModel.getThrowable().observe(lifecycleOwner, (throwable) -> {
       if (throwable != null) {
         Snackbar.make(getContext(), binding.getRoot(), throwable.getMessage(),
             BaseTransientBottomBar.LENGTH_INDEFINITE).show();
       }
     });
-    notesViewModel.getPlants().observe(lifecycleOwner, (plants) -> {
-      this.plants = plants;
-      ArrayAdapter<Plant> adapter = new ArrayAdapter<>(getContext(), R.layout.item_spinner, plants);
-      adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
-      binding.plantsSpinner.setAdapter(adapter);
-    });
-
   }
 }

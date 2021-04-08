@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.lifecycle.ViewModelProvider;
 import edu.cnm.deepdive.gardenbuddy.R;
 import edu.cnm.deepdive.gardenbuddy.databinding.FragmentOtherNoteBinding;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Note;
@@ -28,7 +29,7 @@ public class OtherNoteFragment extends DialogFragment implements TextWatcher {
   private FragmentOtherNoteBinding binding;
   private AlertDialog alertDialog;
   private MainViewModel mainViewModel;
-  private Long noteId;
+  private Long plantId;
 
   /**
    *
@@ -37,6 +38,10 @@ public class OtherNoteFragment extends DialogFragment implements TextWatcher {
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+    if (getArguments() != null ) {
+      PestNoteFragmentArgs args = PestNoteFragmentArgs.fromBundle(getArguments());
+      plantId = args.getPlantId();
+    }
   }
 
   /**
@@ -72,6 +77,12 @@ public class OtherNoteFragment extends DialogFragment implements TextWatcher {
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
       Bundle savedInstanceState) {
     return binding.getRoot();
+  }
+
+  @Override
+  public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    super.onViewCreated(view, savedInstanceState);
+    notesViewModel = new ViewModelProvider(getActivity()).get(NotesViewModel.class);
   }
 
   /**
@@ -122,7 +133,7 @@ public class OtherNoteFragment extends DialogFragment implements TextWatcher {
     Note note = new Note();
     String otherNote = binding.otherNote.getText().toString().trim();
     note.setNote(otherNote);
-    note.setPlantId(noteId);
+    note.setPlantId(plantId);
     note.setCategory(Category.OTHER);
     notesViewModel.saveNote(note);
   }
