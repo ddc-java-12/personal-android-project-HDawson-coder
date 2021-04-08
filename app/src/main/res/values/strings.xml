@@ -35,4 +35,6 @@
   <string name="pest_note_hint">Pest Note Hint</string>
   <string name="weather_note_hint">Weather Note Hint</string>
   <string name="other_note_hint">Other Note Hint</string>
+  <string name="pest_category">Pest Category</string>
+  <string name="text_input">Text Input</string>
 </resources>

@@ -37,7 +37,6 @@ public class MainViewModel extends AndroidViewModel {
     return plant;
   }
 
-
   public LiveData<Throwable> getThrowable() {
     return throwable;
   }

@@ -7,16 +7,11 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.LifecycleOwner;
-import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
@@ -24,14 +19,11 @@ import edu.cnm.deepdive.gardenbuddy.MobileNavigationDirections.OpenOtherNote;
 import edu.cnm.deepdive.gardenbuddy.MobileNavigationDirections.OpenPestNote;
 import edu.cnm.deepdive.gardenbuddy.MobileNavigationDirections.OpenWeatherNote;
 import edu.cnm.deepdive.gardenbuddy.R;
+import edu.cnm.deepdive.gardenbuddy.adapter.PestAdapter;
 import edu.cnm.deepdive.gardenbuddy.databinding.FragmentNotesBinding;
-import edu.cnm.deepdive.gardenbuddy.model.entity.Note.Category;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Plant;
-import edu.cnm.deepdive.gardenbuddy.viewmodel.MainViewModel;
 import edu.cnm.deepdive.gardenbuddy.viewmodel.NotesViewModel;
 import java.util.List;
-import java.util.Observable;
-import org.jetbrains.annotations.NotNull;
 
 /**
  * This is the notes fragment which will show all categories of notes.
@@ -42,6 +34,7 @@ public class NotesFragment extends Fragment {
   private NotesViewModel notesViewModel;
   private FragmentNotesBinding binding;
   private List<Plant> plants;
+  private PestAdapter pestAdapter;
 
   /**
    *
@@ -102,8 +95,7 @@ public class NotesFragment extends Fragment {
 
     });
     notesViewModel.getPestNotes().observe(lifecycleOwner, (notes) -> {
-      // TODO Create an instance of a recycler view adapter with the notes received from 104.
-//      binding.pestNotes.setAdapter(/* This has to be the adapter created in previous line */);
+      binding.pestNotes.setAdapter(new PestAdapter(getContext(), notes));
     });
     notesViewModel.getThrowable().observe(lifecycleOwner, (throwable) -> {
       if (throwable != null) {
