@@ -42,9 +42,9 @@ public class PlantRepository {
   }
 
   /**
-   * Saves a Single Plant in to the Database.
-   * @param plant
-   * @return
+   * Saves a Single Plant in to the Database if a new one is created.
+   * @param plant A parameter of the Plant class.
+   * @return Returns the saved plant.
    */
   public Single<Plant> save(Plant plant) {
     return (
@@ -62,6 +62,11 @@ public class PlantRepository {
         .subscribeOn(Schedulers.io());
   }
 
+  /**
+   * Saves a note to the database when a new Note is created.
+   * @param note A new note to becreated from the Note class.
+   * @return Returns the new note that is created by the user.
+   */
   public Single<Note> saveNote(Note note) {
     return (
         (note.getId() > 0)
@@ -78,6 +83,11 @@ public class PlantRepository {
         .subscribeOn(Schedulers.io());
   }
 
+  /**
+   * Saves the new History created to be assigned to the Plant it is to be paired with.
+   * @param plant The plant the history is assigned to in the Plant class.
+   * @return Returns the Plant and History connected.
+   */
   public Single<PlantWithHistories> saveHistory(PlantWithHistories plant) {
     if (plant.getId() > 0) {
       //update
@@ -109,6 +119,12 @@ public class PlantRepository {
     }
   }
 
+  /**
+   * If a Note is created it must be connected to a plant. This allows the Note to be created
+   * and assigned to the Plant.
+   * @param plant Assigns the plant instance with the PlantWithNotes POJO.
+   * @return Returns the Note with the Plant.
+   */
   public Single<PlantWithNotes> saveNote(PlantWithNotes plant) {
     if (plant.getId() > 0) {
       //update
@@ -139,6 +155,12 @@ public class PlantRepository {
     }
   }
 
+  /**
+   * Allows a plant to be deleted and deletes any child columns (such as history or notes) along
+   * with it.
+   * @param plant A plant object created from the Plant class.
+   * @return Completes the deletion of the object.
+   */
   public Completable delete(Plant plant) { //a plant is a plantWithHistory too
     return (
         (plant.getId() == 0)
@@ -150,10 +172,20 @@ public class PlantRepository {
         .subscribeOn(Schedulers.io());
   }
 
+  /**
+   * Gets all plants in the current live Database.
+   * @return
+   */
   public LiveData<List<Plant>> getPlants() {
     return plantDao.selectAll();
   }
 
+  /**
+   * Gets all notes in the current live database and returns them by category.
+   * @param plantId Each note must be connected to a plantId.
+   * @param category Each note must be connected to a category.
+   * @return Returns the notes selected by the plantId and the category.
+   */
   public LiveData<List<Note>> getNotesByCategory(long plantId, Category category) {
     return noteDao.selectByPlantAndCategory(plantId, category);
   }
