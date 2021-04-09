@@ -41,10 +41,16 @@ order: 0
 
 
 * Aesthetic/cosmetic Enhancements
-  * TBD
+  * Changes to the Notes page.
+    * Redesigning the look of the page to make it less cluttered and more appealing to the eye.
+    * Currently the Plant name to show which page the user is on shows in small basic font under the
+  top menu bar. I would like to move this in to the top menu bar just to the right of the "Notes" header to make it look better.
+  * Changing the font and look of the user input notes in the recycler view.
+  * Allowing users to put a title in with their notes.
   
 
 * Functional Stretch Goals
+  * Implementing a settings option to change how the notes show in the recycler view, such as ascending or descending by date.
   * Implementing the History database into the application. This would allow users to track specific instances such as fruits/vegetables yielded, amount of time to harvest, etc...
   * Implementing an API to get a much larger list of plants and information available for the user. With this implemented, a user would be able to select plants specific to what they would like to grow.  
   * Adding a garden layout design. This would allow the user to design a garden layout with their selected plants from the database, and map out where they want the plants to be in their own garden.
@@ -86,8 +92,6 @@ Notifications permissions through the device
 
 Weather services
 
-* https://www.climacell.co/data-catalog/
-* or
 * https://www.weather.gov/documentation/services-web-api  
 
 * The weather services will be used to alert users if there are weather conditions that will be harmful to the plants. Ie, too hot or too cold..
@@ -102,4 +106,4 @@ Weather services
 
 * The ability to take a picture of packages of seeds to auto input in to the app, instead of manually typing each plant name in.
 
-* Using a web service to host a larger database of plants and the relevant details.
+* Using a web service to host a larger database of plants and the relevant details.K
