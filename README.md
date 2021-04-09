@@ -1,7 +1,5 @@
-# Garden Buddy
+## Copyright & license information
 
-## Overview
+Copyright 2021 Hana Dawson
 
-## Copyright & License information
-
-Copyright
+Additional copyright & license notices can be read in [`NOTICE`](NOTICE) and [`docs/notice.md`](docs/notice.md).
