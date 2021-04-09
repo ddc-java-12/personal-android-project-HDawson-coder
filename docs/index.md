@@ -79,6 +79,7 @@ order: 0
 * Plant information. Different plants, yield, watering info, etc.
     
 ## Device/external services
+#### not yet implemented.
 
 Notifications permissions through the device
 
