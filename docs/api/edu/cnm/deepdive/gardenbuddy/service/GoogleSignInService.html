@@ -132,6 +132,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">GoogleSignInService</span>
 extends <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
+<div class="block">The GoogleSignInService class allows the application to connect to the Google Cloud
+ and recognize the google accounts being used to sign in. The Google Service gives a specific
+ ID to each user that logs in to the application.</div>
 </li>
 </ul>
 </div>
@@ -155,38 +158,53 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/com/google/android/gms/tasks/Task.html?is-external=true" title="class or interface in com.google.android.gms.tasks" class="externalLink">Task</a>&lt;<a href="https://developer.android.com/reference/com/google/android/gms/auth/api/signin/GoogleSignInAccount.html?is-external=true" title="class or interface in com.google.android.gms.auth.api.signin" class="externalLink">GoogleSignInAccount</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#completeSignIn(android.content.Intent)">completeSignIn</a></span>&#8203;(<a href="https://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content" class="externalLink">Intent</a>&nbsp;data)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Allows the user to sign in when the correct information is input (account and password).</div>
+</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>static <a href="GoogleSignInService.html" title="class in edu.cnm.deepdive.gardenbuddy.service">GoogleSignInService</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getInstance()">getInstance</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Gets the instance of the GoogleSignInService when called upon.</div>
+</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>io.reactivex.Single&lt;<a href="https://developer.android.com/reference/com/google/android/gms/auth/api/signin/GoogleSignInAccount.html?is-external=true" title="class or interface in com.google.android.gms.auth.api.signin" class="externalLink">GoogleSignInAccount</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#refresh()">refresh</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">When the application is closed and reopened this will refresh the information associated with
+ the signed in account to continue using the application.</div>
+</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>io.reactivex.Single&lt;<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#refreshBearerToken()">refreshBearerToken</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Refreshes the BearerToken for the sign in service to prevent the services from timing out.</div>
+</td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setContext(android.app.Application)">setContext</a></span>&#8203;(<a href="https://developer.android.com/reference/android/app/Application.html?is-external=true" title="class or interface in android.app" class="externalLink">Application</a>&nbsp;context)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Sets the context of the GoogleSignInService when called upon.</div>
+</td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/com/google/android/gms/tasks/Task.html?is-external=true" title="class or interface in com.google.android.gms.tasks" class="externalLink">Task</a>&lt;<a href="https://developer.android.com/reference/java/lang/Void.html?is-external=true" title="class or interface in java.lang" class="externalLink">Void</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#signOut()">signOut</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">When a user selects to sign out, they will be logged out of their Google Account.</div>
+</td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#startSignIn(android.app.Activity,int)">startSignIn</a></span>&#8203;(<a href="https://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app" class="externalLink">Activity</a>&nbsp;activity,
            int&nbsp;requestCode)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">When a user selects sign in this starts the activity to allow the user to sign in.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -219,6 +237,11 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <li class="blockList">
 <h4>setContext</h4>
 <pre class="methodSignature">public static&nbsp;void&nbsp;setContext&#8203;(<a href="https://developer.android.com/reference/android/app/Application.html?is-external=true" title="class or interface in android.app" class="externalLink">Application</a>&nbsp;context)</pre>
+<div class="block">Sets the context of the GoogleSignInService when called upon.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>context</code> - </dd>
+</dl>
 </li>
 </ul>
 <a id="getInstance()">
@@ -228,6 +251,10 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <li class="blockList">
 <h4>getInstance</h4>
 <pre class="methodSignature">public static&nbsp;<a href="GoogleSignInService.html" title="class in edu.cnm.deepdive.gardenbuddy.service">GoogleSignInService</a>&nbsp;getInstance()</pre>
+<div class="block">Gets the instance of the GoogleSignInService when called upon.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="refresh()">
@@ -237,6 +264,12 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <li class="blockList">
 <h4>refresh</h4>
 <pre class="methodSignature">public&nbsp;io.reactivex.Single&lt;<a href="https://developer.android.com/reference/com/google/android/gms/auth/api/signin/GoogleSignInAccount.html?is-external=true" title="class or interface in com.google.android.gms.auth.api.signin" class="externalLink">GoogleSignInAccount</a>&gt;&nbsp;refresh()</pre>
+<div class="block">When the application is closed and reopened this will refresh the information associated with
+ the signed in account to continue using the application.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Returns the current GoogleSign in account information.</dd>
+</dl>
 </li>
 </ul>
 <a id="refreshBearerToken()">
@@ -246,6 +279,10 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <li class="blockList">
 <h4>refreshBearerToken</h4>
 <pre class="methodSignature">public&nbsp;io.reactivex.Single&lt;<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;refreshBearerToken()</pre>
+<div class="block">Refreshes the BearerToken for the sign in service to prevent the services from timing out.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="startSignIn(android.app.Activity,int)">
@@ -256,6 +293,12 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <h4>startSignIn</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;startSignIn&#8203;(<a href="https://developer.android.com/reference/android/app/Activity.html?is-external=true" title="class or interface in android.app" class="externalLink">Activity</a>&nbsp;activity,
                         int&nbsp;requestCode)</pre>
+<div class="block">When a user selects sign in this starts the activity to allow the user to sign in.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>activity</code> - Activity starts when the sign service is started.</dd>
+<dd><code>requestCode</code> - Gets the request code needed for when an account is logging in.</dd>
+</dl>
 </li>
 </ul>
 <a id="completeSignIn(android.content.Intent)">
@@ -265,6 +308,13 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <li class="blockList">
 <h4>completeSignIn</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://developer.android.com/reference/com/google/android/gms/tasks/Task.html?is-external=true" title="class or interface in com.google.android.gms.tasks" class="externalLink">Task</a>&lt;<a href="https://developer.android.com/reference/com/google/android/gms/auth/api/signin/GoogleSignInAccount.html?is-external=true" title="class or interface in com.google.android.gms.auth.api.signin" class="externalLink">GoogleSignInAccount</a>&gt;&nbsp;completeSignIn&#8203;(<a href="https://developer.android.com/reference/android/content/Intent.html?is-external=true" title="class or interface in android.content" class="externalLink">Intent</a>&nbsp;data)</pre>
+<div class="block">Allows the user to sign in when the correct information is input (account and password).</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>data</code> - The data to be used for the Intent when the service of signing in is complete.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Returns the following task after the Sign in is complete.</dd>
+</dl>
 </li>
 </ul>
 <a id="signOut()">
@@ -274,6 +324,11 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <li class="blockList">
 <h4>signOut</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://developer.android.com/reference/com/google/android/gms/tasks/Task.html?is-external=true" title="class or interface in com.google.android.gms.tasks" class="externalLink">Task</a>&lt;<a href="https://developer.android.com/reference/java/lang/Void.html?is-external=true" title="class or interface in java.lang" class="externalLink">Void</a>&gt;&nbsp;signOut()</pre>
+<div class="block">When a user selects to sign out, they will be logged out of their Google Account.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Completes the sign out.</dd>
+</dl>
 </li>
 </ul>
 </li>

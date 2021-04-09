@@ -1,4 +1,5 @@
 edu.cnm.deepdive.gardenbuddy
+edu.cnm.deepdive.gardenbuddy.adapter
 edu.cnm.deepdive.gardenbuddy.controller
 edu.cnm.deepdive.gardenbuddy.model.dao
 edu.cnm.deepdive.gardenbuddy.model.entity

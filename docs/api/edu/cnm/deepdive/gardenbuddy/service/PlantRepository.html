@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -132,6 +132,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">PlantRepository</span>
 extends <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
+<div class="block">The PlantRepository connects the Entities to each other for use. Since the Plant Entity
+ is the parent entities for the History and Notes, there is only this PlantRepository and no other
+ repositories.</div>
 </li>
 </ul>
 </div>
@@ -153,7 +156,9 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 </tr>
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(android.content.Context)">PlantRepository</a></span>&#8203;(<a href="https://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content" class="externalLink">Context</a>&nbsp;context)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Provides the context of the PlantRepository when called upon in other classes.</div>
+</td>
 </tr>
 </table>
 </li>
@@ -176,43 +181,53 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>io.reactivex.Completable</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#delete(edu.cnm.deepdive.gardenbuddy.model.entity.Plant)">delete</a></span>&#8203;(<a href="../model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a>&nbsp;plant)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Allows a plant to be deleted and deletes any child columns (such as history or notes) along
+ with it.</div>
+</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Note</a>&gt;&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getNotesByCategory(edu.cnm.deepdive.gardenbuddy.model.entity.Plant,edu.cnm.deepdive.gardenbuddy.model.entity.Note.Category)">getNotesByCategory</a></span>&#8203;(<a href="../model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a>&nbsp;plant,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getNotesByCategory(long,edu.cnm.deepdive.gardenbuddy.model.entity.Note.Category)">getNotesByCategory</a></span>&#8203;(long&nbsp;plantId,
                   <a href="../model/entity/Note.Category.html" title="enum in edu.cnm.deepdive.gardenbuddy.model.entity">Note.Category</a>&nbsp;category)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Gets all notes in the current live database and returns them by category.</div>
+</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a>&gt;&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPlants()">getPlants</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Gets all plants in the current live Database.</div>
+</td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code>io.reactivex.Completable</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#newPlant()">newPlant</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr id="i4" class="altColor">
 <td class="colFirst"><code>io.reactivex.Single&lt;<a href="../model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#save(edu.cnm.deepdive.gardenbuddy.model.entity.Plant)">save</a></span>&#8203;(<a href="../model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a>&nbsp;plant)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Saves a Single Plant in to the Database if a new one is created.</div>
+</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>io.reactivex.Single&lt;<a href="../model/pojo/PlantWithHistories.html" title="class in edu.cnm.deepdive.gardenbuddy.model.pojo">PlantWithHistories</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#saveHistory(edu.cnm.deepdive.gardenbuddy.model.pojo.PlantWithHistories)">saveHistory</a></span>&#8203;(<a href="../model/pojo/PlantWithHistories.html" title="class in edu.cnm.deepdive.gardenbuddy.model.pojo">PlantWithHistories</a>&nbsp;plant)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Saves the new History created to be assigned to the Plant it is to be paired with.</div>
+</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>io.reactivex.Single&lt;<a href="../model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Note</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#saveNote(edu.cnm.deepdive.gardenbuddy.model.entity.Note)">saveNote</a></span>&#8203;(<a href="../model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Note</a>&nbsp;note)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Saves a note to the database when a new Note is created.</div>
+</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>io.reactivex.Single&lt;<a href="../model/pojo/PlantWithNotes.html" title="class in edu.cnm.deepdive.gardenbuddy.model.pojo">PlantWithNotes</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#saveNote(edu.cnm.deepdive.gardenbuddy.model.pojo.PlantWithNotes)">saveNote</a></span>&#8203;(<a href="../model/pojo/PlantWithNotes.html" title="class in edu.cnm.deepdive.gardenbuddy.model.pojo">PlantWithNotes</a>&nbsp;plant)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">If a Note is created it must be connected to a plant.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -245,6 +260,11 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <li class="blockList">
 <h4>PlantRepository</h4>
 <pre>public&nbsp;PlantRepository&#8203;(<a href="https://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content" class="externalLink">Context</a>&nbsp;context)</pre>
+<div class="block">Provides the context of the PlantRepository when called upon in other classes.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>context</code> - The Context is the database of the different Dao's.</dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -264,6 +284,13 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <li class="blockList">
 <h4>save</h4>
 <pre class="methodSignature">public&nbsp;io.reactivex.Single&lt;<a href="../model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a>&gt;&nbsp;save&#8203;(<a href="../model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a>&nbsp;plant)</pre>
+<div class="block">Saves a Single Plant in to the Database if a new one is created.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>plant</code> - A parameter of the Plant class.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Returns the saved plant.</dd>
+</dl>
 </li>
 </ul>
 <a id="saveNote(edu.cnm.deepdive.gardenbuddy.model.entity.Note)">
@@ -273,6 +300,13 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <li class="blockList">
 <h4>saveNote</h4>
 <pre class="methodSignature">public&nbsp;io.reactivex.Single&lt;<a href="../model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Note</a>&gt;&nbsp;saveNote&#8203;(<a href="../model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Note</a>&nbsp;note)</pre>
+<div class="block">Saves a note to the database when a new Note is created.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>note</code> - A new note to becreated from the Note class.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Returns the new note that is created by the user.</dd>
+</dl>
 </li>
 </ul>
 <a id="saveHistory(edu.cnm.deepdive.gardenbuddy.model.pojo.PlantWithHistories)">
@@ -282,6 +316,13 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <li class="blockList">
 <h4>saveHistory</h4>
 <pre class="methodSignature">public&nbsp;io.reactivex.Single&lt;<a href="../model/pojo/PlantWithHistories.html" title="class in edu.cnm.deepdive.gardenbuddy.model.pojo">PlantWithHistories</a>&gt;&nbsp;saveHistory&#8203;(<a href="../model/pojo/PlantWithHistories.html" title="class in edu.cnm.deepdive.gardenbuddy.model.pojo">PlantWithHistories</a>&nbsp;plant)</pre>
+<div class="block">Saves the new History created to be assigned to the Plant it is to be paired with.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>plant</code> - The plant the history is assigned to in the Plant class.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Returns the Plant and History connected.</dd>
+</dl>
 </li>
 </ul>
 <a id="saveNote(edu.cnm.deepdive.gardenbuddy.model.pojo.PlantWithNotes)">
@@ -291,6 +332,14 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <li class="blockList">
 <h4>saveNote</h4>
 <pre class="methodSignature">public&nbsp;io.reactivex.Single&lt;<a href="../model/pojo/PlantWithNotes.html" title="class in edu.cnm.deepdive.gardenbuddy.model.pojo">PlantWithNotes</a>&gt;&nbsp;saveNote&#8203;(<a href="../model/pojo/PlantWithNotes.html" title="class in edu.cnm.deepdive.gardenbuddy.model.pojo">PlantWithNotes</a>&nbsp;plant)</pre>
+<div class="block">If a Note is created it must be connected to a plant. This allows the Note to be created
+ and assigned to the Plant.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>plant</code> - Assigns the plant instance with the PlantWithNotes POJO.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Returns the Note with the Plant.</dd>
+</dl>
 </li>
 </ul>
 <a id="delete(edu.cnm.deepdive.gardenbuddy.model.entity.Plant)">
@@ -300,6 +349,14 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <li class="blockList">
 <h4>delete</h4>
 <pre class="methodSignature">public&nbsp;io.reactivex.Completable&nbsp;delete&#8203;(<a href="../model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a>&nbsp;plant)</pre>
+<div class="block">Allows a plant to be deleted and deletes any child columns (such as history or notes) along
+ with it.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>plant</code> - A plant object created from the Plant class.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Completes the deletion of the object.</dd>
+</dl>
 </li>
 </ul>
 <a id="getPlants()">
@@ -309,25 +366,28 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <li class="blockList">
 <h4>getPlants</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a>&gt;&gt;&nbsp;getPlants()</pre>
+<div class="block">Gets all plants in the current live Database.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
-<a id="newPlant()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>newPlant</h4>
-<pre class="methodSignature">public&nbsp;io.reactivex.Completable&nbsp;newPlant()</pre>
-</li>
-</ul>
-<a id="getNotesByCategory(edu.cnm.deepdive.gardenbuddy.model.entity.Plant,edu.cnm.deepdive.gardenbuddy.model.entity.Note.Category)">
+<a id="getNotesByCategory(long,edu.cnm.deepdive.gardenbuddy.model.entity.Note.Category)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getNotesByCategory</h4>
-<pre class="methodSignature">public&nbsp;<a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Note</a>&gt;&gt;&nbsp;getNotesByCategory&#8203;(<a href="../model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a>&nbsp;plant,
+<pre class="methodSignature">public&nbsp;<a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Note</a>&gt;&gt;&nbsp;getNotesByCategory&#8203;(long&nbsp;plantId,
                                                <a href="../model/entity/Note.Category.html" title="enum in edu.cnm.deepdive.gardenbuddy.model.entity">Note.Category</a>&nbsp;category)</pre>
+<div class="block">Gets all notes in the current live database and returns them by category.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>plantId</code> - Each note must be connected to a plantId.</dd>
+<dd><code>category</code> - Each note must be connected to a category.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Returns the notes selected by the plantId and the category.</dd>
+</dl>
 </li>
 </ul>
 </li>

@@ -136,6 +136,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">Plant</span>
 extends <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
+<div class="block">Plant Entity is the parent entity to History and Note.
+ Every Note or History created is assigned to a plantId.
+ The Plant entity currently has 4 pre-loaded plants, but will eventually have a much more
+ robust list of plants.</div>
 </li>
 </ul>
 </div>
@@ -180,82 +184,114 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCommonName()">getCommonName</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Gets the commonName of the Plant.</div>
+</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDaysToMaturity()">getDaysToMaturity</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Gets the number of average days a plant will take the mature.</div>
+</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>long</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getId()">getId</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Gets the unique identifier for the plant.</div>
+</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMaxTemp()">getMaxTemp</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Gets the maximum temperature of soil for when the plant can be planted.</div>
+</td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMinTemp()">getMinTemp</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Gets the minimum temperature of soil for when the plant can be planted.</div>
+</td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getScientificName()">getScientificName</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Gets the scientificName of the Plant.</div>
+</td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSpacingInInches()">getSpacingInInches</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Gets the spacingInInches that a plant must have to thrive.</div>
+</td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTimestamp()">getTimestamp</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Gets the timestamp of when the Plant is created.</div>
+</td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCommonName(java.lang.String)">setCommonName</a></span>&#8203;(<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;commonName)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns the commonName of the Plant.</div>
+</td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setDaysToMaturity(java.lang.Integer)">setDaysToMaturity</a></span>&#8203;(<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&nbsp;daysToMaturity)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns the number of average days a plant will take the mature.</div>
+</td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setId(long)">setId</a></span>&#8203;(long&nbsp;id)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Sets the unique identifier for the plant.</div>
+</td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setMaxTemp(java.lang.Integer)">setMaxTemp</a></span>&#8203;(<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&nbsp;maxTemp)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns the maximum temperature of soil for when the plant can be planted.</div>
+</td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setMinTemp(java.lang.Integer)">setMinTemp</a></span>&#8203;(<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&nbsp;minTemp)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns the minimum temperature of soil for when the plant can be planted.</div>
+</td>
 </tr>
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setScientificName(java.lang.String)">setScientificName</a></span>&#8203;(<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;scientificName)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns the scientificName of the Plant.</div>
+</td>
 </tr>
 <tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSpacingInInches(java.lang.Integer)">setSpacingInInches</a></span>&#8203;(<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&nbsp;spacingInInches)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns he spacingInInches that a plant must have to thrive.</div>
+</td>
 </tr>
 <tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setTimestamp(java.util.Date)">setTimestamp</a></span>&#8203;(<a href="https://developer.android.com/reference/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;timestamp)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns the timestamp of when the Plant is created.</div>
+</td>
 </tr>
 <tr id="i16" class="altColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
@@ -312,6 +348,10 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <li class="blockList">
 <h4>getId</h4>
 <pre class="methodSignature">public&nbsp;long&nbsp;getId()</pre>
+<div class="block">Gets the unique identifier for the plant.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="setId(long)">
@@ -321,6 +361,11 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <li class="blockList">
 <h4>setId</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setId&#8203;(long&nbsp;id)</pre>
+<div class="block">Sets the unique identifier for the plant.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>id</code> - </dd>
+</dl>
 </li>
 </ul>
 <a id="getTimestamp()">
@@ -331,6 +376,10 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <h4>getTimestamp</h4>
 <pre class="methodSignature"><a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
 public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;getTimestamp()</pre>
+<div class="block">Gets the timestamp of when the Plant is created.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="setTimestamp(java.util.Date)">
@@ -341,6 +390,11 @@ public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html
 <h4>setTimestamp</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setTimestamp&#8203;(<a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
                          <a href="https://developer.android.com/reference/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;timestamp)</pre>
+<div class="block">Returns the timestamp of when the Plant is created.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>timestamp</code> - </dd>
+</dl>
 </li>
 </ul>
 <a id="getCommonName()">
@@ -351,6 +405,7 @@ public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html
 <h4>getCommonName</h4>
 <pre class="methodSignature"><a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
 public&nbsp;<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getCommonName()</pre>
+<div class="block">Gets the commonName of the Plant.</div>
 </li>
 </ul>
 <a id="setCommonName(java.lang.String)">
@@ -361,6 +416,11 @@ public&nbsp;<a href="https://developer.android.com/reference/java/lang/String.ht
 <h4>setCommonName</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setCommonName&#8203;(<a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
                           <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;commonName)</pre>
+<div class="block">Returns the commonName of the Plant.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>commonName</code> - </dd>
+</dl>
 </li>
 </ul>
 <a id="getScientificName()">
@@ -371,6 +431,10 @@ public&nbsp;<a href="https://developer.android.com/reference/java/lang/String.ht
 <h4>getScientificName</h4>
 <pre class="methodSignature"><a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
 public&nbsp;<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getScientificName()</pre>
+<div class="block">Gets the scientificName of the Plant.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="setScientificName(java.lang.String)">
@@ -381,6 +445,11 @@ public&nbsp;<a href="https://developer.android.com/reference/java/lang/String.ht
 <h4>setScientificName</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setScientificName&#8203;(<a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
                               <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;scientificName)</pre>
+<div class="block">Returns the scientificName of the Plant.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>scientificName</code> - </dd>
+</dl>
 </li>
 </ul>
 <a id="getMinTemp()">
@@ -391,6 +460,10 @@ public&nbsp;<a href="https://developer.android.com/reference/java/lang/String.ht
 <h4>getMinTemp</h4>
 <pre class="methodSignature"><a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
 public&nbsp;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&nbsp;getMinTemp()</pre>
+<div class="block">Gets the minimum temperature of soil for when the plant can be planted.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="setMinTemp(java.lang.Integer)">
@@ -401,6 +474,11 @@ public&nbsp;<a href="https://developer.android.com/reference/java/lang/Integer.h
 <h4>setMinTemp</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setMinTemp&#8203;(<a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
                        <a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&nbsp;minTemp)</pre>
+<div class="block">Returns the minimum temperature of soil for when the plant can be planted.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>minTemp</code> - </dd>
+</dl>
 </li>
 </ul>
 <a id="getMaxTemp()">
@@ -411,6 +489,10 @@ public&nbsp;<a href="https://developer.android.com/reference/java/lang/Integer.h
 <h4>getMaxTemp</h4>
 <pre class="methodSignature"><a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
 public&nbsp;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&nbsp;getMaxTemp()</pre>
+<div class="block">Gets the maximum temperature of soil for when the plant can be planted.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="setMaxTemp(java.lang.Integer)">
@@ -421,6 +503,11 @@ public&nbsp;<a href="https://developer.android.com/reference/java/lang/Integer.h
 <h4>setMaxTemp</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setMaxTemp&#8203;(<a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
                        <a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&nbsp;maxTemp)</pre>
+<div class="block">Returns the maximum temperature of soil for when the plant can be planted.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>maxTemp</code> - </dd>
+</dl>
 </li>
 </ul>
 <a id="getDaysToMaturity()">
@@ -431,6 +518,10 @@ public&nbsp;<a href="https://developer.android.com/reference/java/lang/Integer.h
 <h4>getDaysToMaturity</h4>
 <pre class="methodSignature"><a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
 public&nbsp;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&nbsp;getDaysToMaturity()</pre>
+<div class="block">Gets the number of average days a plant will take the mature.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="setDaysToMaturity(java.lang.Integer)">
@@ -441,6 +532,11 @@ public&nbsp;<a href="https://developer.android.com/reference/java/lang/Integer.h
 <h4>setDaysToMaturity</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setDaysToMaturity&#8203;(<a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
                               <a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&nbsp;daysToMaturity)</pre>
+<div class="block">Returns the number of average days a plant will take the mature.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>daysToMaturity</code> - </dd>
+</dl>
 </li>
 </ul>
 <a id="getSpacingInInches()">
@@ -451,6 +547,10 @@ public&nbsp;<a href="https://developer.android.com/reference/java/lang/Integer.h
 <h4>getSpacingInInches</h4>
 <pre class="methodSignature"><a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
 public&nbsp;<a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&nbsp;getSpacingInInches()</pre>
+<div class="block">Gets the spacingInInches that a plant must have to thrive.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="setSpacingInInches(java.lang.Integer)">
@@ -461,6 +561,11 @@ public&nbsp;<a href="https://developer.android.com/reference/java/lang/Integer.h
 <h4>setSpacingInInches</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setSpacingInInches&#8203;(<a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
                                <a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&nbsp;spacingInInches)</pre>
+<div class="block">Returns he spacingInInches that a plant must have to thrive.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>spacingInInches</code> - </dd>
+</dl>
 </li>
 </ul>
 <a id="toString()">

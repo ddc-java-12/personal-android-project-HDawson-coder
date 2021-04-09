@@ -129,13 +129,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
-<dl>
-<dt>Direct Known Subclasses:</dt>
-<dd><code><a href="../pojo/NoteWithPlant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.pojo">NoteWithPlant</a></code></dd>
-</dl>
 <hr>
 <pre>public class <span class="typeNameLabel">Note</span>
 extends <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
+<div class="block">The plantId is the foreign key used with the Note Database.
+ The notes entity gets information to be used in the database from user input and each note is
+ assigned to a plant and category.</div>
 </li>
 </ul>
 </div>
@@ -159,7 +158,9 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="Note.Category.html" title="enum in edu.cnm.deepdive.gardenbuddy.model.entity">Note.Category</a></span></code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Category is an enum that is set up for three different categories; Pest, Weather, and Other.</div>
+</td>
 </tr>
 </table>
 </li>
@@ -203,52 +204,72 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="Note.Category.html" title="enum in edu.cnm.deepdive.gardenbuddy.model.entity">Note.Category</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCategory()">getCategory</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Gets the category that the note is assigned to.</div>
+</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getId()">getId</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Gets the Unique Id for the note.</div>
+</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getNote()">getNote</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Gets the note that is written by the the user.</div>
+</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPlantId()">getPlantId</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Gets the PlantId that is assigned with the created note.</div>
+</td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTimestamp()">getTimestamp</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Gets the timestamp assigned when the note is created.</div>
+</td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCategory(edu.cnm.deepdive.gardenbuddy.model.entity.Note.Category)">setCategory</a></span>&#8203;(<a href="Note.Category.html" title="enum in edu.cnm.deepdive.gardenbuddy.model.entity">Note.Category</a>&nbsp;category)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns the category that the note is assigned to.</div>
+</td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setId(long)">setId</a></span>&#8203;(long&nbsp;id)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Sets the Unique Id for the note.</div>
+</td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setNote(java.lang.String)">setNote</a></span>&#8203;(<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;note)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Sets the note that is written by the user.</div>
+</td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPlantId(long)">setPlantId</a></span>&#8203;(long&nbsp;plantId)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns the PlantId that is assigned with the created note.</div>
+</td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setTimestamp(java.util.Date)">setTimestamp</a></span>&#8203;(<a href="https://developer.android.com/reference/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;timestamp)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Sets the timestamp of the date when note is created.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -300,6 +321,10 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <li class="blockList">
 <h4>getId</h4>
 <pre class="methodSignature">public&nbsp;long&nbsp;getId()</pre>
+<div class="block">Gets the Unique Id for the note.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="setId(long)">
@@ -309,6 +334,11 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <li class="blockList">
 <h4>setId</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setId&#8203;(long&nbsp;id)</pre>
+<div class="block">Sets the Unique Id for the note.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>id</code> - </dd>
+</dl>
 </li>
 </ul>
 <a id="getTimestamp()">
@@ -319,6 +349,10 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <h4>getTimestamp</h4>
 <pre class="methodSignature"><a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
 public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;getTimestamp()</pre>
+<div class="block">Gets the timestamp assigned when the note is created.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="setTimestamp(java.util.Date)">
@@ -329,6 +363,11 @@ public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html
 <h4>setTimestamp</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setTimestamp&#8203;(<a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
                          <a href="https://developer.android.com/reference/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;timestamp)</pre>
+<div class="block">Sets the timestamp of the date when note is created.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>timestamp</code> - </dd>
+</dl>
 </li>
 </ul>
 <a id="getPlantId()">
@@ -338,6 +377,10 @@ public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html
 <li class="blockList">
 <h4>getPlantId</h4>
 <pre class="methodSignature">public&nbsp;long&nbsp;getPlantId()</pre>
+<div class="block">Gets the PlantId that is assigned with the created note.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="setPlantId(long)">
@@ -347,6 +390,11 @@ public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html
 <li class="blockList">
 <h4>setPlantId</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setPlantId&#8203;(long&nbsp;plantId)</pre>
+<div class="block">Returns the PlantId that is assigned with the created note.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>plantId</code> - </dd>
+</dl>
 </li>
 </ul>
 <a id="getNote()">
@@ -356,6 +404,10 @@ public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html
 <li class="blockList">
 <h4>getNote</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getNote()</pre>
+<div class="block">Gets the note that is written by the the user.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="setNote(java.lang.String)">
@@ -365,6 +417,11 @@ public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html
 <li class="blockList">
 <h4>setNote</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setNote&#8203;(<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;note)</pre>
+<div class="block">Sets the note that is written by the user.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>note</code> - </dd>
+</dl>
 </li>
 </ul>
 <a id="getCategory()">
@@ -375,6 +432,10 @@ public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html
 <h4>getCategory</h4>
 <pre class="methodSignature"><a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
 public&nbsp;<a href="Note.Category.html" title="enum in edu.cnm.deepdive.gardenbuddy.model.entity">Note.Category</a>&nbsp;getCategory()</pre>
+<div class="block">Gets the category that the note is assigned to.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="setCategory(edu.cnm.deepdive.gardenbuddy.model.entity.Note.Category)">
@@ -385,6 +446,11 @@ public&nbsp;<a href="Note.Category.html" title="enum in edu.cnm.deepdive.gardenb
 <h4>setCategory</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setCategory&#8203;(<a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
                         <a href="Note.Category.html" title="enum in edu.cnm.deepdive.gardenbuddy.model.entity">Note.Category</a>&nbsp;category)</pre>
+<div class="block">Returns the category that the note is assigned to.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>category</code> - </dd>
+</dl>
 </li>
 </ul>
 </li>

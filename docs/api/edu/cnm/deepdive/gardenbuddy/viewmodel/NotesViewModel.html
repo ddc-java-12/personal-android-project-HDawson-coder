@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -147,6 +147,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre>public class <span class="typeNameLabel">NotesViewModel</span>
 extends <a href="https://developer.android.com/reference/androidx/lifecycle/AndroidViewModel.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">AndroidViewModel</a>
 implements <a href="https://developer.android.com/reference/androidx/lifecycle/LifecycleObserver.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LifecycleObserver</a></pre>
+<div class="block">NotesViewModel gathers everything needed to display on the notes Fragment when the notes page is
+ loaded and displayed.</div>
 </li>
 </ul>
 </div>
@@ -168,7 +170,9 @@ implements <a href="https://developer.android.com/reference/androidx/lifecycle/L
 </tr>
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(android.app.Application)">NotesViewModel</a></span>&#8203;(<a href="https://developer.android.com/reference/android/app/Application.html?is-external=true" title="class or interface in android.app" class="externalLink">Application</a>&nbsp;application)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">All of the fields constructors that are needed for the ViewModels.</div>
+</td>
 </tr>
 </table>
 </li>
@@ -189,19 +193,53 @@ implements <a href="https://developer.android.com/reference/androidx/lifecycle/L
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code><a href="../service/PlantRepository.html" title="class in edu.cnm.deepdive.gardenbuddy.service">PlantRepository</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPlantRepository()">getPlantRepository</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colFirst"><code><a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Note</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOtherNotes()">getOtherNotes</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Gets all Notes from the Other Category for use in the ViewModel.</div>
+</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="https://developer.android.com/reference/androidx/lifecycle/MutableLiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">MutableLiveData</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a>&gt;&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPlants()">getPlants</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colFirst"><code><a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Note</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPestNotes()">getPestNotes</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Gets all Notes from the Pest Category for use in the ViewModel.</div>
+</td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPlants()">getPlants</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Gets the plants from the plantRepository to use for the page.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="https://developer.android.com/reference/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Throwable</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getThrowable()">getThrowable</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Allows the ViewModel to not display anything if there is nothing to display.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Note</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getWeatherNotes()">getWeatherNotes</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Gets all Notes from the Weather Category for use in the ViewModel.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#saveNote(edu.cnm.deepdive.gardenbuddy.model.entity.Note)">saveNote</a></span>&#8203;(<a href="../model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Note</a>&nbsp;note)</code></th>
+<td class="colLast">
+<div class="block">Saves a note when the user inputs it through this application page.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPlantId(long)">setPlantId</a></span>&#8203;(long&nbsp;id)</code></th>
+<td class="colLast">
+<div class="block">Sets the plantId so the connected entities will know to be displayed as well.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -249,6 +287,11 @@ implements <a href="https://developer.android.com/reference/androidx/lifecycle/L
 <h4>NotesViewModel</h4>
 <pre>public&nbsp;NotesViewModel&#8203;(<a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
                       <a href="https://developer.android.com/reference/android/app/Application.html?is-external=true" title="class or interface in android.app" class="externalLink">Application</a>&nbsp;application)</pre>
+<div class="block">All of the fields constructors that are needed for the ViewModels.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>application</code> - </dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -261,22 +304,84 @@ implements <a href="https://developer.android.com/reference/androidx/lifecycle/L
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="getPlantRepository()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getPlantRepository</h4>
-<pre class="methodSignature">public&nbsp;<a href="../service/PlantRepository.html" title="class in edu.cnm.deepdive.gardenbuddy.service">PlantRepository</a>&nbsp;getPlantRepository()</pre>
-</li>
-</ul>
 <a id="getPlants()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getPlants</h4>
-<pre class="methodSignature">public&nbsp;<a href="https://developer.android.com/reference/androidx/lifecycle/MutableLiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">MutableLiveData</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a>&gt;&gt;&nbsp;getPlants()</pre>
+<pre class="methodSignature">public&nbsp;<a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a>&gt;&gt;&nbsp;getPlants()</pre>
+<div class="block">Gets the plants from the plantRepository to use for the page.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a id="setPlantId(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setPlantId</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setPlantId&#8203;(long&nbsp;id)</pre>
+<div class="block">Sets the plantId so the connected entities will know to be displayed as well.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>id</code> - </dd>
+</dl>
+</li>
+</ul>
+<a id="saveNote(edu.cnm.deepdive.gardenbuddy.model.entity.Note)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>saveNote</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;saveNote&#8203;(<a href="../model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Note</a>&nbsp;note)</pre>
+<div class="block">Saves a note when the user inputs it through this application page.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>note</code> - An object from the Note class.</dd>
+</dl>
+</li>
+</ul>
+<a id="getPestNotes()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPestNotes</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Note</a>&gt;&gt;&nbsp;getPestNotes()</pre>
+<div class="block">Gets all Notes from the Pest Category for use in the ViewModel.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a id="getWeatherNotes()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getWeatherNotes</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Note</a>&gt;&gt;&nbsp;getWeatherNotes()</pre>
+<div class="block">Gets all Notes from the Weather Category for use in the ViewModel.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
+</li>
+</ul>
+<a id="getOtherNotes()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOtherNotes</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Note</a>&gt;&gt;&nbsp;getOtherNotes()</pre>
+<div class="block">Gets all Notes from the Other Category for use in the ViewModel.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="getThrowable()">
@@ -286,6 +391,10 @@ implements <a href="https://developer.android.com/reference/androidx/lifecycle/L
 <li class="blockList">
 <h4>getThrowable</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="https://developer.android.com/reference/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Throwable</a>&gt;&nbsp;getThrowable()</pre>
+<div class="block">Allows the ViewModel to not display anything if there is nothing to display.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 </li>

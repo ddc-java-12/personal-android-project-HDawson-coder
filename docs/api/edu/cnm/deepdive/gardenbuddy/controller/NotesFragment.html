@@ -141,7 +141,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">NotesFragment</span>
 extends <a href="https://developer.android.com/reference/androidx/fragment/app/Fragment.html?is-external=true" title="class or interface in androidx.fragment.app" class="externalLink">Fragment</a></pre>
-<div class="block">This is the notes fragment which will show all categories of notes.</div>
+<div class="block">This is the notes fragment which will show all categories of notes. The NotesFragment also gains
+ the information needed from the note categories fragments to allow a user to input the new notes
+ when they need to.</div>
 </li>
 </ul>
 </div>
@@ -276,6 +278,15 @@ extends <a href="https://developer.android.com/reference/androidx/fragment/app/F
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://developer.android.com/reference/androidx/fragment/app/Fragment.html?is-external=true#onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)" title="class or interface in androidx.fragment.app" class="externalLink">onCreateView</a></code>&nbsp;in class&nbsp;<code><a href="https://developer.android.com/reference/androidx/fragment/app/Fragment.html?is-external=true" title="class or interface in androidx.fragment.app" class="externalLink">Fragment</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>inflater</code> - provides the layout fragment for Notes Fragment and and inflates to
+                           display with UI</dd>
+<dd><code>container</code> - provides the container for the ViewGroup of NotesFragment to
+                           display.</dd>
+<dd><code>savedInstanceState</code> - provides the information from the database and utilizes where
+                           needed.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>provides the viewModel roots to display.</dd>
 </dl>
 </li>
 </ul>
@@ -292,6 +303,10 @@ extends <a href="https://developer.android.com/reference/androidx/fragment/app/F
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://developer.android.com/reference/androidx/fragment/app/Fragment.html?is-external=true#onViewCreated(android.view.View,android.os.Bundle)" title="class or interface in androidx.fragment.app" class="externalLink">onViewCreated</a></code>&nbsp;in class&nbsp;<code><a href="https://developer.android.com/reference/androidx/fragment/app/Fragment.html?is-external=true" title="class or interface in androidx.fragment.app" class="externalLink">Fragment</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>view</code> - Gathers the information from the ViewModel to display as it changes
+                           during application use.</dd>
+<dd><code>savedInstanceState</code> - </dd>
 </dl>
 </li>
 </ul>

@@ -176,6 +176,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">LoginActivity</span>
 extends <a href="https://developer.android.com/reference/androidx/appcompat/app/AppCompatActivity.html?is-external=true" title="class or interface in androidx.appcompat.app" class="externalLink">AppCompatActivity</a></pre>
+<div class="block">This is the LoginActivity page which uses Google Sign in to log users in with their Google
+ accounts so that the application can remember them regardless of which device a user may be using.</div>
 </li>
 </ul>
 </div>
@@ -275,7 +277,9 @@ extends <a href="https://developer.android.com/reference/androidx/appcompat/app/
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onCreate(android.os.Bundle)">onCreate</a></span>&#8203;(<a href="https://developer.android.com/reference/android/os/Bundle.html?is-external=true" title="class or interface in android.os" class="externalLink">Bundle</a>&nbsp;savedInstanceState)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Provides the Google sign activity to be created upon app launch.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -390,9 +394,12 @@ extends <a href="https://developer.android.com/reference/androidx/appcompat/app/
 <li class="blockList">
 <h4>onCreate</h4>
 <pre class="methodSignature">protected&nbsp;void&nbsp;onCreate&#8203;(<a href="https://developer.android.com/reference/android/os/Bundle.html?is-external=true" title="class or interface in android.os" class="externalLink">Bundle</a>&nbsp;savedInstanceState)</pre>
+<div class="block">Provides the Google sign activity to be created upon app launch.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://developer.android.com/reference/androidx/appcompat/app/AppCompatActivity.html?is-external=true#onCreate(android.os.Bundle)" title="class or interface in androidx.appcompat.app" class="externalLink">onCreate</a></code>&nbsp;in class&nbsp;<code><a href="https://developer.android.com/reference/androidx/appcompat/app/AppCompatActivity.html?is-external=true" title="class or interface in androidx.appcompat.app" class="externalLink">AppCompatActivity</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>savedInstanceState</code> - </dd>
 </dl>
 </li>
 </ul>
@@ -409,6 +416,10 @@ extends <a href="https://developer.android.com/reference/androidx/appcompat/app/
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://developer.android.com/reference/androidx/fragment/app/FragmentActivity.html?is-external=true#onActivityResult(int,int,android.content.Intent)" title="class or interface in androidx.fragment.app" class="externalLink">onActivityResult</a></code>&nbsp;in class&nbsp;<code><a href="https://developer.android.com/reference/androidx/fragment/app/FragmentActivity.html?is-external=true" title="class or interface in androidx.fragment.app" class="externalLink">FragmentActivity</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>requestCode</code> - provides a requestCode for Google to recognize the user device signing in.</dd>
+<dd><code>resultCode</code> - provides the resultCode for Google to recognize the user device signing in.</dd>
+<dd><code>data</code> - provides the data needed for Google to recognize the user device signing in.</dd>
 </dl>
 </li>
 </ul>

@@ -132,6 +132,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">History</span>
 extends <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
+<div class="block">The plantId is the foreign key used with the History Database.
+ This is the entity class for the History Database. The HistoryDatabase is not yet implemented
+ in the application. But will be done so at a later point in app development.
+ There will be a many to one relationship with the Plant Entity.</div>
 </li>
 </ul>
 </div>
@@ -176,82 +180,115 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDayFirstHarvest()">getDayFirstHarvest</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">The user will be able to specify the date of when they get their first harvest from the
+ plant that is planted.</div>
+</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDayPlanted()">getDayPlanted</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">The user is able to detail what day the specific plant is planted.</div>
+</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>long</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getId()">getId</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns the Unique identifier of this History.</div>
+</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPlantId()">getPlantId</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Gets the unique plantId that is connected to the History.</div>
+</td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTimestamp()">getTimestamp</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Gets the timestamp of when the History instance is created.</div>
+</td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTotalFruitYielded()">getTotalFruitYielded</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Gets the total amount of fruit yielded that is set by the user.</div>
+</td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTotalPlanted()">getTotalPlanted</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Gets the total amount planted that is input by the user.</div>
+</td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getYearPlanted()">getYearPlanted</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Gets the Date of the year planted for the History created.</div>
+</td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setDayFirstHarvest(java.util.Date)">setDayFirstHarvest</a></span>&#8203;(<a href="https://developer.android.com/reference/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;dayFirstHarvest)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Sets the day input by the user of the first harvest.</div>
+</td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setDayPlanted(java.util.Date)">setDayPlanted</a></span>&#8203;(<a href="https://developer.android.com/reference/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;dayPlanted)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Sets the day planted when user inputs it into the database.</div>
+</td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setId(long)">setId</a></span>&#8203;(long&nbsp;id)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Sets the unique identifier of this history.</div>
+</td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPlantId(long)">setPlantId</a></span>&#8203;(long&nbsp;plantId)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Sets the plantId that is connected to the History.</div>
+</td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setTimestamp(java.util.Date)">setTimestamp</a></span>&#8203;(<a href="https://developer.android.com/reference/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;timestamp)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns the TimeStamp of when the History instance is created.</div>
+</td>
 </tr>
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setTotalFruitYielded(int)">setTotalFruitYielded</a></span>&#8203;(int&nbsp;totalFruitYielded)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Sets the total amount of fruit yielded that is input by the user.</div>
+</td>
 </tr>
 <tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setTotalPlanted(int)">setTotalPlanted</a></span>&#8203;(int&nbsp;totalPlanted)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Sets the total amount planted that is input by the user.</div>
+</td>
 </tr>
 <tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setYearPlanted(java.util.Date)">setYearPlanted</a></span>&#8203;(<a href="https://developer.android.com/reference/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;yearPlanted)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Sets the date of the year planted after user has input a date.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -303,6 +340,10 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <li class="blockList">
 <h4>getId</h4>
 <pre class="methodSignature">public&nbsp;long&nbsp;getId()</pre>
+<div class="block">Returns the Unique identifier of this History.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="setId(long)">
@@ -312,6 +353,11 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <li class="blockList">
 <h4>setId</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setId&#8203;(long&nbsp;id)</pre>
+<div class="block">Sets the unique identifier of this history.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>id</code> - </dd>
+</dl>
 </li>
 </ul>
 <a id="getTimestamp()">
@@ -322,6 +368,10 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <h4>getTimestamp</h4>
 <pre class="methodSignature"><a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
 public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;getTimestamp()</pre>
+<div class="block">Gets the timestamp of when the History instance is created.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="setTimestamp(java.util.Date)">
@@ -332,6 +382,11 @@ public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html
 <h4>setTimestamp</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setTimestamp&#8203;(<a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
                          <a href="https://developer.android.com/reference/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;timestamp)</pre>
+<div class="block">Returns the TimeStamp of when the History instance is created.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>timestamp</code> - </dd>
+</dl>
 </li>
 </ul>
 <a id="getPlantId()">
@@ -341,6 +396,10 @@ public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html
 <li class="blockList">
 <h4>getPlantId</h4>
 <pre class="methodSignature">public&nbsp;long&nbsp;getPlantId()</pre>
+<div class="block">Gets the unique plantId that is connected to the History.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="setPlantId(long)">
@@ -350,6 +409,11 @@ public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html
 <li class="blockList">
 <h4>setPlantId</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setPlantId&#8203;(long&nbsp;plantId)</pre>
+<div class="block">Sets the plantId that is connected to the History.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>plantId</code> - </dd>
+</dl>
 </li>
 </ul>
 <a id="getYearPlanted()">
@@ -360,6 +424,11 @@ public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html
 <h4>getYearPlanted</h4>
 <pre class="methodSignature"><a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
 public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;getYearPlanted()</pre>
+<div class="block">Gets the Date of the year planted for the History created.
+ The year planted will be a date that the user will input themselves.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="setYearPlanted(java.util.Date)">
@@ -370,6 +439,11 @@ public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html
 <h4>setYearPlanted</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setYearPlanted&#8203;(<a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
                            <a href="https://developer.android.com/reference/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;yearPlanted)</pre>
+<div class="block">Sets the date of the year planted after user has input a date.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>yearPlanted</code> - </dd>
+</dl>
 </li>
 </ul>
 <a id="getTotalPlanted()">
@@ -379,6 +453,10 @@ public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html
 <li class="blockList">
 <h4>getTotalPlanted</h4>
 <pre class="methodSignature">public&nbsp;int&nbsp;getTotalPlanted()</pre>
+<div class="block">Gets the total amount planted that is input by the user.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="setTotalPlanted(int)">
@@ -388,6 +466,11 @@ public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html
 <li class="blockList">
 <h4>setTotalPlanted</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setTotalPlanted&#8203;(int&nbsp;totalPlanted)</pre>
+<div class="block">Sets the total amount planted that is input by the user.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>totalPlanted</code> - </dd>
+</dl>
 </li>
 </ul>
 <a id="getTotalFruitYielded()">
@@ -397,6 +480,10 @@ public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html
 <li class="blockList">
 <h4>getTotalFruitYielded</h4>
 <pre class="methodSignature">public&nbsp;int&nbsp;getTotalFruitYielded()</pre>
+<div class="block">Gets the total amount of fruit yielded that is set by the user.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="setTotalFruitYielded(int)">
@@ -406,6 +493,11 @@ public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html
 <li class="blockList">
 <h4>setTotalFruitYielded</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setTotalFruitYielded&#8203;(int&nbsp;totalFruitYielded)</pre>
+<div class="block">Sets the total amount of fruit yielded that is input by the user.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>totalFruitYielded</code> - </dd>
+</dl>
 </li>
 </ul>
 <a id="getDayPlanted()">
@@ -416,6 +508,11 @@ public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html
 <h4>getDayPlanted</h4>
 <pre class="methodSignature"><a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
 public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;getDayPlanted()</pre>
+<div class="block">The user is able to detail what day the specific plant is planted.
+ This will get the day planted and return it to the user.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="setDayPlanted(java.util.Date)">
@@ -426,6 +523,11 @@ public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html
 <h4>setDayPlanted</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setDayPlanted&#8203;(<a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
                           <a href="https://developer.android.com/reference/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;dayPlanted)</pre>
+<div class="block">Sets the day planted when user inputs it into the database.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>dayPlanted</code> - </dd>
+</dl>
 </li>
 </ul>
 <a id="getDayFirstHarvest()">
@@ -436,6 +538,11 @@ public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html
 <h4>getDayFirstHarvest</h4>
 <pre class="methodSignature"><a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
 public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;getDayFirstHarvest()</pre>
+<div class="block">The user will be able to specify the date of when they get their first harvest from the
+ plant that is planted. This will return the day that is input by the user.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="setDayFirstHarvest(java.util.Date)">
@@ -446,6 +553,11 @@ public&nbsp;<a href="https://developer.android.com/reference/java/util/Date.html
 <h4>setDayFirstHarvest</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setDayFirstHarvest&#8203;(<a href="https://developer.android.com/reference/androidx/annotation/NonNull.html?is-external=true" title="class or interface in androidx.annotation" class="externalLink">@NonNull</a>
                                <a href="https://developer.android.com/reference/java/util/Date.html?is-external=true" title="class or interface in java.util" class="externalLink">Date</a>&nbsp;dayFirstHarvest)</pre>
+<div class="block">Sets the day input by the user of the first harvest.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>dayFirstHarvest</code> - </dd>
+</dl>
 </li>
 </ul>
 </li>

@@ -121,9 +121,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <h2 class="title">C</h2>
 <dl>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.Category.html#categoryToInteger(edu.cnm.deepdive.gardenbuddy.model.entity.Note.Category)">categoryToInteger(Note.Category)</a></span> - Static method in enum edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.Category.html" title="enum in edu.cnm.deepdive.gardenbuddy.model.entity">Note.Category</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Changes the category name to an Integer.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/service/GoogleSignInService.html#completeSignIn(android.content.Intent)">completeSignIn(Intent)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.service.<a href="edu/cnm/deepdive/gardenbuddy/service/GoogleSignInService.html" title="class in edu.cnm.deepdive.gardenbuddy.service">GoogleSignInService</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Allows the user to sign in when the correct information is input (account and password).</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/service/GardenBuddyDatabase.Converters.html#%3Cinit%3E()">Converters()</a></span> - Constructor for class edu.cnm.deepdive.gardenbuddy.service.<a href="edu/cnm/deepdive/gardenbuddy/service/GardenBuddyDatabase.Converters.html" title="class in edu.cnm.deepdive.gardenbuddy.service">GardenBuddyDatabase.Converters</a></dt>
 <dd>&nbsp;</dd>
 </dl>
@@ -145,7 +149,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/dao/PlantDao.html#delete(edu.cnm.deepdive.gardenbuddy.model.entity.Plant)">delete(Plant)</a></span> - Method in interface edu.cnm.deepdive.gardenbuddy.model.dao.<a href="edu/cnm/deepdive/gardenbuddy/model/dao/PlantDao.html" title="interface in edu.cnm.deepdive.gardenbuddy.model.dao">PlantDao</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/service/PlantRepository.html#delete(edu.cnm.deepdive.gardenbuddy.model.entity.Plant)">delete(Plant)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.service.<a href="edu/cnm/deepdive/gardenbuddy/service/PlantRepository.html" title="class in edu.cnm.deepdive.gardenbuddy.service">PlantRepository</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Allows a plant to be deleted and deletes any child columns (such as history or notes) along
+ with it.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/dao/PlantDao.html#delete(edu.cnm.deepdive.gardenbuddy.model.entity.Plant...)">delete(Plant...)</a></span> - Method in interface edu.cnm.deepdive.gardenbuddy.model.dao.<a href="edu/cnm/deepdive/gardenbuddy/model/dao/PlantDao.html" title="interface in edu.cnm.deepdive.gardenbuddy.model.dao">PlantDao</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/dao/HistoryDao.html#delete(java.util.Collection)">delete(Collection&lt;History&gt;)</a></span> - Method in interface edu.cnm.deepdive.gardenbuddy.model.dao.<a href="edu/cnm/deepdive/gardenbuddy/model/dao/HistoryDao.html" title="interface in edu.cnm.deepdive.gardenbuddy.model.dao">HistoryDao</a></dt>
@@ -161,6 +168,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <h2 class="title">E</h2>
 <dl>
 <dt><a href="edu/cnm/deepdive/gardenbuddy/package-summary.html">edu.cnm.deepdive.gardenbuddy</a> - package edu.cnm.deepdive.gardenbuddy</dt>
+<dd>&nbsp;</dd>
+<dt><a href="edu/cnm/deepdive/gardenbuddy/adapter/package-summary.html">edu.cnm.deepdive.gardenbuddy.adapter</a> - package edu.cnm.deepdive.gardenbuddy.adapter</dt>
 <dd>&nbsp;</dd>
 <dt><a href="edu/cnm/deepdive/gardenbuddy/controller/package-summary.html">edu.cnm.deepdive.gardenbuddy.controller</a> - package edu.cnm.deepdive.gardenbuddy.controller</dt>
 <dd>&nbsp;</dd>
@@ -187,89 +196,190 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/GardenBuddyApplication.html#%3Cinit%3E()">GardenBuddyApplication()</a></span> - Constructor for class edu.cnm.deepdive.gardenbuddy.<a href="edu/cnm/deepdive/gardenbuddy/GardenBuddyApplication.html" title="class in edu.cnm.deepdive.gardenbuddy">GardenBuddyApplication</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="edu/cnm/deepdive/gardenbuddy/service/GardenBuddyDatabase.html" title="class in edu.cnm.deepdive.gardenbuddy.service"><span class="typeNameLink">GardenBuddyDatabase</span></a> - Class in <a href="edu/cnm/deepdive/gardenbuddy/service/package-summary.html">edu.cnm.deepdive.gardenbuddy.service</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">The database holds all of the entities and allows the application to call the context and
+ other instances needed in different classes.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/service/GardenBuddyDatabase.html#%3Cinit%3E()">GardenBuddyDatabase()</a></span> - Constructor for class edu.cnm.deepdive.gardenbuddy.service.<a href="edu/cnm/deepdive/gardenbuddy/service/GardenBuddyDatabase.html" title="class in edu.cnm.deepdive.gardenbuddy.service">GardenBuddyDatabase</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="edu/cnm/deepdive/gardenbuddy/service/GardenBuddyDatabase.Converters.html" title="class in edu.cnm.deepdive.gardenbuddy.service"><span class="typeNameLink">GardenBuddyDatabase.Converters</span></a> - Class in <a href="edu/cnm/deepdive/gardenbuddy/service/package-summary.html">edu.cnm.deepdive.gardenbuddy.service</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Converts the dates into a Long to be used within the application if a date needs to use
+ Long.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.html#getCategory()">getCategory()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Note</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the category that the note is assigned to.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html#getCommonName()">getCommonName()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the commonName of the Plant.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html#getDayFirstHarvest()">getDayFirstHarvest()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">History</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">The user will be able to specify the date of when they get their first harvest from the
+ plant that is planted.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html#getDayPlanted()">getDayPlanted()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">History</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">The user is able to detail what day the specific plant is planted.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html#getDaysToMaturity()">getDaysToMaturity()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the number of average days a plant will take the mature.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/pojo/PlantWithHistories.html#getHistories()">getHistories()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.pojo.<a href="edu/cnm/deepdive/gardenbuddy/model/pojo/PlantWithHistories.html" title="class in edu.cnm.deepdive.gardenbuddy.model.pojo">PlantWithHistories</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the list of Histories associated to a plant and returns them.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/service/GardenBuddyDatabase.html#getHistoryDao()">getHistoryDao()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.service.<a href="edu/cnm/deepdive/gardenbuddy/service/GardenBuddyDatabase.html" title="class in edu.cnm.deepdive.gardenbuddy.service">GardenBuddyDatabase</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the HistoryDao when it needs to be used within the application.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html#getId()">getId()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">History</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the Unique identifier of this History.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.html#getId()">getId()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Note</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the Unique Id for the note.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html#getId()">getId()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the unique identifier for the plant.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/service/GardenBuddyDatabase.html#getInstance()">getInstance()</a></span> - Static method in class edu.cnm.deepdive.gardenbuddy.service.<a href="edu/cnm/deepdive/gardenbuddy/service/GardenBuddyDatabase.html" title="class in edu.cnm.deepdive.gardenbuddy.service">GardenBuddyDatabase</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the instance of the database whenever an item from the database needs to be
+ viewed in the application.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/service/GoogleSignInService.html#getInstance()">getInstance()</a></span> - Static method in class edu.cnm.deepdive.gardenbuddy.service.<a href="edu/cnm/deepdive/gardenbuddy/service/GoogleSignInService.html" title="class in edu.cnm.deepdive.gardenbuddy.service">GoogleSignInService</a></dt>
+<dd>
+<div class="block">Gets the instance of the GoogleSignInService when called upon.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/adapter/OtherAdapter.html#getItemCount()">getItemCount()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.adapter.<a href="edu/cnm/deepdive/gardenbuddy/adapter/OtherAdapter.html" title="class in edu.cnm.deepdive.gardenbuddy.adapter">OtherAdapter</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/adapter/PestAdapter.html#getItemCount()">getItemCount()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.adapter.<a href="edu/cnm/deepdive/gardenbuddy/adapter/PestAdapter.html" title="class in edu.cnm.deepdive.gardenbuddy.adapter">PestAdapter</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/adapter/WeatherAdapter.html#getItemCount()">getItemCount()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.adapter.<a href="edu/cnm/deepdive/gardenbuddy/adapter/WeatherAdapter.html" title="class in edu.cnm.deepdive.gardenbuddy.adapter">WeatherAdapter</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html#getMaxTemp()">getMaxTemp()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the maximum temperature of soil for when the plant can be planted.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html#getMinTemp()">getMinTemp()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the minimum temperature of soil for when the plant can be planted.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.html#getNote()">getNote()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Note</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the note that is written by the the user.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/service/GardenBuddyDatabase.html#getNoteDao()">getNoteDao()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.service.<a href="edu/cnm/deepdive/gardenbuddy/service/GardenBuddyDatabase.html" title="class in edu.cnm.deepdive.gardenbuddy.service">GardenBuddyDatabase</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the NoteDao when it needs to be used within the application.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/adapter/OtherAdapter.html#getNotes()">getNotes()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.adapter.<a href="edu/cnm/deepdive/gardenbuddy/adapter/OtherAdapter.html" title="class in edu.cnm.deepdive.gardenbuddy.adapter">OtherAdapter</a></dt>
+<dd>
+<div class="block">Gets the list of Notes from <a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity"><code>Note</code></a> to be used for new notes set.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/adapter/PestAdapter.html#getNotes()">getNotes()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.adapter.<a href="edu/cnm/deepdive/gardenbuddy/adapter/PestAdapter.html" title="class in edu.cnm.deepdive.gardenbuddy.adapter">PestAdapter</a></dt>
+<dd>
+<div class="block">Gets the list of Notes from <a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity"><code>Note</code></a> to be used for new notes set.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/adapter/WeatherAdapter.html#getNotes()">getNotes()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.adapter.<a href="edu/cnm/deepdive/gardenbuddy/adapter/WeatherAdapter.html" title="class in edu.cnm.deepdive.gardenbuddy.adapter">WeatherAdapter</a></dt>
+<dd>
+<div class="block">Gets the list of Notes from <a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity"><code>Note</code></a> to be used for new notes set.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/pojo/PlantWithNotes.html#getNotes()">getNotes()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.pojo.<a href="edu/cnm/deepdive/gardenbuddy/model/pojo/PlantWithNotes.html" title="class in edu.cnm.deepdive.gardenbuddy.model.pojo">PlantWithNotes</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/service/PlantRepository.html#getNotesByCategory(edu.cnm.deepdive.gardenbuddy.model.entity.Plant,edu.cnm.deepdive.gardenbuddy.model.entity.Note.Category)">getNotesByCategory(Plant, Note.Category)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.service.<a href="edu/cnm/deepdive/gardenbuddy/service/PlantRepository.html" title="class in edu.cnm.deepdive.gardenbuddy.service">PlantRepository</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/pojo/NoteWithPlant.html#getPlant()">getPlant()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.pojo.<a href="edu/cnm/deepdive/gardenbuddy/model/pojo/NoteWithPlant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.pojo">NoteWithPlant</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/viewmodel/MainViewModel.html#getPlant()">getPlant()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.viewmodel.<a href="edu/cnm/deepdive/gardenbuddy/viewmodel/MainViewModel.html" title="class in edu.cnm.deepdive.gardenbuddy.viewmodel">MainViewModel</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the list of Notes and returns the notes.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/service/PlantRepository.html#getNotesByCategory(long,edu.cnm.deepdive.gardenbuddy.model.entity.Note.Category)">getNotesByCategory(long, Note.Category)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.service.<a href="edu/cnm/deepdive/gardenbuddy/service/PlantRepository.html" title="class in edu.cnm.deepdive.gardenbuddy.service">PlantRepository</a></dt>
+<dd>
+<div class="block">Gets all notes in the current live database and returns them by category.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/viewmodel/NotesViewModel.html#getOtherNotes()">getOtherNotes()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.viewmodel.<a href="edu/cnm/deepdive/gardenbuddy/viewmodel/NotesViewModel.html" title="class in edu.cnm.deepdive.gardenbuddy.viewmodel">NotesViewModel</a></dt>
+<dd>
+<div class="block">Gets all Notes from the Other Category for use in the ViewModel.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/viewmodel/NotesViewModel.html#getPestNotes()">getPestNotes()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.viewmodel.<a href="edu/cnm/deepdive/gardenbuddy/viewmodel/NotesViewModel.html" title="class in edu.cnm.deepdive.gardenbuddy.viewmodel">NotesViewModel</a></dt>
+<dd>
+<div class="block">Gets all Notes from the Pest Category for use in the ViewModel.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/service/GardenBuddyDatabase.html#getPlantDao()">getPlantDao()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.service.<a href="edu/cnm/deepdive/gardenbuddy/service/GardenBuddyDatabase.html" title="class in edu.cnm.deepdive.gardenbuddy.service">GardenBuddyDatabase</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the PlantDao when it needs to be used within the application.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html#getPlantId()">getPlantId()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">History</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the unique plantId that is connected to the History.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.html#getPlantId()">getPlantId()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Note</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/viewmodel/NotesViewModel.html#getPlantRepository()">getPlantRepository()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.viewmodel.<a href="edu/cnm/deepdive/gardenbuddy/viewmodel/NotesViewModel.html" title="class in edu.cnm.deepdive.gardenbuddy.viewmodel">NotesViewModel</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the PlantId that is assigned with the created note.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/service/PlantRepository.html#getPlants()">getPlants()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.service.<a href="edu/cnm/deepdive/gardenbuddy/service/PlantRepository.html" title="class in edu.cnm.deepdive.gardenbuddy.service">PlantRepository</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets all plants in the current live Database.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/viewmodel/NotesViewModel.html#getPlants()">getPlants()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.viewmodel.<a href="edu/cnm/deepdive/gardenbuddy/viewmodel/NotesViewModel.html" title="class in edu.cnm.deepdive.gardenbuddy.viewmodel">NotesViewModel</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the plants from the plantRepository to use for the page.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html#getScientificName()">getScientificName()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the scientificName of the Plant.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html#getSpacingInInches()">getSpacingInInches()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the spacingInInches that a plant must have to thrive.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/viewmodel/HomeViewModel.html#getText()">getText()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.viewmodel.<a href="edu/cnm/deepdive/gardenbuddy/viewmodel/HomeViewModel.html" title="class in edu.cnm.deepdive.gardenbuddy.viewmodel">HomeViewModel</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the text set in the field and returns for the application to display.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/viewmodel/PlantViewModel.html#getText()">getText()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.viewmodel.<a href="edu/cnm/deepdive/gardenbuddy/viewmodel/PlantViewModel.html" title="class in edu.cnm.deepdive.gardenbuddy.viewmodel">PlantViewModel</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/viewmodel/MainViewModel.html#getThrowable()">getThrowable()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.viewmodel.<a href="edu/cnm/deepdive/gardenbuddy/viewmodel/MainViewModel.html" title="class in edu.cnm.deepdive.gardenbuddy.viewmodel">MainViewModel</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the text set in the text field to display on the page.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/viewmodel/NotesViewModel.html#getThrowable()">getThrowable()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.viewmodel.<a href="edu/cnm/deepdive/gardenbuddy/viewmodel/NotesViewModel.html" title="class in edu.cnm.deepdive.gardenbuddy.viewmodel">NotesViewModel</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Allows the ViewModel to not display anything if there is nothing to display.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html#getTimestamp()">getTimestamp()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">History</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the timestamp of when the History instance is created.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.html#getTimestamp()">getTimestamp()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Note</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the timestamp assigned when the note is created.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html#getTimestamp()">getTimestamp()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the timestamp of when the Plant is created.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html#getTotalFruitYielded()">getTotalFruitYielded()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">History</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the total amount of fruit yielded that is set by the user.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html#getTotalPlanted()">getTotalPlanted()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">History</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the total amount planted that is input by the user.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/viewmodel/NotesViewModel.html#getWeatherNotes()">getWeatherNotes()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.viewmodel.<a href="edu/cnm/deepdive/gardenbuddy/viewmodel/NotesViewModel.html" title="class in edu.cnm.deepdive.gardenbuddy.viewmodel">NotesViewModel</a></dt>
+<dd>
+<div class="block">Gets all Notes from the Weather Category for use in the ViewModel.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html#getYearPlanted()">getYearPlanted()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">History</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the Date of the year planted for the History created.</div>
+</dd>
 <dt><a href="edu/cnm/deepdive/gardenbuddy/service/GoogleSignInService.html" title="class in edu.cnm.deepdive.gardenbuddy.service"><span class="typeNameLink">GoogleSignInService</span></a> - Class in <a href="edu/cnm/deepdive/gardenbuddy/service/package-summary.html">edu.cnm.deepdive.gardenbuddy.service</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">The GoogleSignInService class allows the application to connect to the Google Cloud
+ and recognize the google accounts being used to sign in.</div>
+</dd>
 </dl>
 <a id="I:H">
 <!--   -->
@@ -277,19 +387,29 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <h2 class="title">H</h2>
 <dl>
 <dt><a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity"><span class="typeNameLink">History</span></a> - Class in <a href="edu/cnm/deepdive/gardenbuddy/model/entity/package-summary.html">edu.cnm.deepdive.gardenbuddy.model.entity</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">The plantId is the foreign key used with the History Database.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html#%3Cinit%3E()">History()</a></span> - Constructor for class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">History</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="edu/cnm/deepdive/gardenbuddy/model/dao/HistoryDao.html" title="interface in edu.cnm.deepdive.gardenbuddy.model.dao"><span class="typeNameLink">HistoryDao</span></a> - Interface in <a href="edu/cnm/deepdive/gardenbuddy/model/dao/package-summary.html">edu.cnm.deepdive.gardenbuddy.model.dao</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">HistoryDao is not yet implemented into the features in the app.</div>
+</dd>
 <dt><a href="edu/cnm/deepdive/gardenbuddy/controller/HomeFragment.html" title="class in edu.cnm.deepdive.gardenbuddy.controller"><span class="typeNameLink">HomeFragment</span></a> - Class in <a href="edu/cnm/deepdive/gardenbuddy/controller/package-summary.html">edu.cnm.deepdive.gardenbuddy.controller</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Home fragment is the first page that displays after Google Sign in upon launching of the app.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/controller/HomeFragment.html#%3Cinit%3E()">HomeFragment()</a></span> - Constructor for class edu.cnm.deepdive.gardenbuddy.controller.<a href="edu/cnm/deepdive/gardenbuddy/controller/HomeFragment.html" title="class in edu.cnm.deepdive.gardenbuddy.controller">HomeFragment</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="edu/cnm/deepdive/gardenbuddy/viewmodel/HomeViewModel.html" title="class in edu.cnm.deepdive.gardenbuddy.viewmodel"><span class="typeNameLink">HomeViewModel</span></a> - Class in <a href="edu/cnm/deepdive/gardenbuddy/viewmodel/package-summary.html">edu.cnm.deepdive.gardenbuddy.viewmodel</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Currently just a placeholder.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/viewmodel/HomeViewModel.html#%3Cinit%3E()">HomeViewModel()</a></span> - Constructor for class edu.cnm.deepdive.gardenbuddy.viewmodel.<a href="edu/cnm/deepdive/gardenbuddy/viewmodel/HomeViewModel.html" title="class in edu.cnm.deepdive.gardenbuddy.viewmodel">HomeViewModel</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Displays the text "This is a home fragment" when the home screen is loaded.</div>
+</dd>
 </dl>
 <a id="I:I">
 <!--   -->
@@ -315,21 +435,26 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/dao/PlantDao.html#insert(java.util.Collection)">insert(Collection&lt;Plant&gt;)</a></span> - Method in interface edu.cnm.deepdive.gardenbuddy.model.dao.<a href="edu/cnm/deepdive/gardenbuddy/model/dao/PlantDao.html" title="interface in edu.cnm.deepdive.gardenbuddy.model.dao">PlantDao</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.Category.html#integerToCategory(java.lang.Integer)">integerToCategory(Integer)</a></span> - Static method in enum edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.Category.html" title="enum in edu.cnm.deepdive.gardenbuddy.model.entity">Note.Category</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Changes the integer back to the Category name.</div>
+</dd>
 </dl>
 <a id="I:L">
 <!--   -->
 </a>
 <h2 class="title">L</h2>
 <dl>
-<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/viewmodel/MainViewModel.html#loadPlants()">loadPlants()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.viewmodel.<a href="edu/cnm/deepdive/gardenbuddy/viewmodel/MainViewModel.html" title="class in edu.cnm.deepdive.gardenbuddy.viewmodel">MainViewModel</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="edu/cnm/deepdive/gardenbuddy/controller/LoginActivity.html" title="class in edu.cnm.deepdive.gardenbuddy.controller"><span class="typeNameLink">LoginActivity</span></a> - Class in <a href="edu/cnm/deepdive/gardenbuddy/controller/package-summary.html">edu.cnm.deepdive.gardenbuddy.controller</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">This is the LoginActivity page which uses Google Sign in to log users in with their Google
+ accounts so that the application can remember them regardless of which device a user may be using.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/controller/LoginActivity.html#%3Cinit%3E()">LoginActivity()</a></span> - Constructor for class edu.cnm.deepdive.gardenbuddy.controller.<a href="edu/cnm/deepdive/gardenbuddy/controller/LoginActivity.html" title="class in edu.cnm.deepdive.gardenbuddy.controller">LoginActivity</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/service/GardenBuddyDatabase.Converters.html#longToDate(java.lang.Long)">longToDate(Long)</a></span> - Static method in class edu.cnm.deepdive.gardenbuddy.service.<a href="edu/cnm/deepdive/gardenbuddy/service/GardenBuddyDatabase.Converters.html" title="class in edu.cnm.deepdive.gardenbuddy.service">GardenBuddyDatabase.Converters</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Converts the long into the date format to be used for the application.</div>
+</dd>
 </dl>
 <a id="I:M">
 <!--   -->
@@ -337,12 +462,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <h2 class="title">M</h2>
 <dl>
 <dt><a href="edu/cnm/deepdive/gardenbuddy/controller/MainActivityDrawer.html" title="class in edu.cnm.deepdive.gardenbuddy.controller"><span class="typeNameLink">MainActivityDrawer</span></a> - Class in <a href="edu/cnm/deepdive/gardenbuddy/controller/package-summary.html">edu.cnm.deepdive.gardenbuddy.controller</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">MainActivityDrawer is the mainActivity class for the application.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/controller/MainActivityDrawer.html#%3Cinit%3E()">MainActivityDrawer()</a></span> - Constructor for class edu.cnm.deepdive.gardenbuddy.controller.<a href="edu/cnm/deepdive/gardenbuddy/controller/MainActivityDrawer.html" title="class in edu.cnm.deepdive.gardenbuddy.controller">MainActivityDrawer</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="edu/cnm/deepdive/gardenbuddy/viewmodel/MainViewModel.html" title="class in edu.cnm.deepdive.gardenbuddy.viewmodel"><span class="typeNameLink">MainViewModel</span></a> - Class in <a href="edu/cnm/deepdive/gardenbuddy/viewmodel/package-summary.html">edu.cnm.deepdive.gardenbuddy.viewmodel</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/viewmodel/MainViewModel.html#%3Cinit%3E(android.app.Application)">MainViewModel(Application)</a></span> - Constructor for class edu.cnm.deepdive.gardenbuddy.viewmodel.<a href="edu/cnm/deepdive/gardenbuddy/viewmodel/MainViewModel.html" title="class in edu.cnm.deepdive.gardenbuddy.viewmodel">MainViewModel</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <a id="I:N">
@@ -350,16 +473,20 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a>
 <h2 class="title">N</h2>
 <dl>
-<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/service/PlantRepository.html#newPlant()">newPlant()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.service.<a href="edu/cnm/deepdive/gardenbuddy/service/PlantRepository.html" title="class in edu.cnm.deepdive.gardenbuddy.service">PlantRepository</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity"><span class="typeNameLink">Note</span></a> - Class in <a href="edu/cnm/deepdive/gardenbuddy/model/entity/package-summary.html">edu.cnm.deepdive.gardenbuddy.model.entity</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">The plantId is the foreign key used with the Note Database.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.html#%3Cinit%3E()">Note()</a></span> - Constructor for class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Note</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.Category.html" title="enum in edu.cnm.deepdive.gardenbuddy.model.entity"><span class="typeNameLink">Note.Category</span></a> - Enum in <a href="edu/cnm/deepdive/gardenbuddy/model/entity/package-summary.html">edu.cnm.deepdive.gardenbuddy.model.entity</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Category is an enum that is set up for three different categories; Pest, Weather, and Other.</div>
+</dd>
 <dt><a href="edu/cnm/deepdive/gardenbuddy/model/dao/NoteDao.html" title="interface in edu.cnm.deepdive.gardenbuddy.model.dao"><span class="typeNameLink">NoteDao</span></a> - Interface in <a href="edu/cnm/deepdive/gardenbuddy/model/dao/package-summary.html">edu.cnm.deepdive.gardenbuddy.model.dao</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">NoteDao will track all Notes added in to the database.</div>
+</dd>
 <dt><a href="edu/cnm/deepdive/gardenbuddy/controller/NotesFragment.html" title="class in edu.cnm.deepdive.gardenbuddy.controller"><span class="typeNameLink">NotesFragment</span></a> - Class in <a href="edu/cnm/deepdive/gardenbuddy/controller/package-summary.html">edu.cnm.deepdive.gardenbuddy.controller</a></dt>
 <dd>
 <div class="block">This is the notes fragment which will show all categories of notes.</div>
@@ -367,13 +494,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/controller/NotesFragment.html#%3Cinit%3E()">NotesFragment()</a></span> - Constructor for class edu.cnm.deepdive.gardenbuddy.controller.<a href="edu/cnm/deepdive/gardenbuddy/controller/NotesFragment.html" title="class in edu.cnm.deepdive.gardenbuddy.controller">NotesFragment</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="edu/cnm/deepdive/gardenbuddy/viewmodel/NotesViewModel.html" title="class in edu.cnm.deepdive.gardenbuddy.viewmodel"><span class="typeNameLink">NotesViewModel</span></a> - Class in <a href="edu/cnm/deepdive/gardenbuddy/viewmodel/package-summary.html">edu.cnm.deepdive.gardenbuddy.viewmodel</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">NotesViewModel gathers everything needed to display on the notes Fragment when the notes page is
+ loaded and displayed.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/viewmodel/NotesViewModel.html#%3Cinit%3E(android.app.Application)">NotesViewModel(Application)</a></span> - Constructor for class edu.cnm.deepdive.gardenbuddy.viewmodel.<a href="edu/cnm/deepdive/gardenbuddy/viewmodel/NotesViewModel.html" title="class in edu.cnm.deepdive.gardenbuddy.viewmodel">NotesViewModel</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="edu/cnm/deepdive/gardenbuddy/model/pojo/NoteWithPlant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.pojo"><span class="typeNameLink">NoteWithPlant</span></a> - Class in <a href="edu/cnm/deepdive/gardenbuddy/model/pojo/package-summary.html">edu.cnm.deepdive.gardenbuddy.model.pojo</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/pojo/NoteWithPlant.html#%3Cinit%3E()">NoteWithPlant()</a></span> - Constructor for class edu.cnm.deepdive.gardenbuddy.model.pojo.<a href="edu/cnm/deepdive/gardenbuddy/model/pojo/NoteWithPlant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.pojo">NoteWithPlant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">All of the fields constructors that are needed for the ViewModels.</div>
+</dd>
 </dl>
 <a id="I:O">
 <!--   -->
@@ -382,10 +510,18 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dl>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/controller/LoginActivity.html#onActivityResult(int,int,android.content.Intent)">onActivityResult(int, int, Intent)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.controller.<a href="edu/cnm/deepdive/gardenbuddy/controller/LoginActivity.html" title="class in edu.cnm.deepdive.gardenbuddy.controller">LoginActivity</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/adapter/OtherAdapter.html#onBindViewHolder(edu.cnm.deepdive.gardenbuddy.adapter.OtherAdapter.Holder,int)">onBindViewHolder(OtherAdapter.Holder, int)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.adapter.<a href="edu/cnm/deepdive/gardenbuddy/adapter/OtherAdapter.html" title="class in edu.cnm.deepdive.gardenbuddy.adapter">OtherAdapter</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/adapter/PestAdapter.html#onBindViewHolder(edu.cnm.deepdive.gardenbuddy.adapter.PestAdapter.Holder,int)">onBindViewHolder(PestAdapter.Holder, int)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.adapter.<a href="edu/cnm/deepdive/gardenbuddy/adapter/PestAdapter.html" title="class in edu.cnm.deepdive.gardenbuddy.adapter">PestAdapter</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/adapter/WeatherAdapter.html#onBindViewHolder(edu.cnm.deepdive.gardenbuddy.adapter.WeatherAdapter.Holder,int)">onBindViewHolder(WeatherAdapter.Holder, int)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.adapter.<a href="edu/cnm/deepdive/gardenbuddy/adapter/WeatherAdapter.html" title="class in edu.cnm.deepdive.gardenbuddy.adapter">WeatherAdapter</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/GardenBuddyApplication.html#onCreate()">onCreate()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.<a href="edu/cnm/deepdive/gardenbuddy/GardenBuddyApplication.html" title="class in edu.cnm.deepdive.gardenbuddy">GardenBuddyApplication</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/controller/LoginActivity.html#onCreate(android.os.Bundle)">onCreate(Bundle)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.controller.<a href="edu/cnm/deepdive/gardenbuddy/controller/LoginActivity.html" title="class in edu.cnm.deepdive.gardenbuddy.controller">LoginActivity</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Provides the Google sign activity to be created upon app launch.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/controller/MainActivityDrawer.html#onCreate(android.os.Bundle)">onCreate(Bundle)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.controller.<a href="edu/cnm/deepdive/gardenbuddy/controller/MainActivityDrawer.html" title="class in edu.cnm.deepdive.gardenbuddy.controller">MainActivityDrawer</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/controller/OtherNoteFragment.html#onCreate(android.os.Bundle)">onCreate(Bundle)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.controller.<a href="edu/cnm/deepdive/gardenbuddy/controller/OtherNoteFragment.html" title="class in edu.cnm.deepdive.gardenbuddy.controller">OtherNoteFragment</a></dt>
@@ -403,7 +539,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/controller/MainActivityDrawer.html#onCreateOptionsMenu(android.view.Menu)">onCreateOptionsMenu(Menu)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.controller.<a href="edu/cnm/deepdive/gardenbuddy/controller/MainActivityDrawer.html" title="class in edu.cnm.deepdive.gardenbuddy.controller">MainActivityDrawer</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/controller/HomeFragment.html#onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)">onCreateView(LayoutInflater, ViewGroup, Bundle)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.controller.<a href="edu/cnm/deepdive/gardenbuddy/controller/HomeFragment.html" title="class in edu.cnm.deepdive.gardenbuddy.controller">HomeFragment</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Home Fragment is the first page that displays on the top level of the Activity Drawer.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/controller/NotesFragment.html#onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)">onCreateView(LayoutInflater, ViewGroup, Bundle)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.controller.<a href="edu/cnm/deepdive/gardenbuddy/controller/NotesFragment.html" title="class in edu.cnm.deepdive.gardenbuddy.controller">NotesFragment</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/controller/OtherNoteFragment.html#onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)">onCreateView(LayoutInflater, ViewGroup, Bundle)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.controller.<a href="edu/cnm/deepdive/gardenbuddy/controller/OtherNoteFragment.html" title="class in edu.cnm.deepdive.gardenbuddy.controller">OtherNoteFragment</a></dt>
@@ -411,8 +549,16 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/controller/PestNoteFragment.html#onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)">onCreateView(LayoutInflater, ViewGroup, Bundle)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.controller.<a href="edu/cnm/deepdive/gardenbuddy/controller/PestNoteFragment.html" title="class in edu.cnm.deepdive.gardenbuddy.controller">PestNoteFragment</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/controller/PlantFragment.html#onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)">onCreateView(LayoutInflater, ViewGroup, Bundle)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.controller.<a href="edu/cnm/deepdive/gardenbuddy/controller/PlantFragment.html" title="class in edu.cnm.deepdive.gardenbuddy.controller">PlantFragment</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">This currently creates the view of the PlantFragment page from the Activity Drawer when selected.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/controller/WeatherNoteFragment.html#onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)">onCreateView(LayoutInflater, ViewGroup, Bundle)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.controller.<a href="edu/cnm/deepdive/gardenbuddy/controller/WeatherNoteFragment.html" title="class in edu.cnm.deepdive.gardenbuddy.controller">WeatherNoteFragment</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/adapter/OtherAdapter.html#onCreateViewHolder(android.view.ViewGroup,int)">onCreateViewHolder(ViewGroup, int)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.adapter.<a href="edu/cnm/deepdive/gardenbuddy/adapter/OtherAdapter.html" title="class in edu.cnm.deepdive.gardenbuddy.adapter">OtherAdapter</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/adapter/PestAdapter.html#onCreateViewHolder(android.view.ViewGroup,int)">onCreateViewHolder(ViewGroup, int)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.adapter.<a href="edu/cnm/deepdive/gardenbuddy/adapter/PestAdapter.html" title="class in edu.cnm.deepdive.gardenbuddy.adapter">PestAdapter</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/adapter/WeatherAdapter.html#onCreateViewHolder(android.view.ViewGroup,int)">onCreateViewHolder(ViewGroup, int)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.adapter.<a href="edu/cnm/deepdive/gardenbuddy/adapter/WeatherAdapter.html" title="class in edu.cnm.deepdive.gardenbuddy.adapter">WeatherAdapter</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/controller/MainActivityDrawer.html#onSupportNavigateUp()">onSupportNavigateUp()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.controller.<a href="edu/cnm/deepdive/gardenbuddy/controller/MainActivityDrawer.html" title="class in edu.cnm.deepdive.gardenbuddy.controller">MainActivityDrawer</a></dt>
 <dd>&nbsp;</dd>
@@ -424,14 +570,27 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/controller/NotesFragment.html#onViewCreated(android.view.View,android.os.Bundle)">onViewCreated(View, Bundle)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.controller.<a href="edu/cnm/deepdive/gardenbuddy/controller/NotesFragment.html" title="class in edu.cnm.deepdive.gardenbuddy.controller">NotesFragment</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/controller/OtherNoteFragment.html#onViewCreated(android.view.View,android.os.Bundle)">onViewCreated(View, Bundle)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.controller.<a href="edu/cnm/deepdive/gardenbuddy/controller/OtherNoteFragment.html" title="class in edu.cnm.deepdive.gardenbuddy.controller">OtherNoteFragment</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/controller/PestNoteFragment.html#onViewCreated(android.view.View,android.os.Bundle)">onViewCreated(View, Bundle)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.controller.<a href="edu/cnm/deepdive/gardenbuddy/controller/PestNoteFragment.html" title="class in edu.cnm.deepdive.gardenbuddy.controller">PestNoteFragment</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/controller/WeatherNoteFragment.html#onViewCreated(android.view.View,android.os.Bundle)">onViewCreated(View, Bundle)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.controller.<a href="edu/cnm/deepdive/gardenbuddy/controller/WeatherNoteFragment.html" title="class in edu.cnm.deepdive.gardenbuddy.controller">WeatherNoteFragment</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.Category.html#OTHER">OTHER</a></span> - edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.Category.html" title="enum in edu.cnm.deepdive.gardenbuddy.model.entity">Note.Category</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="edu/cnm/deepdive/gardenbuddy/adapter/OtherAdapter.html" title="class in edu.cnm.deepdive.gardenbuddy.adapter"><span class="typeNameLink">OtherAdapter</span></a> - Class in <a href="edu/cnm/deepdive/gardenbuddy/adapter/package-summary.html">edu.cnm.deepdive.gardenbuddy.adapter</a></dt>
+<dd>
+<div class="block">OtherAdapter class allows the recycler view of the user input notes to be displayed on the UI.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/adapter/OtherAdapter.html#%3Cinit%3E(android.content.Context,java.util.List)">OtherAdapter(Context, List&lt;Note&gt;)</a></span> - Constructor for class edu.cnm.deepdive.gardenbuddy.adapter.<a href="edu/cnm/deepdive/gardenbuddy/adapter/OtherAdapter.html" title="class in edu.cnm.deepdive.gardenbuddy.adapter">OtherAdapter</a></dt>
+<dd>
+<div class="block">This sets the fields for context and notes to be used in the adapter.</div>
+</dd>
 <dt><a href="edu/cnm/deepdive/gardenbuddy/controller/OtherNoteFragment.html" title="class in edu.cnm.deepdive.gardenbuddy.controller"><span class="typeNameLink">OtherNoteFragment</span></a> - Class in <a href="edu/cnm/deepdive/gardenbuddy/controller/package-summary.html">edu.cnm.deepdive.gardenbuddy.controller</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">OtherNoteFragment creates the Dialog to insert a new note into the database and allows the new
+ notes to be saved to the Plant Repository based on the category and plants selected.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/controller/OtherNoteFragment.html#%3Cinit%3E()">OtherNoteFragment()</a></span> - Constructor for class edu.cnm.deepdive.gardenbuddy.controller.<a href="edu/cnm/deepdive/gardenbuddy/controller/OtherNoteFragment.html" title="class in edu.cnm.deepdive.gardenbuddy.controller">OtherNoteFragment</a></dt>
 <dd>&nbsp;</dd>
 </dl>
@@ -442,36 +601,63 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dl>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.Category.html#PEST">PEST</a></span> - edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.Category.html" title="enum in edu.cnm.deepdive.gardenbuddy.model.entity">Note.Category</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="edu/cnm/deepdive/gardenbuddy/adapter/PestAdapter.html" title="class in edu.cnm.deepdive.gardenbuddy.adapter"><span class="typeNameLink">PestAdapter</span></a> - Class in <a href="edu/cnm/deepdive/gardenbuddy/adapter/package-summary.html">edu.cnm.deepdive.gardenbuddy.adapter</a></dt>
+<dd>
+<div class="block">PestAdapter class allows the recycler view of the user input notes to be displayed on the UI.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/adapter/PestAdapter.html#%3Cinit%3E(android.content.Context,java.util.List)">PestAdapter(Context, List&lt;Note&gt;)</a></span> - Constructor for class edu.cnm.deepdive.gardenbuddy.adapter.<a href="edu/cnm/deepdive/gardenbuddy/adapter/PestAdapter.html" title="class in edu.cnm.deepdive.gardenbuddy.adapter">PestAdapter</a></dt>
+<dd>
+<div class="block">This sets the fields for context and notes to be used in the adapter.</div>
+</dd>
 <dt><a href="edu/cnm/deepdive/gardenbuddy/controller/PestNoteFragment.html" title="class in edu.cnm.deepdive.gardenbuddy.controller"><span class="typeNameLink">PestNoteFragment</span></a> - Class in <a href="edu/cnm/deepdive/gardenbuddy/controller/package-summary.html">edu.cnm.deepdive.gardenbuddy.controller</a></dt>
 <dd>
-<div class="block">This is for notes associated to pest incidents.</div>
+<div class="block">PestNoteFragment creates the Dialog to insert a new note into the database and allows the new
+ notes to be saved to the Plant Repository based on the category and plants selected.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/controller/PestNoteFragment.html#%3Cinit%3E()">PestNoteFragment()</a></span> - Constructor for class edu.cnm.deepdive.gardenbuddy.controller.<a href="edu/cnm/deepdive/gardenbuddy/controller/PestNoteFragment.html" title="class in edu.cnm.deepdive.gardenbuddy.controller">PestNoteFragment</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity"><span class="typeNameLink">Plant</span></a> - Class in <a href="edu/cnm/deepdive/gardenbuddy/model/entity/package-summary.html">edu.cnm.deepdive.gardenbuddy.model.entity</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Plant Entity is the parent entity to History and Note.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html#%3Cinit%3E()">Plant()</a></span> - Constructor for class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="edu/cnm/deepdive/gardenbuddy/model/dao/PlantDao.html" title="interface in edu.cnm.deepdive.gardenbuddy.model.dao"><span class="typeNameLink">PlantDao</span></a> - Interface in <a href="edu/cnm/deepdive/gardenbuddy/model/dao/package-summary.html">edu.cnm.deepdive.gardenbuddy.model.dao</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">PlantDao will track all Plants added in to the database.</div>
+</dd>
 <dt><a href="edu/cnm/deepdive/gardenbuddy/controller/PlantFragment.html" title="class in edu.cnm.deepdive.gardenbuddy.controller"><span class="typeNameLink">PlantFragment</span></a> - Class in <a href="edu/cnm/deepdive/gardenbuddy/controller/package-summary.html">edu.cnm.deepdive.gardenbuddy.controller</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">PlantFragment is currently a placeholder page.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/controller/PlantFragment.html#%3Cinit%3E()">PlantFragment()</a></span> - Constructor for class edu.cnm.deepdive.gardenbuddy.controller.<a href="edu/cnm/deepdive/gardenbuddy/controller/PlantFragment.html" title="class in edu.cnm.deepdive.gardenbuddy.controller">PlantFragment</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="edu/cnm/deepdive/gardenbuddy/service/PlantRepository.html" title="class in edu.cnm.deepdive.gardenbuddy.service"><span class="typeNameLink">PlantRepository</span></a> - Class in <a href="edu/cnm/deepdive/gardenbuddy/service/package-summary.html">edu.cnm.deepdive.gardenbuddy.service</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">The PlantRepository connects the Entities to each other for use.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/service/PlantRepository.html#%3Cinit%3E(android.content.Context)">PlantRepository(Context)</a></span> - Constructor for class edu.cnm.deepdive.gardenbuddy.service.<a href="edu/cnm/deepdive/gardenbuddy/service/PlantRepository.html" title="class in edu.cnm.deepdive.gardenbuddy.service">PlantRepository</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Provides the context of the PlantRepository when called upon in other classes.</div>
+</dd>
 <dt><a href="edu/cnm/deepdive/gardenbuddy/viewmodel/PlantViewModel.html" title="class in edu.cnm.deepdive.gardenbuddy.viewmodel"><span class="typeNameLink">PlantViewModel</span></a> - Class in <a href="edu/cnm/deepdive/gardenbuddy/viewmodel/package-summary.html">edu.cnm.deepdive.gardenbuddy.viewmodel</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Currently a placeholder that displays the text saying it is a plant fragment when the page is loaded.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/viewmodel/PlantViewModel.html#%3Cinit%3E()">PlantViewModel()</a></span> - Constructor for class edu.cnm.deepdive.gardenbuddy.viewmodel.<a href="edu/cnm/deepdive/gardenbuddy/viewmodel/PlantViewModel.html" title="class in edu.cnm.deepdive.gardenbuddy.viewmodel">PlantViewModel</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Displays the text stating "This is a plant fragment" when the user is on the Plant Page.</div>
+</dd>
 <dt><a href="edu/cnm/deepdive/gardenbuddy/model/pojo/PlantWithHistories.html" title="class in edu.cnm.deepdive.gardenbuddy.model.pojo"><span class="typeNameLink">PlantWithHistories</span></a> - Class in <a href="edu/cnm/deepdive/gardenbuddy/model/pojo/package-summary.html">edu.cnm.deepdive.gardenbuddy.model.pojo</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Attaches all Histories to the Plants.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/pojo/PlantWithHistories.html#%3Cinit%3E()">PlantWithHistories()</a></span> - Constructor for class edu.cnm.deepdive.gardenbuddy.model.pojo.<a href="edu/cnm/deepdive/gardenbuddy/model/pojo/PlantWithHistories.html" title="class in edu.cnm.deepdive.gardenbuddy.model.pojo">PlantWithHistories</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="edu/cnm/deepdive/gardenbuddy/model/pojo/PlantWithNotes.html" title="class in edu.cnm.deepdive.gardenbuddy.model.pojo"><span class="typeNameLink">PlantWithNotes</span></a> - Class in <a href="edu/cnm/deepdive/gardenbuddy/model/pojo/package-summary.html">edu.cnm.deepdive.gardenbuddy.model.pojo</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">All Notes must be associated to a Plant.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/pojo/PlantWithNotes.html#%3Cinit%3E()">PlantWithNotes()</a></span> - Constructor for class edu.cnm.deepdive.gardenbuddy.model.pojo.<a href="edu/cnm/deepdive/gardenbuddy/model/pojo/PlantWithNotes.html" title="class in edu.cnm.deepdive.gardenbuddy.model.pojo">PlantWithNotes</a></dt>
 <dd>&nbsp;</dd>
 </dl>
@@ -481,9 +667,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <h2 class="title">R</h2>
 <dl>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/service/GoogleSignInService.html#refresh()">refresh()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.service.<a href="edu/cnm/deepdive/gardenbuddy/service/GoogleSignInService.html" title="class in edu.cnm.deepdive.gardenbuddy.service">GoogleSignInService</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">When the application is closed and reopened this will refresh the information associated with
+ the signed in account to continue using the application.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/service/GoogleSignInService.html#refreshBearerToken()">refreshBearerToken()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.service.<a href="edu/cnm/deepdive/gardenbuddy/service/GoogleSignInService.html" title="class in edu.cnm.deepdive.gardenbuddy.service">GoogleSignInService</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Refreshes the BearerToken for the sign in service to prevent the services from timing out.</div>
+</dd>
 </dl>
 <a id="I:S">
 <!--   -->
@@ -491,15 +682,25 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <h2 class="title">S</h2>
 <dl>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/service/PlantRepository.html#save(edu.cnm.deepdive.gardenbuddy.model.entity.Plant)">save(Plant)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.service.<a href="edu/cnm/deepdive/gardenbuddy/service/PlantRepository.html" title="class in edu.cnm.deepdive.gardenbuddy.service">PlantRepository</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Saves a Single Plant in to the Database if a new one is created.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/service/PlantRepository.html#saveHistory(edu.cnm.deepdive.gardenbuddy.model.pojo.PlantWithHistories)">saveHistory(PlantWithHistories)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.service.<a href="edu/cnm/deepdive/gardenbuddy/service/PlantRepository.html" title="class in edu.cnm.deepdive.gardenbuddy.service">PlantRepository</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Saves the new History created to be assigned to the Plant it is to be paired with.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/service/PlantRepository.html#saveNote(edu.cnm.deepdive.gardenbuddy.model.entity.Note)">saveNote(Note)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.service.<a href="edu/cnm/deepdive/gardenbuddy/service/PlantRepository.html" title="class in edu.cnm.deepdive.gardenbuddy.service">PlantRepository</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/viewmodel/MainViewModel.html#saveNote(edu.cnm.deepdive.gardenbuddy.model.entity.Note)">saveNote(Note)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.viewmodel.<a href="edu/cnm/deepdive/gardenbuddy/viewmodel/MainViewModel.html" title="class in edu.cnm.deepdive.gardenbuddy.viewmodel">MainViewModel</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Saves a note to the database when a new Note is created.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/viewmodel/NotesViewModel.html#saveNote(edu.cnm.deepdive.gardenbuddy.model.entity.Note)">saveNote(Note)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.viewmodel.<a href="edu/cnm/deepdive/gardenbuddy/viewmodel/NotesViewModel.html" title="class in edu.cnm.deepdive.gardenbuddy.viewmodel">NotesViewModel</a></dt>
+<dd>
+<div class="block">Saves a note when the user inputs it through this application page.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/service/PlantRepository.html#saveNote(edu.cnm.deepdive.gardenbuddy.model.pojo.PlantWithNotes)">saveNote(PlantWithNotes)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.service.<a href="edu/cnm/deepdive/gardenbuddy/service/PlantRepository.html" title="class in edu.cnm.deepdive.gardenbuddy.service">PlantRepository</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">If a Note is created it must be connected to a plant.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/dao/PlantDao.html#selectAll()">selectAll()</a></span> - Method in interface edu.cnm.deepdive.gardenbuddy.model.dao.<a href="edu/cnm/deepdive/gardenbuddy/model/dao/PlantDao.html" title="interface in edu.cnm.deepdive.gardenbuddy.model.dao">PlantDao</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/dao/PlantDao.html#selectByHstId(long)">selectByHstId(long)</a></span> - Method in interface edu.cnm.deepdive.gardenbuddy.model.dao.<a href="edu/cnm/deepdive/gardenbuddy/model/dao/PlantDao.html" title="interface in edu.cnm.deepdive.gardenbuddy.model.dao">PlantDao</a></dt>
@@ -511,61 +712,118 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/dao/NoteDao.html#selectByPlantAndCategory(long,edu.cnm.deepdive.gardenbuddy.model.entity.Note.Category)">selectByPlantAndCategory(long, Note.Category)</a></span> - Method in interface edu.cnm.deepdive.gardenbuddy.model.dao.<a href="edu/cnm/deepdive/gardenbuddy/model/dao/NoteDao.html" title="interface in edu.cnm.deepdive.gardenbuddy.model.dao">NoteDao</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.html#setCategory(edu.cnm.deepdive.gardenbuddy.model.entity.Note.Category)">setCategory(Note.Category)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Note</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the category that the note is assigned to.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html#setCommonName(java.lang.String)">setCommonName(String)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the commonName of the Plant.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/service/GardenBuddyDatabase.html#setContext(android.app.Application)">setContext(Application)</a></span> - Static method in class edu.cnm.deepdive.gardenbuddy.service.<a href="edu/cnm/deepdive/gardenbuddy/service/GardenBuddyDatabase.html" title="class in edu.cnm.deepdive.gardenbuddy.service">GardenBuddyDatabase</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Gets the context of the database to be used whenever an item from the database needs to be
+ viewed in the application.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/service/GoogleSignInService.html#setContext(android.app.Application)">setContext(Application)</a></span> - Static method in class edu.cnm.deepdive.gardenbuddy.service.<a href="edu/cnm/deepdive/gardenbuddy/service/GoogleSignInService.html" title="class in edu.cnm.deepdive.gardenbuddy.service">GoogleSignInService</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Sets the context of the GoogleSignInService when called upon.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html#setDayFirstHarvest(java.util.Date)">setDayFirstHarvest(Date)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">History</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Sets the day input by the user of the first harvest.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html#setDayPlanted(java.util.Date)">setDayPlanted(Date)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">History</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Sets the day planted when user inputs it into the database.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html#setDaysToMaturity(java.lang.Integer)">setDaysToMaturity(Integer)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the number of average days a plant will take the mature.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/pojo/PlantWithHistories.html#setHistories(java.util.List)">setHistories(List&lt;History&gt;)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.pojo.<a href="edu/cnm/deepdive/gardenbuddy/model/pojo/PlantWithHistories.html" title="class in edu.cnm.deepdive.gardenbuddy.model.pojo">PlantWithHistories</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Sets the list of Histories to a plant.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html#setId(long)">setId(long)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">History</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Sets the unique identifier of this history.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.html#setId(long)">setId(long)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Note</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Sets the Unique Id for the note.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html#setId(long)">setId(long)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Sets the unique identifier for the plant.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html#setMaxTemp(java.lang.Integer)">setMaxTemp(Integer)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the maximum temperature of soil for when the plant can be planted.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html#setMinTemp(java.lang.Integer)">setMinTemp(Integer)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the minimum temperature of soil for when the plant can be planted.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.html#setNote(java.lang.String)">setNote(String)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Note</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Sets the note that is written by the user.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/pojo/PlantWithNotes.html#setNotes(java.util.List)">setNotes(List&lt;Note&gt;)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.pojo.<a href="edu/cnm/deepdive/gardenbuddy/model/pojo/PlantWithNotes.html" title="class in edu.cnm.deepdive.gardenbuddy.model.pojo">PlantWithNotes</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/pojo/NoteWithPlant.html#setPlant(edu.cnm.deepdive.gardenbuddy.model.entity.Plant)">setPlant(Plant)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.pojo.<a href="edu/cnm/deepdive/gardenbuddy/model/pojo/NoteWithPlant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.pojo">NoteWithPlant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Sets the list of Notes.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html#setPlantId(long)">setPlantId(long)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">History</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Sets the plantId that is connected to the History.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.html#setPlantId(long)">setPlantId(long)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Note</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the PlantId that is assigned with the created note.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/viewmodel/NotesViewModel.html#setPlantId(long)">setPlantId(long)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.viewmodel.<a href="edu/cnm/deepdive/gardenbuddy/viewmodel/NotesViewModel.html" title="class in edu.cnm.deepdive.gardenbuddy.viewmodel">NotesViewModel</a></dt>
+<dd>
+<div class="block">Sets the plantId so the connected entities will know to be displayed as well.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html#setScientificName(java.lang.String)">setScientificName(String)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the scientificName of the Plant.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html#setSpacingInInches(java.lang.Integer)">setSpacingInInches(Integer)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns he spacingInInches that a plant must have to thrive.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html#setTimestamp(java.util.Date)">setTimestamp(Date)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">History</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the TimeStamp of when the History instance is created.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.html#setTimestamp(java.util.Date)">setTimestamp(Date)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Note</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Sets the timestamp of the date when note is created.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html#setTimestamp(java.util.Date)">setTimestamp(Date)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Plant.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">Plant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the timestamp of when the Plant is created.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html#setTotalFruitYielded(int)">setTotalFruitYielded(int)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">History</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Sets the total amount of fruit yielded that is input by the user.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html#setTotalPlanted(int)">setTotalPlanted(int)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">History</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Sets the total amount planted that is input by the user.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html#setYearPlanted(java.util.Date)">setYearPlanted(Date)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/History.html" title="class in edu.cnm.deepdive.gardenbuddy.model.entity">History</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Sets the date of the year planted after user has input a date.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/service/GoogleSignInService.html#signOut()">signOut()</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.service.<a href="edu/cnm/deepdive/gardenbuddy/service/GoogleSignInService.html" title="class in edu.cnm.deepdive.gardenbuddy.service">GoogleSignInService</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">When a user selects to sign out, they will be logged out of their Google Account.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/service/GoogleSignInService.html#startSignIn(android.app.Activity,int)">startSignIn(Activity, int)</a></span> - Method in class edu.cnm.deepdive.gardenbuddy.service.<a href="edu/cnm/deepdive/gardenbuddy/service/GoogleSignInService.html" title="class in edu.cnm.deepdive.gardenbuddy.service">GoogleSignInService</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">When a user selects sign in this starts the activity to allow the user to sign in.</div>
+</dd>
 </dl>
 <a id="I:T">
 <!--   -->
@@ -621,8 +879,19 @@ the order they are declared.</div>
 <dl>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.Category.html#WEATHER">WEATHER</a></span> - edu.cnm.deepdive.gardenbuddy.model.entity.<a href="edu/cnm/deepdive/gardenbuddy/model/entity/Note.Category.html" title="enum in edu.cnm.deepdive.gardenbuddy.model.entity">Note.Category</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="edu/cnm/deepdive/gardenbuddy/adapter/WeatherAdapter.html" title="class in edu.cnm.deepdive.gardenbuddy.adapter"><span class="typeNameLink">WeatherAdapter</span></a> - Class in <a href="edu/cnm/deepdive/gardenbuddy/adapter/package-summary.html">edu.cnm.deepdive.gardenbuddy.adapter</a></dt>
+<dd>
+<div class="block">WeatherAdapter class allows the recycler view of the user input notes to be displayed on the UI.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/adapter/WeatherAdapter.html#%3Cinit%3E(android.content.Context,java.util.List)">WeatherAdapter(Context, List&lt;Note&gt;)</a></span> - Constructor for class edu.cnm.deepdive.gardenbuddy.adapter.<a href="edu/cnm/deepdive/gardenbuddy/adapter/WeatherAdapter.html" title="class in edu.cnm.deepdive.gardenbuddy.adapter">WeatherAdapter</a></dt>
+<dd>
+<div class="block">This sets the fields for context and notes to be used in the adapter.</div>
+</dd>
 <dt><a href="edu/cnm/deepdive/gardenbuddy/controller/WeatherNoteFragment.html" title="class in edu.cnm.deepdive.gardenbuddy.controller"><span class="typeNameLink">WeatherNoteFragment</span></a> - Class in <a href="edu/cnm/deepdive/gardenbuddy/controller/package-summary.html">edu.cnm.deepdive.gardenbuddy.controller</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">OtherNoteFragment creates the Dialog to insert a new note into the database and allows the new
+ notes to be saved to the Plant Repository based on the category and plants selected.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/cnm/deepdive/gardenbuddy/controller/WeatherNoteFragment.html#%3Cinit%3E()">WeatherNoteFragment()</a></span> - Constructor for class edu.cnm.deepdive.gardenbuddy.controller.<a href="edu/cnm/deepdive/gardenbuddy/controller/WeatherNoteFragment.html" title="class in edu.cnm.deepdive.gardenbuddy.controller">WeatherNoteFragment</a></dt>
 <dd>&nbsp;</dd>
 </dl>

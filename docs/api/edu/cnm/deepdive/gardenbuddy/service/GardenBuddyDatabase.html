@@ -137,6 +137,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public abstract class <span class="typeNameLabel">GardenBuddyDatabase</span>
 extends <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true" title="class or interface in androidx.room" class="externalLink">RoomDatabase</a></pre>
+<div class="block">The database holds all of the entities and allows the application to call the context and
+ other instances needed in different classes.
+ There are currently the three entitie classes which are History, Plant, and Note.</div>
 </li>
 </ul>
 </div>
@@ -160,7 +163,10 @@ extends <a href="https://developer.android.com/reference/androidx/room/RoomDatab
 <tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="GardenBuddyDatabase.Converters.html" title="class in edu.cnm.deepdive.gardenbuddy.service">GardenBuddyDatabase.Converters</a></span></code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Converts the dates into a Long to be used within the application if a date needs to use
+ Long.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -228,27 +234,39 @@ extends <a href="https://developer.android.com/reference/androidx/room/RoomDatab
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>abstract <a href="../model/dao/HistoryDao.html" title="interface in edu.cnm.deepdive.gardenbuddy.model.dao">HistoryDao</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHistoryDao()">getHistoryDao</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Gets the HistoryDao when it needs to be used within the application.</div>
+</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>static <a href="GardenBuddyDatabase.html" title="class in edu.cnm.deepdive.gardenbuddy.service">GardenBuddyDatabase</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getInstance()">getInstance</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Returns the instance of the database whenever an item from the database needs to be
+ viewed in the application.</div>
+</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>abstract <a href="../model/dao/NoteDao.html" title="interface in edu.cnm.deepdive.gardenbuddy.model.dao">NoteDao</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getNoteDao()">getNoteDao</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Gets the NoteDao when it needs to be used within the application.</div>
+</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>abstract <a href="../model/dao/PlantDao.html" title="interface in edu.cnm.deepdive.gardenbuddy.model.dao">PlantDao</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPlantDao()">getPlantDao</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Gets the PlantDao when it needs to be used within the application.</div>
+</td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setContext(android.app.Application)">setContext</a></span>&#8203;(<a href="https://developer.android.com/reference/android/app/Application.html?is-external=true" title="class or interface in android.app" class="externalLink">Application</a>&nbsp;context)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Gets the context of the database to be used whenever an item from the database needs to be
+ viewed in the application.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -307,6 +325,12 @@ extends <a href="https://developer.android.com/reference/androidx/room/RoomDatab
 <li class="blockList">
 <h4>setContext</h4>
 <pre class="methodSignature">public static&nbsp;void&nbsp;setContext&#8203;(<a href="https://developer.android.com/reference/android/app/Application.html?is-external=true" title="class or interface in android.app" class="externalLink">Application</a>&nbsp;context)</pre>
+<div class="block">Gets the context of the database to be used whenever an item from the database needs to be
+ viewed in the application.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>context</code> - </dd>
+</dl>
 </li>
 </ul>
 <a id="getInstance()">
@@ -316,6 +340,11 @@ extends <a href="https://developer.android.com/reference/androidx/room/RoomDatab
 <li class="blockList">
 <h4>getInstance</h4>
 <pre class="methodSignature">public static&nbsp;<a href="GardenBuddyDatabase.html" title="class in edu.cnm.deepdive.gardenbuddy.service">GardenBuddyDatabase</a>&nbsp;getInstance()</pre>
+<div class="block">Returns the instance of the database whenever an item from the database needs to be
+ viewed in the application.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="getHistoryDao()">
@@ -325,6 +354,10 @@ extends <a href="https://developer.android.com/reference/androidx/room/RoomDatab
 <li class="blockList">
 <h4>getHistoryDao</h4>
 <pre class="methodSignature">public abstract&nbsp;<a href="../model/dao/HistoryDao.html" title="interface in edu.cnm.deepdive.gardenbuddy.model.dao">HistoryDao</a>&nbsp;getHistoryDao()</pre>
+<div class="block">Gets the HistoryDao when it needs to be used within the application.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="getNoteDao()">
@@ -334,6 +367,10 @@ extends <a href="https://developer.android.com/reference/androidx/room/RoomDatab
 <li class="blockList">
 <h4>getNoteDao</h4>
 <pre class="methodSignature">public abstract&nbsp;<a href="../model/dao/NoteDao.html" title="interface in edu.cnm.deepdive.gardenbuddy.model.dao">NoteDao</a>&nbsp;getNoteDao()</pre>
+<div class="block">Gets the NoteDao when it needs to be used within the application.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 <a id="getPlantDao()">
@@ -343,6 +380,10 @@ extends <a href="https://developer.android.com/reference/androidx/room/RoomDatab
 <li class="blockList">
 <h4>getPlantDao</h4>
 <pre class="methodSignature">public abstract&nbsp;<a href="../model/dao/PlantDao.html" title="interface in edu.cnm.deepdive.gardenbuddy.model.dao">PlantDao</a>&nbsp;getPlantDao()</pre>
+<div class="block">Gets the PlantDao when it needs to be used within the application.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+</dl>
 </li>
 </ul>
 </li>
