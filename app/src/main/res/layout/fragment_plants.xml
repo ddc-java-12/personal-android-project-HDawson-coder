@@ -16,7 +16,8 @@
     android:textAlignment="center"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"/>
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"/>
 
   <ListView
     android:id="@+id/plant_list"
@@ -27,11 +28,44 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"/>
 
-  <com.google.android.material.floatingactionbutton.FloatingActionButton
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:useCompatPadding="true"
+  <ImageView
+    android:id="@+id/corn_image"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:src="@drawable/ic_corn"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_margin="@dimen/fab_margin"
+    android:padding="@dimen/fab_margin"/>
+
+  <ImageView
+    android:id="@+id/chili_image"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:src="@drawable/ic_chilli"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_margin="@dimen/fab_margin"
+    android:padding="@dimen/fab_margin"/>
+
+  <ImageView
+    android:id="@+id/tomato_image"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:src="@drawable/ic_tomato"
     app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"/>
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_margin="@dimen/fab_margin"
+    android:padding="@dimen/fab_margin"/>
+
+  <ImageView
+    android:id="@+id/cucumber_image"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:src="@drawable/ic_cucumber"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_margin="@dimen/fab_margin"
+    android:padding="@dimen/fab_margin"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,7 +32,7 @@ public class PlantFragment extends Fragment {
 
   /**
    * This currently creates the view of the PlantFragment page from the Activity Drawer when selected.
-   * Currently it is just a page that states it is the plant fragment.
+   * Currently it is just a page that displays some pictures.
    * @param inflater Needed to display the layout for the PlantFragment.
    * @param container Needed to get the ViewGroup for PlantFragment
    * @param savedInstanceState
