@@ -17,7 +17,6 @@ import java.util.List;
  * NoteDao will track all Notes added in to the database.
  * There can be many notes attached to one plant.
  */
-
 @Dao // One Dao per entity
 public interface NoteDao {
 

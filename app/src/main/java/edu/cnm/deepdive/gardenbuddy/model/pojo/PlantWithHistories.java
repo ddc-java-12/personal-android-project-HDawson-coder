@@ -7,6 +7,9 @@ import edu.cnm.deepdive.gardenbuddy.model.entity.Plant;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Attaches all Histories to the Plants.
+ */
 public class PlantWithHistories extends Plant {
 
   @Relation(
@@ -16,11 +19,17 @@ public class PlantWithHistories extends Plant {
   )
   private List<edu.cnm.deepdive.gardenbuddy.model.entity.History> histories = new LinkedList<>();
 
+  /**
+   * Gets the list of Histories associated to a plant and returns them.
+   * @return
+   */
   @NonNull
   public List<edu.cnm.deepdive.gardenbuddy.model.entity.History> getHistories() {
     return histories;
   }
-
+/**
+ * Sets the list of Histories to a plant.
+ */
   public void setHistories(List<edu.cnm.deepdive.gardenbuddy.model.entity.History> histories) {
     this.histories = histories;
   }

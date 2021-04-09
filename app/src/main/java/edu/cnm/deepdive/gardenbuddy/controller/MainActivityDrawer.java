@@ -17,6 +17,11 @@ import androidx.appcompat.widget.Toolbar;
 import edu.cnm.deepdive.gardenbuddy.R;
 import edu.cnm.deepdive.gardenbuddy.service.GoogleSignInService;
 
+/**
+ * MainActivityDrawer is the mainActivity class for the application. This holds the required methods
+ * for gaining access to different fragments such as the optionsMenu, or the app bar along the top
+ * of the screen.
+ */
 public class MainActivityDrawer extends AppCompatActivity {
 
   private AppBarConfiguration mAppBarConfiguration;
@@ -54,6 +59,10 @@ public class MainActivityDrawer extends AppCompatActivity {
         || super.onSupportNavigateUp();
   }
 
+  /**
+   * To be used to sign out of Google Account if a user would like to. This is not yet implemented.
+   * A user would have to uninstall the app in this current state in order to use a different account.
+   */
   private void signOut() {
     GoogleSignInService
         .getInstance() // getting the instance of google sign in services

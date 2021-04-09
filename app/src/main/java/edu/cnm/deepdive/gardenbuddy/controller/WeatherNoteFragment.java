@@ -16,21 +16,23 @@ import androidx.lifecycle.ViewModelProvider;
 import edu.cnm.deepdive.gardenbuddy.databinding.FragmentWeatherNoteBinding;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Note;
 import edu.cnm.deepdive.gardenbuddy.model.entity.Note.Category;
-import edu.cnm.deepdive.gardenbuddy.viewmodel.MainViewModel;
 import edu.cnm.deepdive.gardenbuddy.viewmodel.NotesViewModel;
 
+/**
+ * OtherNoteFragment creates the Dialog to insert a new note into the database and allows the new
+ * notes to be saved to the Plant Repository based on the category and plants selected.
+ */
 public class WeatherNoteFragment extends DialogFragment implements TextWatcher {
 
   private NotesViewModel notesViewModel;
   private FragmentWeatherNoteBinding binding;
   private AlertDialog alertDialog;
-  private MainViewModel mainViewModel;
   private Long plantId;
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    if (getArguments() != null ) {
+    if (getArguments() != null) {
       PestNoteFragmentArgs args = PestNoteFragmentArgs.fromBundle(getArguments());
       plantId = args.getPlantId();
     }
@@ -43,8 +45,9 @@ public class WeatherNoteFragment extends DialogFragment implements TextWatcher {
     alertDialog = new AlertDialog.Builder(getContext())
         .setTitle("New Weather Note")
         .setView(binding.getRoot())
-        .setNeutralButton(android.R.string.cancel,(dlg, which) -> {})
-        .setPositiveButton(android.R.string.ok,(dlg, which) -> saveNote())
+        .setNeutralButton(android.R.string.cancel, (dlg, which) -> {
+        })
+        .setPositiveButton(android.R.string.ok, (dlg, which) -> saveNote())
         .create();
     alertDialog.setOnShowListener((dlg) -> {
       binding.weatherNote.addTextChangedListener(this);

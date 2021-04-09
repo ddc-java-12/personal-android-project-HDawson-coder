@@ -19,6 +19,10 @@ import edu.cnm.deepdive.gardenbuddy.model.entity.Plant;
 import edu.cnm.deepdive.gardenbuddy.viewmodel.PlantViewModel;
 import java.util.List;
 
+/**
+ * PlantFragment is currently a placeholder page. Eventually this will display all plants in the
+ * database along with important information such as Name, when to plant, etc...
+ */
 public class PlantFragment extends Fragment {
 
   private static final int FULL_WIDTH = 6;
@@ -26,7 +30,14 @@ public class PlantFragment extends Fragment {
   private PlantViewModel plantViewModel;
   private FragmentPlantsBinding binding;
 
-
+  /**
+   * This currently creates the view of the PlantFragment page from the Activity Drawer when selected.
+   * Currently it is just a page that states it is the plant fragment.
+   * @param inflater Needed to display the layout for the PlantFragment.
+   * @param container Needed to get the ViewGroup for PlantFragment
+   * @param savedInstanceState
+   * @return Returns the root to display the PlantFragment.
+   */
   public View onCreateView(@NonNull LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {
     plantViewModel = ViewModelProviders.of(this).get(PlantViewModel.class);

@@ -17,7 +17,11 @@ import io.reactivex.schedulers.Schedulers;
 import java.util.Iterator;
 import java.util.List;
 
-
+/**
+ * The PlantRepository connects the Entities to each other for use. Since the Plant Entity
+ * is the parent entities for the History and Notes, there is only this PlantRepository and no other
+ * repositories.
+ */
 public class PlantRepository {
 
   private final Context context;
@@ -25,7 +29,10 @@ public class PlantRepository {
   private final NoteDao noteDao;
   private final HistoryDao historyDao;
 
-
+  /**
+   * Provides the context of the PlantRepository when called upon in other classes.
+   * @param context The Context is the database of the different Dao's.
+   */
   public PlantRepository(Context context) {
     this.context = context;
     GardenBuddyDatabase database = GardenBuddyDatabase.getInstance();
@@ -34,6 +41,11 @@ public class PlantRepository {
     historyDao = database.getHistoryDao();
   }
 
+  /**
+   * Saves a Single Plant in to the Database.
+   * @param plant
+   * @return
+   */
   public Single<Plant> save(Plant plant) {
     return (
         (plant.getId() > 0)

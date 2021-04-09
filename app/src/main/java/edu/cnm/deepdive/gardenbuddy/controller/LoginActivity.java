@@ -12,6 +12,10 @@ import edu.cnm.deepdive.gardenbuddy.R;
 import edu.cnm.deepdive.gardenbuddy.databinding.ActivityLoginBinding;
 import edu.cnm.deepdive.gardenbuddy.service.GoogleSignInService;
 
+/**
+ * This is the LoginActivity page which uses Google Sign in to log users in with their Google
+ * accounts so that the application can remember them regardless of which device a user may be using.
+ */
 public class LoginActivity extends AppCompatActivity {
 
   private static final int LOGIN_REQUEST_CODE = 2047;
@@ -62,8 +66,9 @@ public class LoginActivity extends AppCompatActivity {
   }
 
   /**
-   *
-   * @param account gathers the account information and if correct will sign the user in.
+   * updateAndSwitch gathers the account information and if correct will sign the user in then
+   * display the HomeFragment page which is set through the MainActivityDrawer.class.
+   * @param account Needed to gain the account information through GoogleSignInAccount.
    */
   private void updateAndSwitch(GoogleSignInAccount account) {
     startActivity(

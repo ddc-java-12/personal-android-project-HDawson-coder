@@ -17,7 +17,6 @@ import java.util.List;
  * The HistoryDao will eventually be used as another way to track the plants in the garden.
  * There can be many History's attached to one Plant.
  */
-
 @Dao // One Dao per entity
 public interface HistoryDao {
 

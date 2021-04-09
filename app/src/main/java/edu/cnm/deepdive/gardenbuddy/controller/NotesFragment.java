@@ -28,9 +28,10 @@ import edu.cnm.deepdive.gardenbuddy.viewmodel.NotesViewModel;
 import java.util.List;
 
 /**
- * This is the notes fragment which will show all categories of notes.
+ * This is the notes fragment which will show all categories of notes. The NotesFragment also gains
+ * the information needed from the note categories fragments to allow a user to input the new notes
+ * when they need to.
  */
-
 public class NotesFragment extends Fragment {
 
   private NotesViewModel notesViewModel;
@@ -47,7 +48,6 @@ public class NotesFragment extends Fragment {
    *                           needed.
    * @return provides the viewModel roots to display.
    */
-
   public View onCreateView(@NonNull LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {
     binding = FragmentNotesBinding.inflate(inflater, container, false);

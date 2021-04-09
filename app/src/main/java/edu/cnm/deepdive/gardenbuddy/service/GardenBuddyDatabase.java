@@ -30,6 +30,11 @@ import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * The database holds all of the entities and allows the application to call the context and
+ * other instances needed in different classes.
+ * There are currently the three entitie classes which are History, Plant, and Note.
+ */
 @Database(
     entities = {History.class, Plant.class, Note.class},
     version = 1,
@@ -42,18 +47,40 @@ public abstract class GardenBuddyDatabase extends RoomDatabase {
 
   private static Application context;
 
+  /**
+   * Gets the context of the database to be used whenever an item from the database needs to be
+   * viewed in the application.
+   * @param context
+   */
   public static void setContext(Application context) {
     GardenBuddyDatabase.context = context;
   }
 
+  /**
+   * Returns the instance of the database whenever an item from the database needs to be
+   * viewed in the application.
+   * @return
+   */
   public static GardenBuddyDatabase getInstance() {
     return InstanceHolder.INSTANCE;
   }
 
+  /**
+   * Gets the HistoryDao when it needs to be used within the application.
+   * @return
+   */
   public abstract HistoryDao getHistoryDao();
 
+  /**
+   * Gets the NoteDao when it needs to be used within the application.
+   * @return
+   */
   public abstract NoteDao getNoteDao();
 
+  /**
+   * Gets the PlantDao when it needs to be used within the application.
+   * @return
+   */
   public abstract PlantDao getPlantDao();
 
   private static class InstanceHolder {
@@ -65,7 +92,7 @@ public abstract class GardenBuddyDatabase extends RoomDatabase {
 
   }
 
-  private static class CallBack extends RoomDatabase.Callback{
+  private static class CallBack extends RoomDatabase.Callback {
 
     @Override
     public void onCreate(@NonNull SupportSQLiteDatabase db) {
@@ -79,8 +106,8 @@ public abstract class GardenBuddyDatabase extends RoomDatabase {
           Reader reader = new InputStreamReader(inputStream);
           CSVParser parser = CSVParser.parse(reader, CSVFormat.DEFAULT.withFirstRecordAsHeader()
               .withIgnoreEmptyLines()
-          .withIgnoreSurroundingSpaces());
-          ) {
+              .withIgnoreSurroundingSpaces());
+      ) {
         List<Plant> plants = new LinkedList<>();
         for (CSVRecord record : parser) {
           Plant plant = new Plant();
@@ -99,13 +126,17 @@ public abstract class GardenBuddyDatabase extends RoomDatabase {
                 },
                 (throwable) -> Log.e(getClass().getSimpleName(), throwable.getMessage(), throwable)
             );
-      } catch(IOException e) {
+      } catch (IOException e) {
         Log.e(getClass().getSimpleName(), e.getMessage(), e);
         throw new RuntimeException(e);
       }
     }
   }
 
+  /**
+   * Converts the dates into a Long to be used within the application if a date needs to use
+   * Long.
+   */
   public static class Converters {
 
     @TypeConverter
@@ -113,6 +144,11 @@ public abstract class GardenBuddyDatabase extends RoomDatabase {
       return (value != null) ? value.getTime() : null;
     }
 
+    /**
+     * Converts the long into the date format to be used for the application.
+     * @param value The value of the Long to be used when Date is called.
+     * @return
+     */
     @TypeConverter
     public static Date longToDate(Long value) {
       return (value != null) ? new Date(value) : null;
