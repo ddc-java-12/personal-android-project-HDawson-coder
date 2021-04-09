@@ -105,3 +105,28 @@ _______
 
 Seedling icon used for launcher icon and in drawer activity is made by https://www.freepik.com
 from https://www.flaticon.com. This has been used in accordance to their licensing agreements.
+
+____
+
+Tomato icon used is made by www.flaticon.com/authors/pixel-perfect from www.flaticon.com.
+This has been used in accordance to their licensing agreements.
+
+____
+
+Corn icon used is made by www.flaticon.com/authors/smashicons from www.flaticon.com.
+This has been used in accordance to their licensing agreements.
+
+----
+
+Chili icon used is made by www.flaticon.com/authors/good-ware from www.flaticon.com.
+This has been used in accordance to their licensing agreements.
+
+-----
+
+Cucumber icon used is made by www.freepik.com from www.flaticon.com.
+This has been used in accordance to their licensing agreements.
+
+----
+
+Gardening icon used is made by www.freepik.com from www.flaticon.com.
+This has been used in accordance to their licensing agreements.
