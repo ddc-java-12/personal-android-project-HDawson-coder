@@ -1,3 +1,10 @@
+---
+title: Notice
+description: Copyright notice of the application. 
+menu: Overview
+order: 60
+---
+
 ## Garden Buddy
 
 Copyright 2021 Hana Dawson
