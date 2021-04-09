@@ -33,9 +33,11 @@ order: 0
 
 * Current State of functionality
 
+  * The user is prompted to log in using Google Sign in after initial installation and app launch.
   * The app has a drawer activity that allows the user to switch between the home screen, notes screen and plants screen. 
-  * The home screen displays a basic picture with the words "Garden Buddy". 
-  * The notes screen allows the user to switch between the four plants currently in the database, add notes, and see the notes assigned to each plant and category.
+  * The home screen displays the words "This is the Home Screen"
+  * The plants fragment displays the words "This is the plant Screen" 
+  * The notes fragment allows the user to switch between the four plants currently in the database, add notes, and see the notes assigned to each plant and category through a recycler view.
 
 
 * Aesthetic/cosmetic Enhancements
@@ -46,7 +48,8 @@ order: 0
   * Implementing the History database into the application. This would allow users to track specific instances such as fruits/vegetables yielded, amount of time to harvest, etc...
   * Implementing an API to get a much larger list of plants and information available for the user. With this implemented, a user would be able to select plants specific to what they would like to grow.  
   * Adding a garden layout design. This would allow the user to design a garden layout with their selected plants from the database, and map out where they want the plants to be in their own garden.
-  * Adding a weather API which would tie to the limits of the individual plants a user has selected, and with this the user could receive notifications warning of weather conditions that may impact the users plants.
+  * Adding a weather API which would tie to temperature limits of the individual plants a user has selected, and with this the user could receive notifications warning of weather conditions that may impact the users plants.
+  * Notifications that would tell the user when the weather is going to effect the plants, reminding the user to water at their set times, or other types of notifications.
   
   
 ## Functionality
